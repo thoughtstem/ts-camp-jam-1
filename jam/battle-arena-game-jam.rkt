@@ -8,7 +8,8 @@
          spear
          sword
          paint
-
+         flying-dagger
+         ring-of-fire
          custom-enemy
          custom-avatar)
 
