@@ -58,14 +58,14 @@ Fort building:
 
 @section{???}
 
-@(image "imgs/avatar-dance.gif")
+@(image "doc/imgs/avatar-dance.gif")
 
 
-@(image "imgs/bus-drop.gif")
+@(image "doc/imgs/bus-drop.gif")
 
-@(image "imgs/jetpack-death.gif")
+@(image "doc/imgs/jetpack-death.gif")
 
 
-@(image "imgs/building-while-running.gif")
+@(image "doc/imgs/building-while-running.gif")
 
-@(image "imgs/wall-shoot.gif")
+@(image "doc/imgs/wall-shoot.gif")
