@@ -8,8 +8,9 @@
                 #:ai              level
                 #:health          100
                 #:shield          200
-                #:weapon          (custom-weapon
-                                   #:bullet (custom-bullet))))
+                ;Change this to take an entity, not a system/component
+                #:weapon          (custom-weapon-system
+                                   #:dart (custom-dart))))
 
 
 (battle-arena-game
@@ -22,6 +23,6 @@
                             #:components
                             (storage "Weapon Slot" 1)
                             (on-key 1 (set-storage-named "Weapon Slot" 1))
-                            (custom-weapon #:slot 1 #:mouse-fire-button 'left)
+                            (custom-weapon-system #:slot 1 #:mouse-fire-button 'left)
                             ))
 

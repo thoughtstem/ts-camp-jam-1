@@ -9,9 +9,9 @@
   ))
 
 (define compile-omit-paths '(
-  "test" "examples"))
+  "test" "examples" "fleet"))
 
-(define test-omit-paths '("doc" "jam" "scoring" "examples"))
+(define test-omit-paths '("doc" "jam" "scoring" "examples" "fleet"))
 
 (define test-include-paths '(
   "test"))
