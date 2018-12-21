@@ -311,13 +311,27 @@
                                (cons c custom-components)
                                ))
 
-  (define health-bar (stat-progress-bar 'red
-                                        #:max 100 #:offset (posn 0 -40)
-                                        #:after (λ(e) (remove-component e lock-to?))))
+  (define health-bar (stat-progress-bar 'green
+                                        #:width 100
+                                        #:height 10
+                                        #:max 100 
+                                        #:after (λ(e) (~> e
+                                                          (remove-component _ lock-to?)
+                                                          (add-component _
+                                                                         (on-start
+                                                                          (go-to-pos-inside 'top-left
+                                                                                            #:posn-offset (posn 0 10))))))))
 
-  (define sheild-bar (stat-progress-bar 'orange
-                                        #:max 100 #:offset (posn 0 -35)
-                                        #:after (λ(e) (remove-component e lock-to?))))
+  (define sheild-bar (stat-progress-bar 'blue
+                                        #:width 100
+                                        #:height 10
+                                        #:max 100
+                                        #:after (λ(e) (~> e
+                                                          (remove-component _ lock-to?)
+                                                          (add-component _
+                                                                         (on-start
+                                                                          (go-to-pos-inside 'top-left)))))
+                                        ))
 
   (combatant
    #:stats (list (make-stat-config 'health 100 health-bar)
@@ -326,12 +340,14 @@
    base-avatar)
   )
 
-(define/contract (battle-arena-game #:bg             [bg-ent (custom-background)]
-                           #:avatar         [p (custom-avatar)]
-                           #:enemy-list     [e-list (list (custom-enemy))]
-                           #:weapon-list    [weapon-list '()]
-                           #:other-entities [ent #f]
-                           . custom-entities)
+(define/contract (battle-arena-game
+                  #:bg             [bg-ent (custom-background)]
+                  #:avatar         [p (custom-avatar)]
+                  #:enemy-list     [e-list (list (custom-enemy))]
+                  #:weapon-list    [weapon-list '()]
+                  #:other-entities [ent #f]
+                  . custom-entities)
+  
   (->* () (#:bg entity?
            #:avatar entity?
            #:enemy-list (listof entity?)
