@@ -1,4 +1,4 @@
-#lang ts-fortnite-2d
+#lang ts-camp-jam-1
 
 (require ts-racket)
 
@@ -22,5 +22,6 @@
                             #:components
                             (storage "Weapon Slot" 1)
                             (on-key 1 (set-storage-named "Weapon Slot" 1))
-                            (custom-weapon #:slot 1 #:mouse-fire-button 'left)))
+                            (custom-weapon #:slot 1 #:mouse-fire-button 'left)
+                            ))
 

@@ -1,4 +1,4 @@
-#lang ts-game-jam-1
+#lang ts-camp-jam-1
 
 ;BATTLE MELEE, RANGED
 ;BATTLE GEAR - WEAPONS, ARMOR, POWER UPS, POTIONS

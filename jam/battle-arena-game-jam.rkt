@@ -72,15 +72,23 @@
 
 
 
+(define/contract (custom-enemy #:amount-in-world (amount-in-world 10)
+                               #:sprite (s (row->sprite (random-character-row) #:delay 4))
+                               #:ai (ai-level 'easy)
+                               #:health (health 100)
+                               #:shield (shield 100)
+                               #:weapon (weapon (custom-weapon))
+                               #:death-particles (particles (custom-particles)))
 
-;NOt all of these work yet...
-(define (custom-enemy #:amount-in-world (amount-in-world 10)
-                      #:sprite (s (row->sprite (random-character-row) #:delay 4))
-                      #:ai (ai-level 'easy)
-                      #:health (health 100)
-                      #:shield (shield 100)
-                      #:weapon (weapon (custom-weapon))
-                      #:death-particles (particles (custom-particles)))
+  (->* () (#:amount-in-world positive?
+           #:sprite any/c
+           #:ai symbol?
+           #:health positive?
+           #:shield positive?
+           #:weapon component?
+           #:death-particles entity? ) entity?)
+
+  
  
   ;Makes sure that we can run (custom-enemy) through (entity-cloner ...)
   ;  Works because combatant ids get assigned at runtime.
@@ -208,7 +216,7 @@
   #f)
 
 (define (lost? g e)
-  (health-is-zero? g e))
+  #f)
 
 (define (custom-weapon-entity #:name        [n "Weapon"]
                               #:sprite      [s chest-sprite]
@@ -246,7 +254,9 @@
        (range amount)))
 
 
-(define (clone-by-amount-in-world es)
+(define/contract (clone-by-amount-in-world es)
+  (-> (listof entity?) (listof (listof entity?)))
+
   (define (f e)
     (define to-clone (if (procedure? e)
                          (e)
@@ -283,7 +293,9 @@
   (define dead-frame (if (image? sprite)
                          (rotate -90 sprite)
                          (rotate -90 (render sprite))))
-  (sprite->entity sprite
+
+  (define base-avatar
+    (sprite->entity sprite
                   #:name       "player"
                   #:position   p
                   #:components (physical-collider)
@@ -295,22 +307,38 @@
                                (stop-on-edge)
                                (backpack-system #:components (observe-change backpack-changed? update-backpack))
                                (player-edge-system)
-                               ;(on-key "o" #:rule player-info-closed? show-move-info)
-                               (observe-change lost? (kill-player))
-                               ;(on-key "i" #:rule (λ (g e) (not (get-entity "instructions" g)))
-                               ;        (spawn instructions-entity #:relative? #f))
-                               ;(on-key "m" (open-mini-map #:close-key "m"))
                                (counter 0)
-                               (on-key 'enter #:rule player-dialog-open? (get-dialog-selection))
-                               (on-rule (not/r all-dialog-closed?) (stop-movement))
-                               (cons c custom-components)))
+                               (cons c custom-components)
+                               ))
 
-(define (battle-arena-game #:bg             [bg-ent (custom-background)]
+  (define health-bar (stat-progress-bar 'red
+                                        #:max 100 #:offset (posn 0 -40)
+                                        #:after (λ(e) (remove-component e lock-to?))))
+
+  (define sheild-bar (stat-progress-bar 'orange
+                                        #:max 100 #:offset (posn 0 -35)
+                                        #:after (λ(e) (remove-component e lock-to?))))
+
+  (combatant
+   #:stats (list (make-stat-config 'health 100 health-bar)
+                 (make-stat-config 'shield 100 sheild-bar))
+   #:damage-processor (divert-damage #:filter-out '(passive))         
+   base-avatar)
+  )
+
+(define/contract (battle-arena-game #:bg             [bg-ent (custom-background)]
                            #:avatar         [p (custom-avatar)]
                            #:enemy-list     [e-list (list (custom-enemy))]
                            #:weapon-list    [weapon-list '()]
                            #:other-entities [ent #f]
-                                          . custom-entities)
+                           . custom-entities)
+  (->* () (#:bg entity?
+           #:avatar entity?
+           #:enemy-list (listof entity?)
+           #:weapon-list (listof entity?)
+           #:other-entities (or/c #f (listof entity?)))
+       
+       #:rest (listof entity?) game?)
 
   (define (weapon-entity->player-system e)
     (get-storage-data "Weapon" e))
@@ -343,12 +371,6 @@
                                              show)))
         e))
   
-  (define (health-entity)
-    (define max-health 100)
-    (define e (health-bar-entity #:max 100
-                                 #:starvation-period #f))
-    (~> e
-        (update-entity _ posn? (posn 100 20))))
 
   (define (enemy-counter-entity)
     (define bg (~> (rectangle 1 1 'solid (make-color 0 0 0 100))
@@ -373,10 +395,9 @@
                      (flatten
                       (list
                        (instructions-entity #:move-keys move-keys #:shoot-key shoot-key #:mouse-aim? mouse-aim?)
-                       (if p (game-over-screen won? health-is-zero?) #f)
+                       (if p (game-over-screen won? lost?) #f)
                        (if p (enemy-counter-entity) #f)
 
-                       (if p (health-entity) #f)
 
                        player-with-weapons
               
@@ -398,7 +419,7 @@
 
 ; ==== PREBUILT BULLETS ====
 (define (spear #:sprite     [s spear-bullet-sprite]
-               #:damage     [dmg 50]
+               #:damage     [dmg 50]S-Automation-Backend in AWS EC2 console
                #:durability [dur 20]
                #:speed      [spd 5]
                #:range      [rng 20])

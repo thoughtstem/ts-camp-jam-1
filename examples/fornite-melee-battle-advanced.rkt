@@ -1,4 +1,4 @@
-#lang ts-game-jam-1
+#lang ts-camp-jam-1
 
 (define (my-spear)
   (custom-bullet #:position (posn 20 0)

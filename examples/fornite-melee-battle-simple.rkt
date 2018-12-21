@@ -1,4 +1,4 @@
-#lang ts-game-jam-1
+#lang ts-camp-jam-1
 
 (battle-arena-game
    #:weapon-list (list (custom-weapon-entity #:name        "Spear"

@@ -1,4 +1,4 @@
-#lang ts-game-jam-1
+#lang ts-camp-jam-1
 
 ; ======= FORTNITE BATTLE GEAR - PAINTBALL WEAPONS =======
 #;(fortnite2d-game
