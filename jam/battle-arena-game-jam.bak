@@ -13,7 +13,7 @@
          custom-avatar)
 
 
-(define (wander-but-defend #:weapon (weapon (custom-weapon-entity))
+(define (wander-but-defend #:weapon (weapon (custom-weapon))
                            #:range (range 150)
                            #:wander-speed (wspeed 1)
                            #:ticks-between-shots (ticks-between-shots 50))
