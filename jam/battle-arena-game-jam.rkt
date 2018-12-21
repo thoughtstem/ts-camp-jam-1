@@ -4,7 +4,7 @@
          game-engine-demos-common)
 
 (provide battle-arena-game
-         custom-weapon-entity
+         custom-weapon
          spear
          sword
          paint
@@ -13,7 +13,7 @@
          custom-avatar)
 
 
-(define (wander-but-defend #:weapon (weapon (custom-weapon-entity))
+(define (wander-but-defend #:weapon (weapon (custom-weapon))
                            #:range (range 150)
                            #:wander-speed (wspeed 1)
                            #:ticks-between-shots (ticks-between-shots 50))
@@ -77,7 +77,7 @@
                                #:ai (ai-level 'easy)
                                #:health (health 100)
                                #:shield (shield 100)
-                               #:weapon (weapon (custom-weapon))
+                               #:weapon (weapon (custom-weapon-system))
                                #:death-particles (particles (custom-particles)))
 
   (->* () (#:amount-in-world positive?
@@ -218,23 +218,23 @@
 (define (lost? g e)
   #f)
 
-(define (custom-weapon-entity #:name        [n "Weapon"]
+(define (custom-weapon #:name        [n "Weapon"]
                               #:sprite      [s chest-sprite]
-                              #:bullet      [b (custom-bullet)]
+                              #:dart      [b (custom-dart)]
                               #:fire-mode   [fm 'normal]
                               #:fire-rate   [fr 3]
                               #:fire-key    [key 'f]
                               #:mouse-fire-button [button #f]
                               #:rapid-fire?       [rf? #t]
                               #:rarity      [rarity 'common])
-  (define weapon-component (custom-weapon #:bullet b
-                                          #:fire-mode fm
-                                          #:fire-rate fr
-                                          #:fire-key  key
-                                          #:mouse-fire-button button
-                                          #:rapid-fire? rf?
-                                          #:rule (and/r (weapon-is? n)
-                                                        (in-backpack? n))))
+  (define weapon-component (custom-weapon-system #:dart b
+                                                 #:fire-mode fm
+                                                 #:fire-rate fr
+                                                 #:fire-key  key
+                                                 #:mouse-fire-button button
+                                                 #:rapid-fire? rf?
+                                                 #:rule (and/r (weapon-is? n)
+                                                               (in-backpack? n))))
   (sprite->entity s
                   #:name n
                   #:position    (posn 0 0)
@@ -433,14 +433,14 @@
   
   (apply start-game es))
 
-; ==== PREBUILT BULLETS ====
-(define (spear #:sprite     [s spear-bullet-sprite]
-               #:damage     [dmg 50]S-Automation-Backend in AWS EC2 console
+; ==== PREBUILT DARTSS ====
+(define (spear #:sprite     [s spear-sprite]
+               #:damage     [dmg 50]
                #:durability [dur 20]
                #:speed      [spd 5]
                #:range      [rng 20])
-  (custom-bullet #:position (posn 20 0)
-                 #:sprite spear-bullet-sprite
+  (custom-dart #:position (posn 20 0)
+                 #:sprite spear-sprite
                  #:damage dmg
                  #:durability dur
                  #:speed spd
@@ -453,7 +453,7 @@
                #:durability [dur 20]
                #:speed      [spd 0]
                #:range      [rng 10])
-  (custom-bullet #:position (posn 10 0)
+  (custom-dart #:position (posn 10 0)
                  #:sprite     s
                  #:damage     dmg
                  #:durability dur
@@ -466,14 +466,43 @@
                #:durability [dur 5]
                #:speed      [spd 3]
                #:range      [rng 15])
-  (custom-bullet #:position (posn 25 0)
-                 #:sprite     s
-                 #:damage     dmg
-                 #:durability dur
-                 #:speed      spd
-                 #:range      rng
-                 #:components (on-start (set-size 0.5))
-                              (every-tick (scale-sprite 1.1))))
+  (custom-dart #:position (posn 25 0)
+               #:sprite     s
+               #:damage     dmg
+               #:durability dur
+               #:speed      spd
+               #:range      rng
+               #:components (on-start (set-size 0.5))
+                            (every-tick (scale-sprite 1.1))))
+
+(define (flying-dagger #:sprite     [s   flying-sword-sprite]
+                       #:damage     [dmg 10]
+                       #:durability [dur 20]
+                       #:speed      [spd 2]
+                       #:range      [rng 40])
+  (custom-dart #:position (posn 20 0)
+               #:sprite     s
+               #:damage     dmg
+               #:durability dur
+               #:speed      spd
+               #:range      rng
+               #:components (on-start (do-many (set-size 0.5)))
+                            (do-every 10 (random-direction 0 360))))
+
+(define (ring-of-fire #:sprite     [s   flame-sprite]
+                      #:damage     [dmg 5]
+                      #:durability [dur 20]
+                      #:speed      [spd 10]
+                      #:range      [rng 36])
+  (custom-dart #:position   (posn 25 0)
+               #:sprite     s
+               #:damage     dmg
+               #:durability dur
+               #:speed      spd
+               #:range      rng
+               #:components (on-start (set-size 0.5))
+                            (every-tick (do-many (scale-sprite 1.05)
+                                                 (change-direction-by 10)))))
 
 
 (module+ test
@@ -482,6 +511,6 @@
    #:avatar          (custom-avatar #:sprite      (row->sprite (random-character-row))
                                     #:key-mode    'wasd
                                     #:mouse-aim?  #t)
-   #:weapon-list     (list (custom-weapon-entity #:name "Light Repeater" #:mouse-fire-button 'left #:fire-mode 'random #:fire-rate 10)
-                           (custom-weapon-entity #:name "Spread Shot"    #:mouse-fire-button 'left #:fire-mode 'spread #:rapid-fire? #f))))
+   #:weapon-list     (list (custom-weapon #:name "Light Repeater" #:mouse-fire-button 'left #:fire-mode 'random #:fire-rate 10)
+                           (custom-weapon #:name "Spread Shot"    #:mouse-fire-button 'left #:fire-mode 'spread #:rapid-fire? #f))))
 
