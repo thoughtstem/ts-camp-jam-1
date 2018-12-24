@@ -31,7 +31,7 @@ make games like Fortnite.  Or perhaps...
 even better ones!
 
 @section{Meta Katas}
-
+clone-entity
 <Core values.>
 
 <Something about hard work.>
@@ -60,6 +60,9 @@ Fort building:
 
 @(image "doc/imgs/avatar-dance.gif")
 
+@(image "kata-definitions/img/enemy-npc.png")
+
+  
 
 @(image "doc/imgs/bus-drop.gif")
 

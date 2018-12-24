@@ -1,6 +1,7 @@
 #lang ts-camp-jam-1
 
-(battle-arena-game
+(define-kata-code fortnite-melee-battle-simple
+  (battle-arena-game
    #:weapon-list (list (custom-weapon #:name        "Spear"
                                       #:sprite      SPEAR-ICON
                                       #:dart        (spear)
@@ -24,5 +25,5 @@
                        (custom-weapon #:name        "Ring of Fire Spell"
                                       #:sprite      RING-OF-FIRE-ICON
                                       #:dart        (ring-of-fire)
-                                      #:fire-rate   30)
-                       ))
+                                      #:fire-rate   30))))
+

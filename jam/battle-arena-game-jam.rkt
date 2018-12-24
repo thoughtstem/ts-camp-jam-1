@@ -354,6 +354,7 @@
   )
 
 (define/contract (battle-arena-game
+                  #:headless       [headless #f]
                   #:bg             [bg-ent (custom-background)]
                   #:avatar         [p (custom-avatar)]
                   #:enemy-list     [e-list (list (custom-enemy))]
@@ -361,7 +362,8 @@
                   #:other-entities [ent #f]
                   . custom-entities)
   
-  (->* () (#:bg entity?
+  (->* () (#:headless boolean?
+           #:bg entity?
            #:avatar entity?
            #:enemy-list (listof entity?)
            #:weapon-list (listof entity?)
@@ -444,7 +446,9 @@
                        bg-with-instructions))))
 
   
-  (apply start-game es))
+  (if headless
+      (initialize-game es) ;Just return initial game state for whatever processing or unit tests...
+      (apply start-game es)))
 
 ; ==== PREBUILT DARTSS ====
 (define (spear #:sprite     [s spear-sprite]
