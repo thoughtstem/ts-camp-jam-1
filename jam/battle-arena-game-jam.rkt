@@ -290,13 +290,12 @@
                            #:start-tile [t 0]
                            #:components [c #f]
                                         . custom-components)
-  (define backdrop
-    (bg->backdrop bg #:rows rows #:columns cols #:start-tile t))
-  (sprite->entity (render-tile backdrop)
-                  #:name "bg"
-                  #:position (posn 0 0)
-                  #:components backdrop
-                               (cons c custom-components)))
+
+  (bg->backdrop-entity (scale 0.25 FOREST-BG)
+                       #:rows       rows
+                       #:columns    cols
+                       #:start-tile t
+                       #:scale 4))
 
 (define (custom-avatar #:sprite       [sprite (circle 10 'solid 'red)]
                        #:position     [p   (posn 100 100)]
@@ -335,6 +334,7 @@
                                         #:max 100 
                                         #:after (λ(e) (~> e
                                                           (remove-component _ lock-to?)
+                                                          (remove-component _ active-on-bg?)
                                                           (add-component _
                                                                          (on-start
                                                                           (go-to-pos-inside 'top-left
@@ -346,10 +346,10 @@
                                         #:max 100
                                         #:after (λ(e) (~> e
                                                           (remove-component _ lock-to?)
+                                                          (remove-component _ active-on-bg?)
                                                           (add-component _
                                                                          (on-start
-                                                                          (go-to-pos-inside 'top-left)))))
-                                        ))
+                                                                          (go-to-pos-inside 'top-left)))))))
 
   (combatant
    #:stats (list (make-stat-config 'health 100 health-bar)
