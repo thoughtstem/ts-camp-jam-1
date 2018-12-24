@@ -1,5 +1,7 @@
 #lang scribble/manual
 
+@require[pict]
+
 @title{Game Design through Fortnite}
 
 Game design is an art.  Two of the best ways
@@ -60,11 +62,137 @@ Fort building:
 
 @subsection{Avatar Katas}
 
-Katas here
+@bold{Bronze Avatar Kata} (5 minutes)
 
-@subsection{Enemy Katas}
+Within five minutes, the student can translate a sentence of this type:
 
-Katas here
+"Make a game with an avatar."
+
+To code of this type:
+
+@;need larger, more clearly separated image
+
+@(image "kata-definitions/img/avatar-1.png")
+
+@;tab in? otherwise format to separate from kata
+
+@italic{Review/Introduce}
+
+        @itemlist[@item{@italic{What does each part of #lang ts-camp-jam-1 mean?
+                    (language, thoughtstem, what we are doing, first 1)}}
+                  @item{@italic{What is an avatar? (playable character)}}
+                  @item{@italic{What is a keyword? (optional additional info)}}
+                  @item{@italic{How do you know it's a keyword? (#:)}}]
+
+@italic{Bonus Dollars -- feel free to give out extra dollars for:}
+
+        @itemlist[@item{@italic{Helping out teammates.}}]
+
+
+@bold{Silver Avatar Kata} (5 minutes)
+
+Within five minutes, the student can translate a sentence of this type:
+
+"Make a game with a blue circle avatar."
+
+To code of this type:
+
+@(image "kata-definitions/img/avatar-2.png")
+
+@italic{Review/Introduce}
+
+        @itemlist[@item{@italic{How many keywords now? (2 - #:avatar & #:sprite)}}
+                  @item{@italic{What info does the circle fuction need?
+                    (circle, size, fill option, color)}}]
+
+@italic{Bonus Dollars -- feel free to give out extra dollars for:}
+
+        @itemlist[@item{@italic{Helping out teammates.}}
+                  @item{@italic{Trying other colors.}}
+                  @item{@italic{Trying other shapes: triangle, square, star,
+                    rectangle (needs 2 numbers for size), ellipse (2 numbers).}}]
+
+
+@bold{Gold Avatar Kata} (10 minutes) 
+
+Within ten minutes, the student can translate a sentence of this type:
+
+@margin-note*{Use the piskel cheat sheet.}
+
+@italic{Make a game with a simple custom avatar created in Piskel.}
+
+To code of this type:
+
+@(image "kata-definitions/img/avatar-3.png")
+
+@italic{Review/Introduce}
+
+        @itemlist[@item{@italic{(my-avatar) can be anything, like (cool-dude).}}
+                  @item{@italic{}}]
+
+@italic{Bonus Dollars -- feel free to give out extra dollars for:}
+
+        @itemlist[@item{@italic{Helping out teammates.}}
+                  @item{@italic{Trying other colors.}}
+                  @item{@italic{Trying other shapes: triangle, square, star,
+                    rectangle (needs 2 numbers for size), ellipse (2 numbers).}}]
+
+@subsection{@bold{Enemy Katas}}
+
+@subsubsection{Bronze Enemy Kata (5 minutes)}
+
+To earn this kata image they need to:
+
+Within five minutes, the student can translate an English sentence of this type:
+
+@italic{Make a game that has an enemy in it.}
+
+To code of this type:
+
+@(image "kata-definitions/img/enemy-1.png")
+
+@italic{Review/Introduce}
+@itemlist[
+ @item{@italic{While the game is loading... Have them memorize the code with you! Other Discussion Topics: What is lang? ts? camp-jam-1? battle-arena-game? enemy?}}
+ @item{@italic{After the game is loaded... talk about what students see in the game (what are the game elements?)}}
+ @item{@italic{The symbol "#:" denotes a keyword argument. These are always optional!)}}]
+
+@subsubsection{Silver Enemy Kata (5 minutes)}
+
+To earn this kata image they need to:
+
+Within five minutes, the student can translate an English sentence of this type:
+
+"Make a game that has a customizable enemy in it."
+
+To code of this type:
+
+@margin-note*{Hint: AI levels are: 'easy, 'medium, 'hard}
+
+@(image "kata-definitions/img/enemy-2.png")
+
+@italic{Review/Introduce}
+@itemlist[
+ @item{@italic{While the code is running, talk about the 5 keywords!}}
+ @item{@italic{(my-enemy) can be anything! It could be (bad-guy) instead!}}
+ @item{@italic{Remember, keywords are optional - you don't need to use all of them!}}]
+
+@subsubsection{Gold Enemy Kata (10 minutes)}
+
+To earn this kata image they need to:
+
+Within ten minutes, the student can translate an English sentence of this type:
+
+@italic{Make a game that has a custom image as an enemy.}
+
+To code of this type:
+@margin-note*{Have students draw fast & simple! They won't keep it. Also, use the piskel cheat sheet.}
+
+@(image "kata-definitions/img/enemy-3.png")
+
+@italic{Review/Introduce}
+@itemlist[
+ @item{@italic{(my-avatar) can be anything! You could put (cool-dude) instead!}}]
 
 @subsection{Spear Katas}
 
