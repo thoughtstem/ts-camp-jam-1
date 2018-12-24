@@ -1,6 +1,6 @@
 #lang ts-camp-jam-1
 
-(define-kata-code fortnite-melee-battle-simple
+(define-kata-code ts-camp-jam-1 fortnite-melee-battle-simple
   (battle-arena-game
    #:weapon-list (list (custom-weapon #:name        "Spear"
                                       #:sprite      SPEAR-ICON
