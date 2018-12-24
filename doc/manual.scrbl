@@ -1,6 +1,7 @@
 #lang scribble/manual
 
-@(define DOLLAR (image "kata-definitions/img/ts-dollar.png"))
+@(define DOLLAR (image "kata-definitions/img/ts-dollar.png"
+                       #:scale 0.15))
 
 @title{Game Design through Fortnite}
 
@@ -143,10 +144,10 @@ To code of this type:
 
 @subsubsection{Bronze Enemy Kata (5 minutes)}
 
-@margin-note*{While the game is loading... Have them memorize the code with you! Other Discussion Topics: What is lang? ts? camp-jam-1? battle-arena-game? enemy?}
-@margin-note*{After the game is loaded... talk about what students see in the game (what are the game elements?)}
+@margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? enemy?}
+@margin-note*{@bold{Extra Dollars for:} Helping teammates}
 
-To earn this kata image they need to:
+@DOLLAR
 
 Within five minutes, the student can translate an English sentence of this type:
 
@@ -158,11 +159,10 @@ To code of this type:
 
 @subsubsection{Silver Enemy Kata (5 minutes)}
 
-@margin-note*{While the code is running, talk about the 5 keywords!}
-@margin-note*{(my-enemy) can be anything! It could be (bad-guy) instead!}
-@margin-note*{The symbol "#:" denotes a keyword argument. These are always optional! You don't need to use all of them!}
+@margin-note*{@bold{Review/Introduce:} The symbol "#:" denotes a keyword argument. These are always optional! Talk about the 5 keywords here!}
+@margin-note*{@bold{Review/Introduce:} (my-enemy) can be anything! It could be (bad-guy) instead!}
 
-To earn this kata image they need to:
+@DOLLAR @DOLLAR @DOLLAR
 
 Within five minutes, the student can translate an English sentence of this type:
 
@@ -170,22 +170,31 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@margin-note*{Hint: AI levels are: 'easy, 'medium, 'hard}
+@margin-note*{@bold{Hint:} AI levels are: 'easy, 'medium, 'hard}
 
 @(image "kata-definitions/img/enemy-2.png")
 
 @subsubsection{Gold Enemy Kata (10 minutes)}
 
-To earn this kata image they need to:
+@margin-note*{@bold{Hint:} Use the piskel cheat sheet!}
+@margin-note*{@bold{Hint:} Have them draw fast & simple - they're not going to keep it!}
+@margin-note*{@bold{Extra Dollars for:} Bonus code or creativity}
+
+@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
 
 Within ten minutes, the student can translate an English sentence of this type:
 
 @italic{Make a game that has a custom image as an enemy.}
 
 To code of this type:
-@margin-note*{Have students draw fast & simple! They won't keep it. Also, use the piskel cheat sheet.}
 
 @(image "kata-definitions/img/enemy-3.png")
+
+@bold{Bonus Code:} Have them create their own custom sprite sheet to earn an extra dollar!
+
+@DOLLAR
+
+@(image "kata-definitions/img/enemy-3-bonus.png")
 
 @subsection{Spear Katas}
 
