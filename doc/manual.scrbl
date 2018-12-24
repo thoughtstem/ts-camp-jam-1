@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@require[pict]
+@(define DOLLAR (image "kata-definitions/img/ts-dollar.png"))
 
 @title{Game Design through Fortnite}
 
@@ -63,6 +63,8 @@ Fort building:
 @subsection{Avatar Katas}
 
 @bold{Bronze Avatar Kata} (5 minutes)
+
+@(image "kata-definitions/img/ts-dollar.png")
 
 Within five minutes, the student can translate a sentence of this type:
 
@@ -184,10 +186,6 @@ To code of this type:
 @margin-note*{Have students draw fast & simple! They won't keep it. Also, use the piskel cheat sheet.}
 
 @(image "kata-definitions/img/enemy-3.png")
-
-@italic{Review/Introduce}
-@itemlist[
- @item{@italic{(my-avatar) can be anything! You could put (cool-dude) instead!}}]
 
 @subsection{Spear Katas}
 
