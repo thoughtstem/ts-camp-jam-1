@@ -14,7 +14,12 @@
          ring-of-fire
 
          custom-enemy
-         custom-avatar)
+         custom-avatar
+
+         STUDENT-IMAGE-HERE)
+
+(define STUDENT-IMAGE-HERE
+  (text "Student Image Here" 30 'blue))
 
 (define (plain-bg-entity)
   (bg->backdrop-entity (rectangle 48 36 ;Can even be smaller...
