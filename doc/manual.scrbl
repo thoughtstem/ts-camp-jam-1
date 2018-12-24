@@ -137,9 +137,12 @@ To code of this type:
                   @item{@italic{Trying other shapes: triangle, square, star,
                     rectangle (needs 2 numbers for size), ellipse (2 numbers).}}]
 
-@subsection{@bold{Enemy Katas}}
+@subsection{Enemy Katas}
 
 @subsubsection{Bronze Enemy Kata (5 minutes)}
+
+@margin-note*{While the game is loading... Have them memorize the code with you! Other Discussion Topics: What is lang? ts? camp-jam-1? battle-arena-game? enemy?}
+@margin-note*{After the game is loaded... talk about what students see in the game (what are the game elements?)}
 
 To earn this kata image they need to:
 
@@ -151,13 +154,11 @@ To code of this type:
 
 @(image "kata-definitions/img/enemy-1.png")
 
-@italic{Review/Introduce}
-@itemlist[
- @item{@italic{While the game is loading... Have them memorize the code with you! Other Discussion Topics: What is lang? ts? camp-jam-1? battle-arena-game? enemy?}}
- @item{@italic{After the game is loaded... talk about what students see in the game (what are the game elements?)}}
- @item{@italic{The symbol "#:" denotes a keyword argument. These are always optional!)}}]
-
 @subsubsection{Silver Enemy Kata (5 minutes)}
+
+@margin-note*{While the code is running, talk about the 5 keywords!}
+@margin-note*{(my-enemy) can be anything! It could be (bad-guy) instead!}
+@margin-note*{The symbol "#:" denotes a keyword argument. These are always optional! You don't need to use all of them!}
 
 To earn this kata image they need to:
 
@@ -170,12 +171,6 @@ To code of this type:
 @margin-note*{Hint: AI levels are: 'easy, 'medium, 'hard}
 
 @(image "kata-definitions/img/enemy-2.png")
-
-@italic{Review/Introduce}
-@itemlist[
- @item{@italic{While the code is running, talk about the 5 keywords!}}
- @item{@italic{(my-enemy) can be anything! It could be (bad-guy) instead!}}
- @item{@italic{Remember, keywords are optional - you don't need to use all of them!}}]
 
 @subsubsection{Gold Enemy Kata (10 minutes)}
 
