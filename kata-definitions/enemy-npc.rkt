@@ -3,7 +3,7 @@
 
 (define-kata-code ts-camp-jam-1 enemy-npc
   (define (enemy-npc level)
-    (custom-enemy #:amount-in-world 1
+    (custom-enemy #:amount-in-world 10
                   #:ai              level
                   #:health          100
                   #:shield          200
@@ -15,8 +15,8 @@
 
   (battle-arena-game
    #:enemy-list (list (enemy-npc 'easy)
-                      (enemy-npc 'medium)
-                      (enemy-npc 'hard))
+                      #;(enemy-npc 'medium)
+                      #;(enemy-npc 'hard))
    #:avatar    (custom-avatar #:sprite      (row->sprite (random-character-row))
                               #:key-mode    'wasd
                               #:mouse-aim?  #t
@@ -29,6 +29,7 @@
 
 
 
-
+(module+ test
+  (run:enemy-npc))
 
 

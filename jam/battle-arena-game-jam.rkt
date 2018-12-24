@@ -127,20 +127,26 @@
               #:sprite s
               #:position (posn 0 0)
               #:mode #f
-             ; #:dialog (list (list))
-              #:components 
+              ;#:components 
+
+              ;What is making these guys slow???
               (die-if-health-is-0)
               (damager 10 (list 'passive 'enemy-team))
-              ;(movable)
               (hidden)
+              ;(active-on-bg 0) ;Don't leave this in
               (on-start (do-many (respawn 'anywhere)
                                  (active-on-random)
+                                 
                                  show
-                                 become-combatant))
+                                 become-combatant
+                                 ))
+
+              ;Need to face player when attacking...
 
               (storage "amount-in-world" amount-in-world)
                          
-              (enemy-ai (get-ai-from-level ai-level weapon))  ))
+              (enemy-ai (get-ai-from-level ai-level weapon))
+              ))
 
 
 (define (custom-npc #:sprite     [s (row->sprite (random-character-row) #:delay 4)]
@@ -160,18 +166,16 @@
   (define sprite (if (image? s)
                      (new-sprite s)
                      s))
-  
-  (create-npc #:sprite      sprite
-              #:name        name
-              #:position    p
-              #:active-tile tile
-              #:dialog      (list (list))
-              #:mode        mode
-              #:speed       spd
-              #:target      target
-              #:sound       sound
-              #:scale       scale
-              #:components  (cons c custom-components)))
+
+  (sprite->entity sprite
+                  #:name name
+                  #:position p
+                  #:components
+                  (active-on-bg tile)
+                  (speed spd)
+                  (direction 0)
+                  (rotation-style 'left-right)
+                  custom-components))
 
 
 
@@ -442,6 +446,9 @@
                        (clone-by-amount-in-world (flatten e-list))
 
                        (cons ent custom-entities)
+
+                       ;For precompilation...
+                       default-combat-particles
               
                        bg-with-instructions))))
 
