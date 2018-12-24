@@ -64,7 +64,11 @@ Katas here
 
 @subsection{Enemy Katas}
 
-Katas here
+@(image "kata-definitions/img/enemy-1.png")
+
+@(image "kata-definitions/img/enemy-2.png")
+
+@(image "kata-definitions/img/enemy-3.png")
 
 @subsection{Spear Katas}
 
