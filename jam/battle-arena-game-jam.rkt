@@ -4,13 +4,22 @@
          game-engine-demos-common)
 
 (provide battle-arena-game
+         plain-bg-entity
+         custom-background
          custom-weapon
          spear
          sword
          paint
+         flying-dagger
+         ring-of-fire
 
          custom-enemy
          custom-avatar)
+
+(define (plain-bg-entity)
+  (bg->backdrop-entity (rectangle 48 36 ;Can even be smaller...
+                                  'solid 'darkgreen) 
+                       #:scale 30))
 
 
 (define (wander-but-defend #:weapon (weapon (custom-weapon))
@@ -51,7 +60,6 @@
   (list (speed 0)
         (use-weapon-against-player w #:ticks-between-shots ticks-between-shots)
         (every-tick (point-to "player"))))
-
 
 
 (define (get-ai-from-level l weapon)
@@ -123,9 +131,10 @@
               #:components 
               (die-if-health-is-0)
               (damager 10 (list 'passive 'enemy-team))
-              (movable)
+              ;(movable)
               (hidden)
               (on-start (do-many (respawn 'anywhere)
+                                 (active-on-random)
                                  show
                                  become-combatant))
 
@@ -284,13 +293,14 @@
                   #:components backdrop
                                (cons c custom-components)))
 
-(define (custom-avatar #:sprite     [sprite (circle 10 'solid 'red)]
-                 #:position   [p   (posn 100 100)]
-                 #:speed      [spd 10]
-                 #:key-mode   [key-mode 'arrow-keys]
-                 #:mouse-aim? [mouse-aim? #f]
-                 #:components [c #f]
-                               . custom-components)
+(define (custom-avatar #:sprite       [sprite (circle 10 'solid 'red)]
+                       #:position     [p   (posn 100 100)]
+                       #:speed        [spd 10]
+                       #:key-mode     [key-mode 'arrow-keys]
+                       #:mouse-aim?   [mouse-aim? #f]
+                       #:weapon-slots [w-slots 2]
+                       #:components   [c #f]
+                       . custom-components)
   (define dead-frame (if (image? sprite)
                          (rotate -90 sprite)
                          (rotate -90 (render sprite))))
@@ -307,7 +317,8 @@
                                                                                (not/r lost?)))
                                (key-animator-system #:mode key-mode #:face-mouse? mouse-aim?)
                                (stop-on-edge)
-                               (backpack-system #:components (observe-change backpack-changed? update-backpack))
+                               (backpack-system #:max-items w-slots
+                                                #:components (observe-change backpack-changed? update-backpack))
                                (player-edge-system)
                                (counter 0)
                                (cons c custom-components)
@@ -338,7 +349,7 @@
   (combatant
    #:stats (list (make-stat-config 'health 100 health-bar)
                  (make-stat-config 'shield 100 sheild-bar))
-   #:damage-processor (divert-damage #:filter-out '(passive))         
+   #:damage-processor (divert-damage #:filter-out '(friendly-team passive))         
    base-avatar)
   )
 
