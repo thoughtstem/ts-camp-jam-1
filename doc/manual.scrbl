@@ -56,6 +56,28 @@ Fort building:
   Offensive
   Defensive
 
+@section{Melee Battle Mode Katas}
+
+@subsection{Avatar Katas}
+
+Katas here
+
+@subsection{Enemy Katas}
+
+Katas here
+
+@subsection{Spear Katas}
+
+Katas here
+
+@subsection{Sword Katas}
+
+Katas here
+
+@subsection{Paint Thrower Katas}
+
+Katas here
+
 @section{???}
 
 @(image "doc/imgs/avatar-dance.gif")

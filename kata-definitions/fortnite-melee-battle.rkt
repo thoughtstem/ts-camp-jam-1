@@ -1,6 +1,6 @@
 #lang ts-camp-jam-1
 
-(define-kata-code fortnite-melee-battle
+(define-kata-code ts-camp-jam-1 fortnite-melee-battle
   ; ======= FORTNITE MELEE =======
   (define (my-sword-bullet)
     (custom-dart #:position (posn 10 0)
@@ -26,23 +26,15 @@
    #:avatar          (custom-avatar #:sprite      (row->sprite (random-character-row))
                                     #:key-mode    'wasd
                                     #:mouse-aim?  #t)
-   #:weapon-list     (list (custom-weapon #:sprite sword-sprite
-                                          #:bullet (my-sword-bullet)
+   #:weapon-list     (list (custom-weapon #:sprite SWORD-ICON
+                                          #:dart (sword)
                                           #:rapid-fire? #f
                                           #:rarity 'common)
-                           (custom-weapon #:sprite paint-thrower-sprite
-                                          #:bullet (my-paint-bullet)
+                           (custom-weapon #:sprite PAINT-THROWER-ICON
+                                          #:dart (paint)
                                           #:fire-rate 30
                                           #:rarity 'legendary)
-                           (custom-weapon #:sprite spear-sprite
-                                          #:bullet (spear-bullet)
+                           (custom-weapon #:sprite SPEAR-ICON
+                                          #:dart (spear)
                                           #:rapid-fire? #f
-                                          #:rarity 'uncommon)
-                           (custom-weapon #:sprite fire-magic
-                                          #:bullet (fire-magic-bullet)
-                                          #:rapid-fire? #f
-                                          #:rarity 'rare)
-                           (custom-weapon #:sprite    laserblade-sprite
-                                          #:bullet    (laserblade-bullet)
-                                          #:rapid-fire? #f
-                                          #:rarity    'epic))))
+                                          #:rarity 'uncommon))))
