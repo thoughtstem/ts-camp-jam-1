@@ -8,6 +8,7 @@
                 #:ai              level
                 #:health          100
                 #:shield          200
+                
                 ;Change this to take an entity, not a system/component
                 #:weapon          (custom-weapon-system
                                    #:dart (custom-dart))))

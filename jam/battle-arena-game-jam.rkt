@@ -250,7 +250,8 @@
 
 (define (entity-cloner entity amount)
   (map (thunk*
-        (if (procedure? entity) (entity) entity ))
+        (if (procedure? entity) (entity)
+            (clone-entity entity) ))
        (range amount)))
 
 
@@ -300,6 +301,7 @@
                   #:position   p
                   #:components (physical-collider)
                                (sound-stream)
+                               ;Handle deaths....
                                (precompiler dead-frame)
                                (key-movement spd #:mode key-mode #:rule (and/r all-dialog-closed?
                                                                                (not/r lost?)))
