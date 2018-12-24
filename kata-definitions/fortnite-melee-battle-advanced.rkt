@@ -1,6 +1,6 @@
 #lang ts-camp-jam-1
 
-(define-kata-code fornite-melee-battle-advanced
+(define-kata-code ts-camp-jam-1 fortnite-melee-battle-advanced
   (define (my-spear)
     (custom-dart #:position (posn 20 0)
                  #:sprite spear-sprite
