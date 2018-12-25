@@ -135,25 +135,27 @@ Fort building:
                #:time-limit 10
                #:dollars 5
                #:review/introduce "(my-avatar) can be anything, draw simple -- nothing is saved for later."
-               #:extra-dollars-for "bonus code, helping teammates, creativity, animation."]{
+               #:extra-dollars-for "helping teammates, creativity."]{
                                                                                             
  @side-note["Tip"]{Give students the piskel cheat sheet.}
 
  @(student-should-translate #:english "Make a game with a simple custom avatar created in Piskel."
                             #:code 'avatar-3)
- @bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
- write code below, for an extra dollar!
- @DOLLAR
-
- @(show-kata-code 'avatar-3b)
-
- @bold{Bonus Code:} Add additional keywords to (custom-avatar) -- #:key-mode and
- #mouse-aim? -- for an extra dollar!
- @DOLLAR
-
- @(show-kata-code 'avatar-3c)
 }
 
+
+@;----- PLATINUM AVATAR ------
+
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'platinum
+               #:title "Avatar"
+               #:time-limit 10
+               #:dollars 1
+               #:review/introduce "what do new keywords mean? what does sheet->sprite mean?"
+               #:extra-dollars-for "helping teammates, creativity."]{
+ @(student-should-translate #:english "Make a game with a custom avatar that uses a sprite sheet created in Piskel and adds additional customizations to (custom-avatar) including key-mode and mouse-aim."
+                            #:code 'avatar-4)
+}
 
 @;====== ENEMY KATAS ======
 @subsection{Enemy Katas}
@@ -197,18 +199,25 @@ Fort building:
                #:time-limit 10
                #:dollars 5
                #:review/introduce "draw simple -- nothing is saved for later."
-               #:extra-dollars-for "bonus code, helping teammates, creativity."]{
+               #:extra-dollars-for "helping teammates, creativity."]{
  @side-note["Hint"]{Use the piskel cheat sheet!}
                                                                                  
  @(student-should-translate #:english "Make a game with a custom enemy image."
                             #:code 'enemy-3)
- 
- @bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
- write code below, for an extra dollar!
+}
 
- @DOLLAR
 
- @(show-kata-code 'enemy-3-bonus)
+@;----- PLATINUM ENEMY ------
+
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'platinum
+               #:title "Enemy"
+               #:time-limit 10
+               #:dollars 1
+               #:review/introduce "what does sheet->sprite mean?"
+               #:extra-dollars-for "helping teammates, creativity."]{
+ @(student-should-translate #:english "Make a game with a custom enemy that uses a sprite sheet created in Piskel."
+                            #:code 'enemy-4)
 }
 
 
@@ -239,7 +248,7 @@ Fort building:
                #:time-limit 5
                #:dollars 3
                #:review/introduce "new keyword, customizable function names (my-weapon-1)."
-               #:extra-dollars-for "helping teammates."]{
+               #:extra-dollars-for "bonus code, helping teammates."]{
                                                          
  @side-note["Tip"]{Rarity indicates how many there will be in the world. All options are: 'common,
   'uncommon, 'rare, 'epic, 'lengendary.}
@@ -263,19 +272,25 @@ Fort building:
                #:time-limit 10
                #:dollars 5
                #:review/introduce "(my-weapon-1) and (my-spear) can be renamed to anything you'd like!"
-               #:extra-dollars-for ""]{
+               #:extra-dollars-for "helping teammates, creativity."]{
  @side-note["Tip"]{Use the piskel cheat sheet! Have them draw fast & simple - they’re not going to keep it!}
   
  @(student-should-translate #:english "Make a game that has a customizable spear in it where you can modify its damage and durability."
                             #:code 'spear-3)
-  
- @bold{Bonus Code:} Have them add additional keywords to (spear) to earn an extra dollar!
-
- @DOLLAR
-
- @(show-kata-code 'spear-3-bonus)
 }
 
+@;----- PLATINUM SPEAR ------
+
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'platinum
+               #:title "Spear"
+               #:time-limit 10
+               #:dollars 1
+               #:review/introduce "what do the new keywords mean?"
+               #:extra-dollars-for "helping teammates, creativity."]{  
+ @(student-should-translate #:english "Make a game that has a customizable spear in it where you can modify its speed, range, and sprite."
+                            #:code 'spear-4)
+}
 
 @;====== SWORD KATAS ======
 @subsection{Sword Katas}
@@ -329,18 +344,25 @@ Fort building:
                     nothing is saved for later."
                #:extra-dollars-for "helping teammates, creativity."]{
                                                                      
- @side-note{Give students the piskel cheat sheet.}
+ @side-note["Tip"]{Give students the piskel cheat sheet.}
 
  @(student-should-translate #:english "Make a game with a fully customized sword."
                             #:code 'sword-3)
-
- @bold{Bonus Code:} Have them add additional keywords to (sword) to earn an extra dollar!
-
- @DOLLAR
-
- @(show-kata-code 'sword-3b)
 }
 
+@;----- PLATINUM SWORD ------
+
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'platinum
+               #:title "Sword"
+               #:time-limit 10
+               #:dollars 1
+               #:review/introduce "what do the new keywords mean?"
+               #:extra-dollars-for "helping teammates, creativity."]{
+                                                   
+ @(student-should-translate #:english "Make a game that has a customizable sword in it where you can modify its speed, range, and sprite."
+                            #:code 'sword-4)
+ }
 
 @;====== PAINT THROWER KATAS ======
 
@@ -370,7 +392,7 @@ Fort building:
                #:time-limit 5
                #:dollars 3
                #:review/introduce "(my-weapon-3) could be anything; you could rename it to (paint-spitter)"
-               #:extra-dollars-for ""]{
+               #:extra-dollars-for "helping teammates."]{
                                        
  @side-note["Hint"]{rarity levels are 'common, 'uncommon, 'rare, 'epic, 'legendary. Rarity is related to how many will spawn in the world!}
 
@@ -393,37 +415,37 @@ Fort building:
                #:time-limit 10
                #:dollars 5
                #:review/introduce "(my-paint) can be renamed to anything you'd like!"
-               #:extra-dollars-for ""]{
+               #:extra-dollars-for "helping teammates, creativity."]{
                                        
  @side-note["Tip"]{Use the piskel cheat sheet! Have them draw fast & simple - they're not going to keep it!}
 
  @(student-should-translate #:english "Make a game that has a customizable paint thrower in it where you can modify its damage and durability."
                             #:code 'paint-thrower-3)
+}
 
- @bold{Bonus Code:} Have them add additional keywords to (paint) to earn an extra dollar! Or award, bonus dollars for creativity!
 
- @DOLLAR
+@;----- PLATINUM PAINT THROWER ------
 
- @(show-kata-code 'paint-thrower-3-bonus)
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'platinum
+               #:title "Paint Thrower"
+               #:time-limit 10
+               #:dollars 1
+               #:review/introduce "what do the new keywords mean?"
+               #:extra-dollars-for "helping teammates, creativity."]{
+ @(student-should-translate #:english  "Make a game that has a customizable paint in it where you can modify its speed, range, and sprite."
+                            #:code 'paint-thrower-4)
 }
 
 
 
 
 
-
-
-
-@(image "doc/imgs/avatar-dance.gif")
-
-@(show-kata-code 'enemy-npc)
-
-  
+@(image "doc/imgs/avatar-dance.gif")  
 
 @(image "doc/imgs/bus-drop.gif")
 
 @(image "doc/imgs/jetpack-death.gif")
-
 
 @(image "doc/imgs/building-while-running.gif")
 
