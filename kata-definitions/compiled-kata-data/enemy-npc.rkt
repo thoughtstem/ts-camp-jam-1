@@ -1,9 +1,9 @@
 #lang ts-camp-jam-1
 (define (enemy-npc level)
- (custom-enemy #:amount-in-world 10
+ (custom-enemy #:amount-in-world 28
                #:ai              level
-               #:health          100
-               #:shield          200
+               #:health          1
+               #:shield          1
 
 
                #:weapon          (custom-weapon-system
