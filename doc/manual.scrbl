@@ -77,8 +77,7 @@ Within five minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/avatar-1.png")
-
+@(show-kata-code 'avatar-1)
 
 @subsubsection{Silver Avatar Kata (5 minutes)}
 
@@ -97,7 +96,7 @@ Within five minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/avatar-2.png")
+@(show-kata-code 'avatar-2.png)
 
 
 @subsubsection{Gold Avatar Kata (10 minutes)}
@@ -117,15 +116,15 @@ Within ten minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/avatar-3.png")
+@(show-kata-code 'avatar-3.png)
 
 If a student creates an animation, they can use the following code instead:
 
-@(image "kata-definitions/img/avatar-3b.png")
+@(show-kata-code 'avatar-3b)
 
 Additional keywords for custom-avatar:
 
-@(image "kata-definitions/img/avatar-3c.png")
+@(show-kata-code 'avatar-3c)
 
 @subsection{Enemy Katas}
 
@@ -142,7 +141,7 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/enemy-1.png")
+@(show-kata-code 'enemy-1.png)
 
 @subsubsection{Silver Enemy Kata (5 minutes)}
 
@@ -159,7 +158,7 @@ To code of this type:
 
 @margin-note*{@bold{Hint:} AI levels are: 'easy, 'medium, 'hard}
 
-@(image "kata-definitions/img/enemy-2.png")
+@(show-kata-code 'enemy-2.png)
 
 @subsubsection{Gold Enemy Kata (10 minutes)}
 
@@ -175,13 +174,13 @@ Within ten minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/enemy-3.png")
+@(show-kata-code 'enemy-3)
 
 @bold{Bonus Code:} Have them create their own custom sprite sheet to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/enemy-3-bonus.png")
+@(show-kata-code 'enemy-3-bonus.png)
 
 @subsection{Spear Katas}
 
@@ -199,7 +198,7 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/spear-1.png")
+@(show-kata-code 'spear-1.png)
 
 @subsubsection{Silver Spear Kata (5 minutes)}
 
@@ -214,13 +213,13 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/spear-1.png")
+@(show-kata-code 'spear-2)
 
 @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/spear-2-bonus.png")
+@(show-kata-code 'spear-2-bonus)
 
 @subsubsection{Gold Spear Kata (10 minutes)}
 
@@ -235,13 +234,13 @@ Within ten minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/spear-3.png")
+@(show-kata-code 'spear-3)
 
 @bold{Bonus Code:} Have them add additional keywords to (spear) to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/spear-3-bonus.png")
+@(show-kata-code 'spear-3-bonus)
 
 @subsection{Sword Katas}
 
@@ -263,7 +262,7 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/paint-thrower-1.png")
+@(show-kata-code 'paint-thrower-1.png)
 
 @subsubsection{Silver Paint Thrower Kata (5 minutes)}
 
@@ -278,13 +277,13 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/paint-thrower-2.png")
+@(show-kata-code 'paint-thrower-2)
 
 @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/paint-thrower-2-bonus.png")
+@(show-kata-code 'paint-thrower-2-bonus)
 
 @subsubsection{Gold Paint Thrower Kata (10 minutes)}
 
@@ -299,13 +298,17 @@ Within ten minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/paint-thrower-3.png")
+@(show-kata-code 'paint-thrower-3)
 
 @bold{Bonus Code:} Have them add additional keywords to (paint) to earn an extra dollar! Or award, bonus dollars for creativity!
 
 @DOLLAR
 
-@(image "kata-definitions/img/paint-thrower-3-bonus.png")
+@(show-kata-code 'paint-thrower-3-bonus)
+
+
+
+
 
 @(image "doc/imgs/avatar-dance.gif")
 
