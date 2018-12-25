@@ -69,7 +69,7 @@ Fort building:
 @;----- BRONZE AVATAR ------
 @subsubsection{Bronze Avatar Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
+@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, avatar.}
 
 @margin-note*{@bold{Extra Dollars for:} helping teammates.}
 
@@ -108,9 +108,7 @@ To code of this type:
 
 @margin-note*{@bold{Review/Introduce:} (my-avatar) can be anything, draw simple --
                     nothing is saved for later.}
-
-@margin-note*{@bold{Extra Dollars for:} helping teammates, creativity, animation.}
-
+@margin-note*{@bold{Extra Dollars for:} bonus code, helping teammates, creativity, animation.}
 @margin-note*{Give students the piskel cheat sheet.}
 
 @DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
@@ -123,11 +121,15 @@ To code of this type:
 
 @(image "kata-definitions/img/avatar-3.png")
 
-If a student creates an animation, they can use the following code instead:
+@bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
+write code below, for an extra dollar!
+@DOLLAR
 
 @(image "kata-definitions/img/avatar-3b.png")
 
-Additional keywords for custom-avatar:
+@bold{Bonus Code:} Add additional keywords to (custom-avatar) -- #:key-mode and
+      #mouse-aim? -- for an extra dollar!
+@DOLLAR
 
 @(image "kata-definitions/img/avatar-3c.png")
 
@@ -137,14 +139,14 @@ Additional keywords for custom-avatar:
 @;----- BRONZE ENEMY ------
 @subsubsection{Bronze Enemy Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? enemy?}
-@margin-note*{@bold{Extra Dollars for:} Helping teammates}
+@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, enemy.}
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
 
 @DOLLAR
 
 Within five minutes, the student can translate an English sentence of this type:
 
-@italic{Make a game that has an enemy in it.}
+@italic{Make a game with an enemy.}
 
 To code of this type:
 
@@ -153,14 +155,15 @@ To code of this type:
 @;----- SILVER ENEMY ------
 @subsubsection{Silver Enemy Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} The symbol "#:" denotes a keyword argument. These are always optional! Talk about the 5 keywords here!}
-@margin-note*{@bold{Review/Introduce:} (my-enemy) can be anything! It could be (bad-guy) instead!}
+@margin-note*{@bold{Review/Introduce:} all the new keywords, keywords are always optional,
+                    (my-enemy) can be anything.}
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
 
 @DOLLAR @DOLLAR @DOLLAR
 
 Within five minutes, the student can translate an English sentence of this type:
 
-"Make a game that has a customizable enemy in it."
+"Make a game with a defined and customized enemy."
 
 To code of this type:
 
@@ -171,21 +174,22 @@ To code of this type:
 @;----- GOLD ENEMY ------
 @subsubsection{Gold Enemy Kata (10 minutes)}
 
-@margin-note*{@bold{Hint:} Use the piskel cheat sheet!}
-@margin-note*{@bold{Hint:} Have them draw fast & simple - they're not going to keep it!}
-@margin-note*{@bold{Extra Dollars for:} Bonus code or creativity}
+@margin-note*{@bold{Review/Introduce:}draw simple -- nothing is saved for later.}
+@margin-note*{@bold{Extra Dollars for:} bonus code, helping teammates, creativity.}
+@margin-note*{Use the piskel cheat sheet!}
 
 @DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
 
 Within ten minutes, the student can translate an English sentence of this type:
 
-@italic{Make a game that has a custom image as an enemy.}
+@italic{Make a game with a custom enemy image.}
 
 To code of this type:
 
 @(image "kata-definitions/img/enemy-3.png")
 
-@bold{Bonus Code:} Have them create their own custom sprite sheet to earn an extra dollar!
+@bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
+write code below, for an extra dollar!
 
 @DOLLAR
 
@@ -197,15 +201,15 @@ To code of this type:
 @;----- BRONZE SPEAR ------
 @subsubsection{Bronze Spear Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? weapon?}
-@margin-note*{@bold{Hint:} "Spear" can be anything! Even "Amazspear"!}
-@margin-note*{@bold{Extra Dollars for:} Helping teammates!}
+@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list.}
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+@margin-note*{"Spear" can be anything, like "Amaze-spear"}
 
 @DOLLAR
 
 Within five minutes, the student can translate an English sentence of this type:
 
-"Make a game that has a spear in it."
+"Make a game that has a spear."
 
 To code of this type:
 
@@ -214,14 +218,16 @@ To code of this type:
 @;----- SILVER SPEAR ------
 @subsubsection{Silver Spear Kata (5 minutes)}
 
-@margin-note*{@bold{Hint:} (my-weapon) could be anything; you could rename it to (sharp-stick)}
-@margin-note*{@bold{Hint:} rarity levels are 'common, 'uncommon, 'rare, 'epic, 'legendary. Rarity is related to how many will spawn in the world!}
+@margin-note*{@bold{Review/Introduce:} new keyword, customizable function names (my-weapon-1).}
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+@margin-note*{Rarity indicates how many there will be in the world. All options are: 'common,
+              'uncommon, 'rare, 'epic, 'lengendary}
 
 @DOLLAR @DOLLAR @DOLLAR
 
 Within five minutes, the student can translate an English sentence of this type:
 
-"Make a game that has a customizable spear in it."
+"Make a game with a ."
 
 To code of this type:
 
