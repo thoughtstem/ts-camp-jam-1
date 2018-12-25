@@ -1,6 +1,7 @@
 #lang scribble/manual
 
 @(require ts-kata-util racket)
+@(require 2htdp/image)
 @(define DOLLAR (image "kata-definitions/img/ts-dollar.png"
                        #:scale .15))
 
@@ -12,6 +13,7 @@
                         #:title (title "Avatar")
                         #:time-limit (time-limit 10)
                         #:dollars    (num-dollars 1)
+                        #:health-bar (health-bar empty-image)
                         #:review/introduce (review-introduce "concepts to review...")
                         #:extra-dollars-for (extra-dollars-for "helping teammates...")
                         . body)
@@ -22,6 +24,8 @@
          #:time-limit time-limit]{
 
  @(dollars num-dollars)
+
+ @(health-bar)
   
  @side-note["Review/Introduce" review-introduce]
 
@@ -29,6 +33,8 @@
                                
  @body
  })
+
+@(define COLOR-BAR (image "doc/img/color-bar.png"))
 
 @title{Game Design through Fortnite}
 
@@ -103,6 +109,7 @@ Fort building:
                #:title "Avatar"
                #:time-limit 5
                #:dollars 1
+               #:health-bar 
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword."
                #:extra-dollars-for "helping teammates."]{
  @(student-should-translate #:english "Make a game with an avatar."
