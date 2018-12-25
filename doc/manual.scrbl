@@ -96,6 +96,8 @@ Fort building:
 @;====== AVATAR KATAS =======
 @subsection{Avatar Katas}
 
+@;----- BRONZE AVATAR ------
+
 @camp-jam-kata[#:document-level subsubsection
                #:difficulty    'bronze
                #:title "Avatar"
@@ -126,96 +128,89 @@ Fort building:
 
 
 @;----- GOLD AVATAR ------
-@subsubsection{Gold Avatar Kata (10 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} (my-avatar) can be anything, draw simple --
-                    nothing is saved for later.}
-@margin-note*{@bold{Extra Dollars for:} bonus code, helping teammates, creativity, animation.}
-@margin-note*{Give students the piskel cheat sheet.}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'gold
+               #:title "Avatar"
+               #:time-limit 10
+               #:dollars 5
+               #:review/introduce "(my-avatar) can be anything, draw simple -- nothing is saved for later."
+               #:extra-dollars-for "bonus code, helping teammates, creativity, animation."]{
+                                                                                            
+ @side-note["Tip"]{Give students the piskel cheat sheet.}
 
-@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+ @(student-should-translate #:english "Make a game with a simple custom avatar created in Piskel"
+                            #:code 'avatar-3)
+ @bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
+ write code below, for an extra dollar!
+ @DOLLAR
 
-Within ten minutes, the student can translate a sentence of this type:
+ @(show-kata-code 'avatar-3b)
 
-@italic{Make a game with a simple custom avatar created in Piskel.}
+ @bold{Bonus Code:} Add additional keywords to (custom-avatar) -- #:key-mode and
+ #mouse-aim? -- for an extra dollar!
+ @DOLLAR
 
-To code of this type:
+ @(show-kata-code 'avatar-3c)
+}
 
-@(show-kata-code 'avatar-3)
-
-@bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
-write code below, for an extra dollar!
-@DOLLAR
-
-@(show-kata-code 'avatar-3b)
-
-@bold{Bonus Code:} Add additional keywords to (custom-avatar) -- #:key-mode and
-      #mouse-aim? -- for an extra dollar!
-@DOLLAR
-
-@(show-kata-code 'avatar-3c)
 
 @;====== ENEMY KATAS ======
 @subsection{Enemy Katas}
 
 @;----- BRONZE ENEMY ------
-@subsubsection{Bronze Enemy Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, enemy.}
-@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'bronze
+               #:title "Enemy"
+               #:time-limit 5
+               #:dollars 1
+               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, enemy"
+               #:extra-dollars-for "helping teammates"]{
+ @(student-should-translate #:english "Make a game with an enemy"
+                            #:code 'enemy-1)
+}
 
-@DOLLAR
-
-Within five minutes, the student can translate an English sentence of this type:
-
-@italic{Make a game with an enemy.}
-
-To code of this type:
-
-@(show-kata-code 'enemy-1)
 
 @;----- SILVER ENEMY ------
-@subsubsection{Silver Enemy Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} all the new keywords, keywords are always optional,
-                    (my-enemy) can be anything.}
-@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'silver
+               #:title "Enemy"
+               #:time-limit 5
+               #:dollars 3
+               #:review/introduce "all the new keywords, keywords are always optional,
+                    (my-enemy) can be anything."
+               #:extra-dollars-for "helping teammates."]{
+ @side-note["Hint"]{AI levels are: 'easy, 'medium, 'hard.}
+  
+ @(student-should-translate #:english "Make a game with a defined and customized enemy."
+                            #:code 'enemy-2)
+}
 
-@DOLLAR @DOLLAR @DOLLAR
-
-Within five minutes, the student can translate an English sentence of this type:
-
-"Make a game with a defined and customized enemy."
-
-To code of this type:
-
-@margin-note*{@bold{Hint:} AI levels are: 'easy, 'medium, 'hard}
-
-@(show-kata-code 'enemy-2)
 
 @;----- GOLD ENEMY ------
-@subsubsection{Gold Enemy Kata (10 minutes)}
 
-@margin-note*{@bold{Review/Introduce:}draw simple -- nothing is saved for later.}
-@margin-note*{@bold{Extra Dollars for:} bonus code, helping teammates, creativity.}
-@margin-note*{Use the piskel cheat sheet!}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'gold
+               #:title "Enemy"
+               #:time-limit 10
+               #:dollars 5
+               #:review/introduce "draw simple -- nothing is saved for later."
+               #:extra-dollars-for "bonus code, helping teammates, creativity."]{
+ @side-note["Hint"]{Use the piskel cheat sheet!}
+                                                                                 
+ @(student-should-translate #:english "Make a game with a custom enemy image."
+                            #:code 'enemy-3)
+ 
+ @bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
+ write code below, for an extra dollar!
 
-@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+ @DOLLAR
 
-Within ten minutes, the student can translate an English sentence of this type:
+ @(show-kata-code 'enemy-3-bonus)
+}
 
-@italic{Make a game with a custom enemy image.}
-
-To code of this type:
-
-@(show-kata-code 'enemy-3)
-
-@bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
-write code below, for an extra dollar!
-
-@DOLLAR
-
-@(show-kata-code 'enemy-3-bonus)
 
 @;====== SPEAR KATAS ======
 @subsection{Spear Katas}
