@@ -185,7 +185,63 @@ To code of this type:
 
 @subsection{Spear Katas}
 
-Katas here
+@subsubsection{Bronze Spear Kata (5 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? weapon?}
+@margin-note*{@bold{Hint:} "Spear" can be anything! Even "Amazspear"!}
+@margin-note*{@bold{Extra Dollars for:} Helping teammates!}
+
+@DOLLAR
+
+Within five minutes, the student can translate an English sentence of this type:
+
+"Make a game that has a spear in it."
+
+To code of this type:
+
+@(image "kata-definitions/img/spear-1.png")
+
+@subsubsection{Silver Spear Kata (5 minutes)}
+
+@margin-note*{@bold{Hint:} (my-weapon) could be anything; you could rename it to (sharp-stick)}
+@margin-note*{@bold{Hint:} rarity levels are 'common, 'uncommon, 'rare, 'epic, 'legendary. Rarity is related to how many will spawn in the world!}
+
+@DOLLAR @DOLLAR @DOLLAR
+
+Within five minutes, the student can translate an English sentence of this type:
+
+"Make a game that has a customizable spear in it."
+
+To code of this type:
+
+@(image "kata-definitions/img/spear-1.png")
+
+@bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
+
+@DOLLAR
+
+@(image "kata-definitions/img/spear-2-bonus.png")
+
+@subsubsection{Gold Spear Kata (10 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} (my-weapon-1) and (my-spear) can be renamed to anything you'd like!}
+@margin-note*{@bold{Hint:} Use the piskel cheat sheet! Have them draw fast & simple - they're not going to keep it!}
+
+@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+
+Within ten minutes, the student can translate an English sentence of this type:
+
+"Make a game that has a customizable spear in it where you can modify its damage and durability."
+
+To code of this type:
+
+@(image "kata-definitions/img/spear-3.png")
+
+@bold{Bonus Code:} Have them add additional keywords to (spear) to earn an extra dollar!
+
+@DOLLAR
+
+@(image "kata-definitions/img/spear-3-bonus.png")
 
 @subsection{Sword Katas}
 
