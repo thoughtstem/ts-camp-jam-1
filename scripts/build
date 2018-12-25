@@ -1,0 +1,3 @@
+rm -r kata-definitions/compiled
+rm -r kata-definitions/compiled-kata-data
+raco test -p ts-camp-jam-1 && raco setup ts-camp-jam-1

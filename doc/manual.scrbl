@@ -33,6 +33,9 @@ you're able to make.  One day, you'll be able to
 make games like Fortnite.  Or perhaps...
 even better ones!
 
+@(require ts-kata-util)
+
+
 @section{Meta Katas}
 clone-entity
 <Core values.>
@@ -59,10 +62,14 @@ Fort building:
   Offensive
   Defensive
 
+@;====== MELEE BATTLE MODE KATAS ======
+@;============== DAY 1 ================
 @section{Melee Battle Mode Katas}
 
+@;====== AVATAR KATAS =======
 @subsection{Avatar Katas}
 
+@;----- BRONZE AVATAR ------
 @subsubsection{Bronze Avatar Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
@@ -79,6 +86,7 @@ To code of this type:
 
 @(show-kata-code 'avatar-1)
 
+@;----- SILVER AVATAR ------
 @subsubsection{Silver Avatar Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} new keyword, the circle function & its parameters.}
@@ -96,9 +104,9 @@ Within five minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(show-kata-code 'avatar-2.png)
+@(show-kata-code 'avatar-2)
 
-
+@;----- GOLD AVATAR ------
 @subsubsection{Gold Avatar Kata (10 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} (my-avatar) can be anything, draw simple --
@@ -116,7 +124,7 @@ Within ten minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(show-kata-code 'avatar-3.png)
+@(show-kata-code 'avatar-3)
 
 If a student creates an animation, they can use the following code instead:
 
@@ -126,8 +134,10 @@ Additional keywords for custom-avatar:
 
 @(show-kata-code 'avatar-3c)
 
+@;====== ENEMY KATAS ======
 @subsection{Enemy Katas}
 
+@;----- BRONZE ENEMY ------
 @subsubsection{Bronze Enemy Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? enemy?}
@@ -141,8 +151,9 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(show-kata-code 'enemy-1.png)
+@(show-kata-code 'enemy-1)
 
+@;----- SILVER ENEMY ------
 @subsubsection{Silver Enemy Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} The symbol "#:" denotes a keyword argument. These are always optional! Talk about the 5 keywords here!}
@@ -158,8 +169,9 @@ To code of this type:
 
 @margin-note*{@bold{Hint:} AI levels are: 'easy, 'medium, 'hard}
 
-@(show-kata-code 'enemy-2.png)
+@(show-kata-code 'enemy-2)
 
+@;----- GOLD ENEMY ------
 @subsubsection{Gold Enemy Kata (10 minutes)}
 
 @margin-note*{@bold{Hint:} Use the piskel cheat sheet!}
@@ -180,10 +192,12 @@ To code of this type:
 
 @DOLLAR
 
-@(show-kata-code 'enemy-3-bonus.png)
+@(show-kata-code 'enemy-3-bonus)
 
+@;====== SPEAR KATAS ======
 @subsection{Spear Katas}
 
+@;----- BRONZE SPEAR ------
 @subsubsection{Bronze Spear Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? weapon?}
@@ -198,8 +212,9 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(show-kata-code 'spear-1.png)
+@(show-kata-code 'spear-1)
 
+@;----- SILVER SPEAR ------
 @subsubsection{Silver Spear Kata (5 minutes)}
 
 @margin-note*{@bold{Hint:} (my-weapon) could be anything; you could rename it to (sharp-stick)}
@@ -221,6 +236,7 @@ To code of this type:
 
 @(show-kata-code 'spear-2-bonus)
 
+@;----- GOLD SPEAR ------
 @subsubsection{Gold Spear Kata (10 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} (my-weapon-1) and (my-spear) can be renamed to anything you'd like!}
@@ -242,9 +258,79 @@ To code of this type:
 
 @(show-kata-code 'spear-3-bonus)
 
+@;====== SWORD KATAS ======
 @subsection{Sword Katas}
 
-Katas here
+@;----- BRONZE SWORD ------
+@subsubsection{Bronze Sword Kata (5 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, list, keywords.}
+
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+
+@margin-note*{"Sword" can be anything, like "Amazing Sword of Awesome"}
+
+@DOLLAR
+
+Within five minutes, the student can translate a sentence of this type:
+
+@italic{Make a game that has a sword.}
+
+To code of this type:
+
+@(show-kata-code 'sword-1)
+
+@;----- SILVER SWORD ------
+@subsubsection{Silver Sword Kata (5 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} new keyword, customizable function names (my-weapon-2).}
+
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+
+@margin-note*{Rarity indicates how many there will be in the world. All options are: 'common,
+              'uncommon, 'rare, 'epic, 'lengendary}
+
+@DOLLAR @DOLLAR @DOLLAR
+
+Within five minutes, the student can translate a sentence of this type:
+
+@italic{Make a game with your own defined sword.}
+
+To code of this type:
+
+@(show-kata-code 'sword-2)
+
+@bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
+
+@DOLLAR
+
+@(show-kata-code 'sword-2b)
+
+@;----- GOLD SWORD ------
+@subsubsection{Gold Sword Kata (10 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} function names can be anything, draw simple --
+                    nothing is saved for later.}
+
+@margin-note*{@bold{Extra Dollars for:} helping teammates, creativity.}
+
+@margin-note*{Give students the piskel cheat sheet.}
+
+@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+
+Within ten minutes, the student can translate a sentence of this type:
+
+@italic{Make a game with a fully customized sword.}
+
+To code of this type:
+
+@(show-kata-code 'sword-3)
+
+@bold{Bonus Code:} Have them add additional keywords to (sword) to earn an extra dollar!
+
+@DOLLAR
+
+@(show-kata-code 'sword-3b)
 
 @subsection{Paint Thrower Katas}
 
@@ -262,7 +348,7 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(show-kata-code 'paint-thrower-1.png)
+@(show-kata-code 'paint-thrower-1)
 
 @subsubsection{Silver Paint Thrower Kata (5 minutes)}
 
@@ -312,7 +398,7 @@ To code of this type:
 
 @(image "doc/imgs/avatar-dance.gif")
 
-@(image "kata-definitions/img/enemy-npc.png")
+@(show-kata-code 'enemy-npc)
 
   
 
