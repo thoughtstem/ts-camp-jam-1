@@ -69,6 +69,19 @@ Fort building:
 @;====== AVATAR KATAS =======
 @subsection{Avatar Katas}
 
+@document-kata[#:document-level subsection
+               #:difficulty    'bronze
+               #:title "Avatar"
+               #:time-limit 5]{
+                               @DOLLAR
+                                
+                               This is a documented kata!  Yay!
+
+                               @(show-kata-code 'avatar-1)
+
+                               Hi this is some more docs...
+}
+
 @;----- BRONZE AVATAR ------
 @subsubsection{Bronze Avatar Kata (5 minutes)}
 
