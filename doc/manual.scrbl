@@ -104,8 +104,8 @@ Fort building:
                #:time-limit 5
                #:dollars 1
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword."
-               #:extra-dollars-for "helping teammates"]{
- @(student-should-translate #:english "Make a game with an avatar"
+               #:extra-dollars-for "helping teammates."]{
+ @(student-should-translate #:english "Make a game with an avatar."
                             #:code 'avatar-1)
 }
 
@@ -117,12 +117,12 @@ Fort building:
                #:time-limit 5
                #:dollars 3
                #:review/introduce "new keyword, the circle function & its parameters."
-               #:extra-dollars-for "helping teammates, trying new colors or shapes"]{
+               #:extra-dollars-for "helping teammates, trying new colors or shapes."]{
 
  @side-note["Additional shapes"]{triangle, square, star, rectangle (needs
   2 numbers), ellipse (needs 2 numbers).}
   
- @student-should-translate[#:english "Make a game with a blue circle avatar"
+ @student-should-translate[#:english "Make a game with a blue circle avatar."
                            #:code 'avatar-2]
 }
 
@@ -139,7 +139,7 @@ Fort building:
                                                                                             
  @side-note["Tip"]{Give students the piskel cheat sheet.}
 
- @(student-should-translate #:english "Make a game with a simple custom avatar created in Piskel"
+ @(student-should-translate #:english "Make a game with a simple custom avatar created in Piskel."
                             #:code 'avatar-3)
  @bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
  write code below, for an extra dollar!
@@ -165,9 +165,9 @@ Fort building:
                #:title "Enemy"
                #:time-limit 5
                #:dollars 1
-               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, enemy"
-               #:extra-dollars-for "helping teammates"]{
- @(student-should-translate #:english "Make a game with an enemy"
+               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, enemy."
+               #:extra-dollars-for "helping teammates."]{
+ @(student-should-translate #:english "Make a game with an enemy."
                             #:code 'enemy-1)
 }
 
@@ -242,7 +242,7 @@ Fort building:
                #:extra-dollars-for "helping teammates."]{
                                                          
  @side-note["Tip"]{Rarity indicates how many there will be in the world. All options are: 'common,
-  'uncommon, 'rare, 'epic, 'lengendary}
+  'uncommon, 'rare, 'epic, 'lengendary.}
  
  @(student-should-translate #:english "Make a game with a customizable spear in it."
                             #:code 'spear-2)
@@ -348,67 +348,67 @@ Fort building:
 
 @;----- BRONZE PAINT THROWER ------
 
-@subsubsection{Bronze Paint Thrower Kata (5 minutes)}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'bronze
+               #:title "Paint Thrower"
+               #:time-limit 5
+               #:dollars 1
+               #:review/introduce "help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? weapon?"
+               #:extra-dollars-for "helping teammates."]{
+ @side-note["Tip"]{Remember, keyword arguments (the parts of the code that start with "#:") are optional!)}
 
-@margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? weapon?}
-@margin-note*{Remember, keywords (the parts of the code that start with "#:" are optional!)}
-@margin-note*{@bold{Extra Dollars for:} Helping teammates!}
+ @(student-should-translate #:english "Make a game that has a paint thrower in it."
+                            #:code 'paint-thrower-1)
+}
 
-@DOLLAR
-
-Within five minutes, the student can translate an English sentence of this type:
-
-"Make a game that has a paint thrower in it."
-
-To code of this type:
-
-@(show-kata-code 'paint-thrower-1)
 
 @;----- SILVER PAINT THROWER ------
 
-@subsubsection{Silver Paint Thrower Kata (5 minutes)}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'silver
+               #:title "Paint Thrower"
+               #:time-limit 5
+               #:dollars 3
+               #:review/introduce "(my-weapon-3) could be anything; you could rename it to (paint-spitter)"
+               #:extra-dollars-for ""]{
+                                       
+ @side-note["Hint"]{rarity levels are 'common, 'uncommon, 'rare, 'epic, 'legendary. Rarity is related to how many will spawn in the world!}
 
-@margin-note*{@bold{Hint:} (my-weapon-3) could be anything; you could rename it to (paint-spitter)}
-@margin-note*{@bold{Hint:} rarity levels are 'common, 'uncommon, 'rare, 'epic, 'legendary. Rarity is related to how many will spawn in the world!}
+ @(student-should-translate #:english "Make a game that has a paint thrower in it with customizable rarity."
+                            #:code 'paint-thrower-2)
 
-@DOLLAR @DOLLAR @DOLLAR
+ @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
 
-Within five minutes, the student can translate an English sentence of this type:
+ @DOLLAR
 
-"Make a game that has a paint thrower in it with customizable rarity."
+ @(show-kata-code 'paint-thrower-2-bonus)
+}
 
-To code of this type:
-
-@(show-kata-code 'paint-thrower-2)
-
-@bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
-
-@DOLLAR
-
-@(show-kata-code 'paint-thrower-2-bonus)
 
 @;----- GOLD PAINT THROWER ------
 
-@subsubsection{Gold Paint Thrower Kata (10 minutes)}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'gold
+               #:title "Paint Thrower"
+               #:time-limit 10
+               #:dollars 5
+               #:review/introduce "(my-paint) can be renamed to anything you'd like!"
+               #:extra-dollars-for ""]{
+                                       
+ @side-note["Tip"]{Use the piskel cheat sheet! Have them draw fast & simple - they're not going to keep it!}
 
-@margin-note*{@bold{Review/Introduce:} (my-paint) can be renamed to anything you'd like!}
-@margin-note*{@bold{Hint:} Use the piskel cheat sheet! Have them draw fast & simple - they're not going to keep it!}
+ @(student-should-translate #:english "Make a game that has a customizable paint thrower in it where you can modify its damage and durability."
+                            #:code 'paint-thrower-3)
 
-@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+ @bold{Bonus Code:} Have them add additional keywords to (paint) to earn an extra dollar! Or award, bonus dollars for creativity!
 
-Within ten minutes, the student can translate an English sentence of this type:
+ @DOLLAR
 
-"Make a game that has a customizable paint thrower in it where you can modify its damage and durability."
+ @(show-kata-code 'paint-thrower-3-bonus)
+}
 
-To code of this type:
 
-@(show-kata-code 'paint-thrower-3)
 
-@bold{Bonus Code:} Have them add additional keywords to (paint) to earn an extra dollar! Or award, bonus dollars for creativity!
-
-@DOLLAR
-
-@(show-kata-code 'paint-thrower-3-bonus)
 
 
 
