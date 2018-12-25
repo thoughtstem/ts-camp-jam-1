@@ -1,6 +1,7 @@
 #lang scribble/manual
 
-@(define DOLLAR (image "kata-definitions/img/ts-dollar.png"))
+@(define DOLLAR (image "kata-definitions/img/ts-dollar.png"
+                       #:scale .15))
 
 @title{Game Design through Fortnite}
 
@@ -62,64 +63,55 @@ Fort building:
 
 @subsection{Avatar Katas}
 
-@bold{Bronze Avatar Kata} (5 minutes)
+@subsubsection{Bronze Avatar Kata (5 minutes)}
 
-@(image "kata-definitions/img/ts-dollar.png")
+@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
+
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+
+@DOLLAR
 
 Within five minutes, the student can translate a sentence of this type:
 
-"Make a game with an avatar."
+@italic{Make a game with an avatar.}
 
 To code of this type:
 
-@;need larger, more clearly separated image
-
 @(image "kata-definitions/img/avatar-1.png")
 
-@;tab in? otherwise format to separate from kata
 
-@italic{Review/Introduce}
+@subsubsection{Silver Avatar Kata (5 minutes)}
 
-        @itemlist[@item{@italic{What does each part of #lang ts-camp-jam-1 mean?
-                    (language, thoughtstem, what we are doing, first 1)}}
-                  @item{@italic{What is an avatar? (playable character)}}
-                  @item{@italic{What is a keyword? (optional additional info)}}
-                  @item{@italic{How do you know it's a keyword? (#:)}}]
+@margin-note*{@bold{Review/Introduce:} new keyword, the circle function & its parameters.}
 
-@italic{Bonus Dollars -- feel free to give out extra dollars for:}
+@margin-note*{@bold{Extra Dollars for:} helping teammates, trying new colors or shapes.}
 
-        @itemlist[@item{@italic{Helping out teammates.}}]
+@margin-note*{Additional shape options are triangle, square, star, rectangle (needs
+             2 numbers), ellipse (needs 2 numbers).}
 
-
-@bold{Silver Avatar Kata} (5 minutes)
+@DOLLAR @DOLLAR @DOLLAR
 
 Within five minutes, the student can translate a sentence of this type:
 
-"Make a game with a blue circle avatar."
+@italic{Make a game with a blue circle avatar.}
 
 To code of this type:
 
 @(image "kata-definitions/img/avatar-2.png")
 
-@italic{Review/Introduce}
 
-        @itemlist[@item{@italic{How many keywords now? (2 - #:avatar & #:sprite)}}
-                  @item{@italic{What info does the circle fuction need?
-                    (circle, size, fill option, color)}}]
+@subsubsection{Gold Avatar Kata (10 minutes)}
 
-@italic{Bonus Dollars -- feel free to give out extra dollars for:}
+@margin-note*{@bold{Review/Introduce:} (my-avatar) can be anything, draw simple --
+                    nothing is saved for later.}
 
-        @itemlist[@item{@italic{Helping out teammates.}}
-                  @item{@italic{Trying other colors.}}
-                  @item{@italic{Trying other shapes: triangle, square, star,
-                    rectangle (needs 2 numbers for size), ellipse (2 numbers).}}]
+@margin-note*{@bold{Extra Dollars for:} helping teammates, creativity, animation.}
 
+@margin-note*{Give students the piskel cheat sheet.}
 
-@bold{Gold Avatar Kata} (10 minutes) 
+@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
 
 Within ten minutes, the student can translate a sentence of this type:
-
-@margin-note*{Use the piskel cheat sheet.}
 
 @italic{Make a game with a simple custom avatar created in Piskel.}
 
@@ -127,17 +119,13 @@ To code of this type:
 
 @(image "kata-definitions/img/avatar-3.png")
 
-@italic{Review/Introduce}
+If a student creates an animation, they can use the following code instead:
 
-        @itemlist[@item{@italic{(my-avatar) can be anything, like (cool-dude).}}
-                  @item{@italic{}}]
+@(image "kata-definitions/img/avatar-3b.png")
 
-@italic{Bonus Dollars -- feel free to give out extra dollars for:}
+Additional keywords for custom-avatar:
 
-        @itemlist[@item{@italic{Helping out teammates.}}
-                  @item{@italic{Trying other colors.}}
-                  @item{@italic{Trying other shapes: triangle, square, star,
-                    rectangle (needs 2 numbers for size), ellipse (2 numbers).}}]
+@(image "kata-definitions/img/avatar-3c.png")
 
 @subsection{Enemy Katas}
 
