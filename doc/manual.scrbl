@@ -1,7 +1,34 @@
 #lang scribble/manual
 
+@(require ts-kata-util racket)
 @(define DOLLAR (image "kata-definitions/img/ts-dollar.png"
                        #:scale .15))
+
+@(define (dollars (n 1))
+   (map (thunk* DOLLAR) (range n)))
+
+@(define (camp-jam-kata #:document-level (level subsubsection)
+                        #:difficulty (difficulty 'bronze)
+                        #:title (title "Avatar")
+                        #:time-limit (time-limit 10)
+                        #:dollars    (num-dollars 1)
+                        #:review/introduce (review-introduce "concepts to review...")
+                        #:extra-dollars-for (extra-dollars-for "helping teammates...")
+                        . body)
+
+   @kata[#:document-level level
+         #:difficulty    difficulty
+         #:title title
+         #:time-limit time-limit]{
+
+ @(dollars num-dollars)
+  
+ @side-note["Review/Introduce" review-introduce]
+
+ @side-note["Extra Dollars for" extra-dollars-for]
+                               
+ @body
+ })
 
 @title{Game Design through Fortnite}
 
@@ -33,7 +60,7 @@ you're able to make.  One day, you'll be able to
 make games like Fortnite.  Or perhaps...
 even better ones!
 
-@(require ts-kata-util)
+
 
 
 @section{Meta Katas}
@@ -69,55 +96,35 @@ Fort building:
 @;====== AVATAR KATAS =======
 @subsection{Avatar Katas}
 
-@document-kata[#:document-level subsection
+@camp-jam-kata[#:document-level subsubsection
                #:difficulty    'bronze
                #:title "Avatar"
-               #:time-limit 5]{
-                               @DOLLAR
-                                
-                               This is a documented kata!  Yay!
-
-                               @(show-kata-code 'avatar-1)
-
-                               Hi this is some more docs...
+               #:time-limit 5
+               #:dollars 1
+               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword."
+               #:extra-dollars-for "helping teammates"]{
+ @(student-should-translate #:english "Make a game with an avatar"
+                            #:code 'avatar-1)
 }
 
-@;----- BRONZE AVATAR ------
-@subsubsection{Bronze Avatar Kata (5 minutes)}
-
-@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
-
-@margin-note*{@bold{Extra Dollars for:} helping teammates.}
-
-@DOLLAR
-
-Within five minutes, the student can translate a sentence of this type:
-
-@italic{Make a game with an avatar.}
-
-To code of this type:
-
-@(show-kata-code 'avatar-1)
 
 @;----- SILVER AVATAR ------
-@subsubsection{Silver Avatar Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} new keyword, the circle function & its parameters.}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'silver
+               #:title "Avatar"
+               #:time-limit 5
+               #:dollars 3
+               #:review/introduce "new keyword, the circle function & its parameters."
+               #:extra-dollars-for "helping teammates, trying new colors or shapes"]{
 
-@margin-note*{@bold{Extra Dollars for:} helping teammates, trying new colors or shapes.}
+ @side-note["Additional shapes"]{triangle, square, star, rectangle (needs
+  2 numbers), ellipse (needs 2 numbers).}
+  
+ @student-should-translate[#:english "Make a game with a blue circle avatar"
+                           #:code 'avatar-2]
+}
 
-@margin-note*{Additional shape options are triangle, square, star, rectangle (needs
-             2 numbers), ellipse (needs 2 numbers).}
-
-@DOLLAR @DOLLAR @DOLLAR
-
-Within five minutes, the student can translate a sentence of this type:
-
-@italic{Make a game with a blue circle avatar.}
-
-To code of this type:
-
-@(show-kata-code 'avatar-2)
 
 @;----- GOLD AVATAR ------
 @subsubsection{Gold Avatar Kata (10 minutes)}
