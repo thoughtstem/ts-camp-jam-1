@@ -94,11 +94,15 @@ Highlight the core values cheat sheets below and print. Cut into strips and put 
 
 Print out a copy of this schedule for each instructor.
 
+---------------------------
+
 @(image "doc/imgs/2018-fleet-winter-schedule.png")
 
 @subsection{Schedule breakdown}
 
 Highlight the schedule breakdown below and print a copy for each instructor.
+
+----------------------------
 
 @bold{8:45 am - 9:15 am : Drop-off}
 
@@ -184,6 +188,48 @@ Students can assist each other once they completed that code (no touching any ot
 
 @subsection{Camp Jam Rules}
 
+Print out a copy of the Camp Jam Rules for each instructor.
+
+------------------------------
+
+@larger{@larger{@bold{CAMP JAM RULES}}}
+
+------------------------------
+
+@larger{@bold{At the Beginning:}}
+@itemlist[
+ @item{@bold{Be positive}; encourage all students to continue and help each other}
+ @item{@bold{High focused energy}; praise them once they get stuff finished/working}
+ @item{@bold{Promote focus}; make sure everyone is on task and moving along}]
+
+
+
+@larger{@bold{During:}}
+@itemlist[
+ @item["Encourage students to:"
+       @itemlist[@item{@bold{Start Small, Test Often}}
+                 @item{Start with the @bold{1st Kata Codes}}
+                 @item{After that, @bold{then customize}}]]
+ @item{Work towards @bold{all students success}}
+ @item{Find ways to @bold{praise all teams} throughout the jam}
+ @itemlist[
+ @item["Life Lines:"
+       @itemlist[@item{Life Line is asking a coach for help}
+                 @item{Each student gets @bold{1 free Life Line} -- once used, the coach initials the name tag}
+                 @item{Each additional Life Line is @bold{$1 TSD}}]]]]
+
+
+
+@larger{@bold{At the End:}}
+@itemlist[
+ @item{Each student gets @bold{$10 TSD} for participating!}
+ @item["Scoring:"
+       @itemlist[@item{1 point per filled Health Bar Square}
+                 @item{3 points per Star Sticker}
+                 @item{5 points per Extra Life (heart sticker)}]]
+ @item{Emphasize @bold{Camp Total Points} over team or individual scores}
+ @item{Add camp total score to @bold{Whole Camp Leader Board}}]
+
 @subsection{Example Camp Jam code}
 
 @subsection{Dollars}
@@ -193,8 +239,8 @@ Students can assist each other once they completed that code (no touching any ot
 Attach a stopwatch to each clipboard.
 
 
-@;====== TABLE CHEST =======
-@section{Table Chest Materials}
+@;====== TABLE MATERIALS =======
+@section{Table Materials}
 
 @subsection{Student Kata Code}
 
