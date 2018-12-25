@@ -5,7 +5,7 @@
                 #:dart              (sword)
                 #:rarity            'rare
                 #:mouse-fire-button 'left
-                #:rapid-fire?       #f))
+                #:rapid-fire?        #f))
 
 (battle-arena-game
 #:weapon-list (list (my-weapon-2)))
