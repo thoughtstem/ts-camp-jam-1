@@ -33,6 +33,9 @@ you're able to make.  One day, you'll be able to
 make games like Fortnite.  Or perhaps...
 even better ones!
 
+@(require ts-kata-util)
+
+
 @section{Meta Katas}
 clone-entity
 <Core values.>
@@ -66,6 +69,19 @@ Fort building:
 @;====== AVATAR KATAS =======
 @subsection{Avatar Katas}
 
+@document-kata[#:document-level subsection
+               #:difficulty    'bronze
+               #:title "Avatar"
+               #:time-limit 5]{
+                               @DOLLAR
+                                
+                               This is a documented kata!  Yay!
+
+                               @(show-kata-code 'avatar-1)
+
+                               Hi this is some more docs...
+}
+
 @;----- BRONZE AVATAR ------
 @subsubsection{Bronze Avatar Kata (5 minutes)}
 
@@ -81,7 +97,7 @@ Within five minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/avatar-1.png")
+@(show-kata-code 'avatar-1)
 
 @;----- SILVER AVATAR ------
 @subsubsection{Silver Avatar Kata (5 minutes)}
@@ -101,7 +117,7 @@ Within five minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/avatar-2.png")
+@(show-kata-code 'avatar-2)
 
 @;----- GOLD AVATAR ------
 @subsubsection{Gold Avatar Kata (10 minutes)}
@@ -119,19 +135,19 @@ Within ten minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/avatar-3.png")
+@(show-kata-code 'avatar-3)
 
 @bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
 write code below, for an extra dollar!
 @DOLLAR
 
-@(image "kata-definitions/img/avatar-3b.png")
+@(show-kata-code 'avatar-3b)
 
 @bold{Bonus Code:} Add additional keywords to (custom-avatar) -- #:key-mode and
       #mouse-aim? -- for an extra dollar!
 @DOLLAR
 
-@(image "kata-definitions/img/avatar-3c.png")
+@(show-kata-code 'avatar-3c)
 
 @;====== ENEMY KATAS ======
 @subsection{Enemy Katas}
@@ -150,7 +166,7 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/enemy-1.png")
+@(show-kata-code 'enemy-1)
 
 @;----- SILVER ENEMY ------
 @subsubsection{Silver Enemy Kata (5 minutes)}
@@ -169,7 +185,7 @@ To code of this type:
 
 @margin-note*{@bold{Hint:} AI levels are: 'easy, 'medium, 'hard}
 
-@(image "kata-definitions/img/enemy-2.png")
+@(show-kata-code 'enemy-2)
 
 @;----- GOLD ENEMY ------
 @subsubsection{Gold Enemy Kata (10 minutes)}
@@ -186,14 +202,14 @@ Within ten minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/enemy-3.png")
+@(show-kata-code 'enemy-3)
 
 @bold{Bonus Code:} Create an animation in Piskel, export as sprite sheet and
 write code below, for an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/enemy-3-bonus.png")
+@(show-kata-code 'enemy-3-bonus)
 
 @;====== SPEAR KATAS ======
 @subsection{Spear Katas}
@@ -213,7 +229,7 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/spear-1.png")
+@(show-kata-code 'spear-1)
 
 @;----- SILVER SPEAR ------
 @subsubsection{Silver Spear Kata (5 minutes)}
@@ -231,13 +247,13 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/spear-1.png")
+@(show-kata-code 'spear-2)
 
 @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/spear-2-bonus.png")
+@(show-kata-code 'spear-2-bonus)
 
 @;----- GOLD SPEAR ------
 @subsubsection{Gold Spear Kata (10 minutes)}
@@ -253,13 +269,13 @@ Within ten minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/spear-3.png")
+@(show-kata-code 'spear-3)
 
 @bold{Bonus Code:} Have them add additional keywords to (spear) to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/spear-3-bonus.png")
+@(show-kata-code 'spear-3-bonus)
 
 @;====== SWORD KATAS ======
 @subsection{Sword Katas}
@@ -281,7 +297,7 @@ Within five minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/sword-1.png")
+@(show-kata-code 'sword-1)
 
 @;----- SILVER SWORD ------
 @subsubsection{Silver Sword Kata (5 minutes)}
@@ -301,13 +317,13 @@ Within five minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/sword-2.png")
+@(show-kata-code 'sword-2)
 
 @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/sword-2b.png")
+@(show-kata-code 'sword-2b)
 
 @;----- GOLD SWORD ------
 @subsubsection{Gold Sword Kata (10 minutes)}
@@ -327,13 +343,13 @@ Within ten minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/sword-3.png")
+@(show-kata-code 'sword-3)
 
 @bold{Bonus Code:} Have them add additional keywords to (sword) to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/sword-3b.png")
+@(show-kata-code 'sword-3b)
 
 @subsection{Paint Thrower Katas}
 
@@ -351,7 +367,7 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/paint-thrower-1.png")
+@(show-kata-code 'paint-thrower-1)
 
 @subsubsection{Silver Paint Thrower Kata (5 minutes)}
 
@@ -366,13 +382,13 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/paint-thrower-2.png")
+@(show-kata-code 'paint-thrower-2)
 
 @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
 
 @DOLLAR
 
-@(image "kata-definitions/img/paint-thrower-2-bonus.png")
+@(show-kata-code 'paint-thrower-2-bonus)
 
 @subsubsection{Gold Paint Thrower Kata (10 minutes)}
 
@@ -387,17 +403,21 @@ Within ten minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/paint-thrower-3.png")
+@(show-kata-code 'paint-thrower-3)
 
 @bold{Bonus Code:} Have them add additional keywords to (paint) to earn an extra dollar! Or award, bonus dollars for creativity!
 
 @DOLLAR
 
-@(image "kata-definitions/img/paint-thrower-3-bonus.png")
+@(show-kata-code 'paint-thrower-3-bonus)
+
+
+
+
 
 @(image "doc/imgs/avatar-dance.gif")
 
-@(image "kata-definitions/img/enemy-npc.png")
+@(show-kata-code 'enemy-npc)
 
   
 
