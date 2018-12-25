@@ -236,14 +236,27 @@ Clothes pin with crown?
 
 @section{Materials for Each Student}
 
+@subsection{Printing}
+
+Print one for each student:
+
+@bold{Kata Health Bar}
+
+@(image "doc/imgs/health-bar-name-badge.png"
+               #:scale 0.5)
+
+@bold{Game Jam Health Bar}
+
+@(image "doc/imgs/large-health-bar.png"
+               #:scale 0.5)
+
+@subsection{Packing}
+
 Pack one of the following for each student:
 
-@subsection{1 lanyard}
-
-@subsection{1 clear plastic badge holder}
-
-@subsection{1 kata health bar}
-
-When they arrive for the day, you will write the student's name on the back of this.
-
-@subsection{1 game jam health bar}
+@itemlist[
+ @item{1 ThoughtSTEM lanyard}
+ @item{1 clear plastic badge holder, attached to lanyard}
+ @item{1 printed kata health bar (see above) - When they arrive for the day, you will write the student's name on the back of this:}
+ @item{1 printed game jam health bar (see above)}
+       ]
