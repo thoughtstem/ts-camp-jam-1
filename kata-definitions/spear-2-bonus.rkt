@@ -1,6 +1,6 @@
 #lang ts-camp-jam-1
 
-(define-kata-code ts-camp-jam-1 spear-2
+(define-kata-code ts-camp-jam-1 spear-2-bonus
   (define (my-weapon-1)
     (custom-weapon #:name              "Spear"
                    #:sprite            SPEAR-ICON
