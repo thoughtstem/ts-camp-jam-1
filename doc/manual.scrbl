@@ -134,7 +134,7 @@ Fort building:
                #:title "Avatar"
                #:time-limit 10
                #:dollars 5
-               #:review/introduce "(my-avatar) can be anything, draw simple -- nothing is saved for later."
+               #:review/introduce "(my-avatar) can be renamed to anything, draw simple -- nothing is saved for later."
                #:extra-dollars-for "helping teammates, creativity."]{
                                                                                             
  @side-note["Tip"]{Give students the piskel cheat sheet.}
@@ -202,7 +202,7 @@ Fort building:
                #:extra-dollars-for "helping teammates, creativity."]{
  @side-note["Hint"]{Use the piskel cheat sheet!}
                                                                                  
- @(student-should-translate #:english "Make a game with a custom enemy image."
+ @(student-should-translate #:english "Make a game with an enemy using a custom image."
                             #:code 'enemy-3)
 }
 
@@ -253,7 +253,7 @@ Fort building:
  @side-note["Tip"]{Rarity indicates how many there will be in the world. All options are: 'common,
   'uncommon, 'rare, 'epic, 'lengendary.}
  
- @(student-should-translate #:english "Make a game with a customizable spear in it."
+ @(student-should-translate #:english "Make a game with your own defined spear."
                             #:code 'spear-2)
 
  @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
@@ -275,7 +275,7 @@ Fort building:
                #:extra-dollars-for "helping teammates, creativity."]{
  @side-note["Tip"]{Use the piskel cheat sheet! Have them draw fast & simple - they’re not going to keep it!}
   
- @(student-should-translate #:english "Make a game that has a customizable spear in it where you can modify its damage and durability."
+ @(student-should-translate #:english "Make a game that has a fully customizable spear in it where you can modify its damage and durability."
                             #:code 'spear-3)
 }
 
@@ -288,7 +288,7 @@ Fort building:
                #:dollars 1
                #:review/introduce "what do the new keywords mean?"
                #:extra-dollars-for "helping teammates, creativity."]{  
- @(student-should-translate #:english "Make a game that has a customizable spear in it where you can modify its speed, range, and sprite."
+ @(student-should-translate #:english "Make a game that has a fully customizable spear in it where you can modify its speed, range, and sprite."
                             #:code 'spear-4)
 }
 
@@ -375,7 +375,7 @@ Fort building:
                #:title "Paint Thrower"
                #:time-limit 5
                #:dollars 1
-               #:review/introduce "help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? weapon?"
+               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, list, keywords"
                #:extra-dollars-for "helping teammates."]{
  @side-note["Tip"]{Remember, keyword arguments (the parts of the code that start with "#:") are optional!)}
 
@@ -396,7 +396,7 @@ Fort building:
                                        
  @side-note["Hint"]{rarity levels are 'common, 'uncommon, 'rare, 'epic, 'legendary. Rarity is related to how many will spawn in the world!}
 
- @(student-should-translate #:english "Make a game that has a paint thrower in it with customizable rarity."
+ @(student-should-translate #:english "Make a game with your own defined paint thrower with customizable rarity."
                             #:code 'paint-thrower-2)
 
  @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!

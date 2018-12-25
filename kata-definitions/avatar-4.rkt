@@ -4,7 +4,7 @@
 (define-kata-code ts-camp-jam-1 avatar-4
   (define (my-avatar)
     (custom-avatar #:sprite (sheet->sprite STUDENT-IMAGE-HERE
-                                           #:columns 3)
+                                           #:columns 4)
                    #:key-mode   'wasd
                    #:mouse-aim? #t))
    
