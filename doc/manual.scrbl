@@ -129,11 +129,59 @@ Additional keywords for custom-avatar:
 
 @subsection{Enemy Katas}
 
+@subsubsection{Bronze Enemy Kata (5 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? enemy?}
+@margin-note*{@bold{Extra Dollars for:} Helping teammates}
+
+@DOLLAR
+
+Within five minutes, the student can translate an English sentence of this type:
+
+@italic{Make a game that has an enemy in it.}
+
+To code of this type:
+
 @(image "kata-definitions/img/enemy-1.png")
+
+@subsubsection{Silver Enemy Kata (5 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} The symbol "#:" denotes a keyword argument. These are always optional! Talk about the 5 keywords here!}
+@margin-note*{@bold{Review/Introduce:} (my-enemy) can be anything! It could be (bad-guy) instead!}
+
+@DOLLAR @DOLLAR @DOLLAR
+
+Within five minutes, the student can translate an English sentence of this type:
+
+"Make a game that has a customizable enemy in it."
+
+To code of this type:
+
+@margin-note*{@bold{Hint:} AI levels are: 'easy, 'medium, 'hard}
 
 @(image "kata-definitions/img/enemy-2.png")
 
+@subsubsection{Gold Enemy Kata (10 minutes)}
+
+@margin-note*{@bold{Hint:} Use the piskel cheat sheet!}
+@margin-note*{@bold{Hint:} Have them draw fast & simple - they're not going to keep it!}
+@margin-note*{@bold{Extra Dollars for:} Bonus code or creativity}
+
+@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+
+Within ten minutes, the student can translate an English sentence of this type:
+
+@italic{Make a game that has a custom image as an enemy.}
+
+To code of this type:
+
 @(image "kata-definitions/img/enemy-3.png")
+
+@bold{Bonus Code:} Have them create their own custom sprite sheet to earn an extra dollar!
+
+@DOLLAR
+
+@(image "kata-definitions/img/enemy-3-bonus.png")
 
 @subsection{Spear Katas}
 
