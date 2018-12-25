@@ -392,7 +392,7 @@ Fort building:
                #:time-limit 5
                #:dollars 3
                #:review/introduce "(my-weapon-3) could be anything; you could rename it to (paint-spitter)"
-               #:extra-dollars-for "helping teammates."]{
+               #:extra-dollars-for "bonus code, helping teammates."]{
                                        
  @side-note["Hint"]{rarity levels are 'common, 'uncommon, 'rare, 'epic, 'legendary. Rarity is related to how many will spawn in the world!}
 
@@ -419,7 +419,7 @@ Fort building:
                                        
  @side-note["Tip"]{Use the piskel cheat sheet! Have them draw fast & simple - they're not going to keep it!}
 
- @(student-should-translate #:english "Make a game that has a customizable paint thrower in it where you can modify its damage and durability."
+ @(student-should-translate #:english "Make a game that has a customizable paint thrower in it where you can modify the damage and durability of the paint."
                             #:code 'paint-thrower-3)
 }
 
@@ -433,7 +433,7 @@ Fort building:
                #:dollars 1
                #:review/introduce "what do the new keywords mean?"
                #:extra-dollars-for "helping teammates, creativity."]{
- @(student-should-translate #:english  "Make a game that has a customizable paint in it where you can modify its speed, range, and sprite."
+ @(student-should-translate #:english  "Make a game that has a customizable paint thrower in it where you can modify the speed, range, and sprite of the paint."
                             #:code 'paint-thrower-4)
 }
 
