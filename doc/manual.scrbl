@@ -62,10 +62,14 @@ Fort building:
   Offensive
   Defensive
 
+@;====== MELEE BATTLE MODE KATAS ======
+@;============== DAY 1 ================
 @section{Melee Battle Mode Katas}
 
+@;====== AVATAR KATAS =======
 @subsection{Avatar Katas}
 
+@;----- BRONZE AVATAR ------
 @subsubsection{Bronze Avatar Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword.}
@@ -84,7 +88,7 @@ To code of this type:
 
 @(show-kata-code 'avatar-1)
 
-
+@;----- SILVER AVATAR ------
 @subsubsection{Silver Avatar Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} new keyword, the circle function & its parameters.}
@@ -104,7 +108,7 @@ To code of this type:
 
 @(show-kata-code 'avatar-2)
 
-
+@;----- GOLD AVATAR ------
 @subsubsection{Gold Avatar Kata (10 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} (my-avatar) can be anything, draw simple --
@@ -132,8 +136,10 @@ Additional keywords for custom-avatar:
 
 @(image "kata-definitions/img/avatar-3c.png")
 
+@;====== ENEMY KATAS ======
 @subsection{Enemy Katas}
 
+@;----- BRONZE ENEMY ------
 @subsubsection{Bronze Enemy Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? enemy?}
@@ -149,6 +155,7 @@ To code of this type:
 
 @(show-kata-code 'enemy-1)
 
+@;----- SILVER ENEMY ------
 @subsubsection{Silver Enemy Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} The symbol "#:" denotes a keyword argument. These are always optional! Talk about the 5 keywords here!}
@@ -166,6 +173,7 @@ To code of this type:
 
 @(show-kata-code 'enemy-2)
 
+@;----- GOLD ENEMY ------
 @subsubsection{Gold Enemy Kata (10 minutes)}
 
 @margin-note*{@bold{Hint:} Use the piskel cheat sheet!}
@@ -188,8 +196,10 @@ To code of this type:
 
 @(image "kata-definitions/img/enemy-3-bonus.png")
 
+@;====== SPEAR KATAS ======
 @subsection{Spear Katas}
 
+@;----- BRONZE SPEAR ------
 @subsubsection{Bronze Spear Kata (5 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? weapon?}
@@ -206,6 +216,7 @@ To code of this type:
 
 @(image "kata-definitions/img/spear-1.png")
 
+@;----- SILVER SPEAR ------
 @subsubsection{Silver Spear Kata (5 minutes)}
 
 @margin-note*{@bold{Hint:} (my-weapon) could be anything; you could rename it to (sharp-stick)}
@@ -227,6 +238,7 @@ To code of this type:
 
 @(image "kata-definitions/img/spear-2-bonus.png")
 
+@;----- GOLD SPEAR ------
 @subsubsection{Gold Spear Kata (10 minutes)}
 
 @margin-note*{@bold{Review/Introduce:} (my-weapon-1) and (my-spear) can be renamed to anything you'd like!}
@@ -248,9 +260,79 @@ To code of this type:
 
 @(image "kata-definitions/img/spear-3-bonus.png")
 
+@;====== SWORD KATAS ======
 @subsection{Sword Katas}
 
-Katas here
+@;----- BRONZE SWORD ------
+@subsubsection{Bronze Sword Kata (5 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, list, keywords.}
+
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+
+@margin-note*{"Sword" can be anything, like "Amazing Sword of Awesome"}
+
+@DOLLAR
+
+Within five minutes, the student can translate a sentence of this type:
+
+@italic{Make a game that has a sword.}
+
+To code of this type:
+
+@(image "kata-definitions/img/sword-1.png")
+
+@;----- SILVER SWORD ------
+@subsubsection{Silver Sword Kata (5 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} new keyword, customizable function names (my-weapon-2).}
+
+@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+
+@margin-note*{Rarity indicates how many there will be in the world. All options are: 'common,
+              'uncommon, 'rare, 'epic, 'lengendary}
+
+@DOLLAR @DOLLAR @DOLLAR
+
+Within five minutes, the student can translate a sentence of this type:
+
+@italic{Make a game with your own defined sword.}
+
+To code of this type:
+
+@(image "kata-definitions/img/sword-2.png")
+
+@bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
+
+@DOLLAR
+
+@(image "kata-definitions/img/sword-2b.png")
+
+@;----- GOLD SWORD ------
+@subsubsection{Gold Sword Kata (10 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} function names can be anything, draw simple --
+                    nothing is saved for later.}
+
+@margin-note*{@bold{Extra Dollars for:} helping teammates, creativity.}
+
+@margin-note*{Give students the piskel cheat sheet.}
+
+@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+
+Within ten minutes, the student can translate a sentence of this type:
+
+@italic{Make a game with a fully customized sword.}
+
+To code of this type:
+
+@(image "kata-definitions/img/sword-3.png")
+
+@bold{Bonus Code:} Have them add additional keywords to (sword) to earn an extra dollar!
+
+@DOLLAR
+
+@(image "kata-definitions/img/sword-3b.png")
 
 @subsection{Paint Thrower Katas}
 
