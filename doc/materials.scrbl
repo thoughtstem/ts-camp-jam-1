@@ -5,6 +5,22 @@
 
 This is essentially a packing list of all materials necessary to run this camp.
 
+
+@;====== EQUIPMENT =======
+@section{Equipment}
+
+Pack the following materials:
+
+@itemlist[
+ @item{30 chromebooks}
+ @item{30 chargers}
+ @item{30 mice}
+ @item{8 power strips}
+ @item{8 extension cords}
+ @item{5 clipboards - see below for what should be attached}
+ @item{Projector - if location doesn't have one}
+ @item{Extra tables - if location doesn't have enough for students + marketplace + game jam score}]
+
 @;====== TEACHER CLIPBOARD =======
 @section{Teacher Clipboard Materials}
 
@@ -16,7 +32,7 @@ Print out each of the katas for the day. Katas are found in these docs. For exam
 
 @subsection{Core Values Cheat Sheet}
 
-Copy the core values cheat sheets below and print. Cut into strips and put one on each instructor's clipboard.
+Highlight the core values cheat sheets below and print. Cut into strips and put one on each instructor's clipboard.
 
 @bold{Core Values}
 
@@ -82,7 +98,7 @@ Print out a copy of this schedule for each instructor.
 
 @subsection{Schedule breakdown}
 
-Print out a copy of this schedule breakdown for each instructor.
+Highlight the schedule breakdown below and print a copy for each instructor.
 
 @bold{8:45 am - 9:15 am : Drop-off}
 
@@ -167,40 +183,67 @@ Students can assist each other once they completed that code (no touching any ot
 @bold{3:45 pm - 4:15 pm : Pick-up}
 
 @subsection{Camp Jam Rules}
+
 @subsection{Example Camp Jam code}
+
 @subsection{Dollars}
-@subsection{Stop watch}
+
+@subsection{Stopwatch}
+
+Attach a stopwatch to each clipboard.
 
 
 @;====== TABLE CHEST =======
 @section{Table Chest Materials}
 
 @subsection{Student Kata Code}
+
 1st Katas - one per student (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-1.rkt)
+
 katas 2 and 3 (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-2-3.rkt)
+
 @subsection{Hint Sheets}
+
 2 per Kata (in ts-camp-jam-1/fleet/fleet-wed-12-26-students-hints-all.rkt)
+
 @subsection{Markers and Stickers}
+
 @subsection{Piskel Cheat Sheet}
 
 @;====== IN CLASSROOM =======
 @section{In Classroom Materials}
 
 @subsection{Daily Team Page}
+
 On butcher paper
+
 Include date, theme, 5 columns w/ space for team name and 5 game jam haleth bars each
+
 @subsection{Whole Camp Leaderboard}
+
 Include every date/theme, place for total score
+
 @subsection{Leaderboard Winner Indicator}
+
 Clothes pin with crown?
+
 @subsection{Markers}
-@subsection{Stickers}
+
+@subsection{Heart & Star Stickers}
 
 
 @;====== MATERIALS FOR EACH STUDENT =======
+
 @section{Materials for Each Student}
+
+Pack one of the following for each student:
+
 @subsection{1 lanyard}
-@subsection{1 badge holder}
+
+@subsection{1 clear plastic badge holder}
+
 @subsection{1 kata health bar}
-The student's name will be written on the back.
+
+When they arrive for the day, you will write the student's name on the back of this.
+
 @subsection{1 game jam health bar}
