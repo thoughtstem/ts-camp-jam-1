@@ -331,9 +331,63 @@ To code of this type:
 
 @subsection{Paint Thrower Katas}
 
-Katas here
+@subsubsection{Bronze Paint Thrower Kata (5 minutes)}
 
-@section{???}
+@margin-note*{@bold{Review/Introduce:} Help them memorize the code! What is lang? ts? camp-jam-1? battle-arena-game? weapon?}
+@margin-note*{Remember, keywords (the parts of the code that start with "#:" are optional!)}
+@margin-note*{@bold{Extra Dollars for:} Helping teammates!}
+
+@DOLLAR
+
+Within five minutes, the student can translate an English sentence of this type:
+
+"Make a game that has a paint thrower in it."
+
+To code of this type:
+
+@(image "kata-definitions/img/paint-thrower-1.png")
+
+@subsubsection{Silver Paint Thrower Kata (5 minutes)}
+
+@margin-note*{@bold{Hint:} (my-weapon-3) could be anything; you could rename it to (paint-spitter)}
+@margin-note*{@bold{Hint:} rarity levels are 'common, 'uncommon, 'rare, 'epic, 'legendary. Rarity is related to how many will spawn in the world!}
+
+@DOLLAR @DOLLAR @DOLLAR
+
+Within five minutes, the student can translate an English sentence of this type:
+
+"Make a game that has a paint thrower in it with customizable rarity."
+
+To code of this type:
+
+@(image "kata-definitions/img/paint-thrower-2.png")
+
+@bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
+
+@DOLLAR
+
+@(image "kata-definitions/img/paint-thrower-2-bonus.png")
+
+@subsubsection{Gold Paint Thrower Kata (10 minutes)}
+
+@margin-note*{@bold{Review/Introduce:} (my-paint) can be renamed to anything you'd like!}
+@margin-note*{@bold{Hint:} Use the piskel cheat sheet! Have them draw fast & simple - they're not going to keep it!}
+
+@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+
+Within ten minutes, the student can translate an English sentence of this type:
+
+"Make a game that has a customizable paint thrower in it where you can modify its damage and durability."
+
+To code of this type:
+
+@(image "kata-definitions/img/paint-thrower-3.png")
+
+@bold{Bonus Code:} Have them add additional keywords to (paint) to earn an extra dollar! Or award, bonus dollars for creativity!
+
+@DOLLAR
+
+@(image "kata-definitions/img/paint-thrower-3-bonus.png")
 
 @(image "doc/imgs/avatar-dance.gif")
 
