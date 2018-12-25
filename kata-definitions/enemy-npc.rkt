@@ -30,6 +30,6 @@
 
 
 (module+ test
-  (run:enemy-npc))
+  #;(run:enemy-npc))
 
 

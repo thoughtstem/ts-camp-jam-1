@@ -32,6 +32,9 @@ you're able to make.  One day, you'll be able to
 make games like Fortnite.  Or perhaps...
 even better ones!
 
+@(require ts-kata-util)
+
+
 @section{Meta Katas}
 clone-entity
 <Core values.>
@@ -72,7 +75,8 @@ To code of this type:
 
 @;need larger, more clearly separated image
 
-@(image "kata-definitions/img/avatar-1.png")
+
+@(show-kata-code 'avatar-1)
 
 @;tab in? otherwise format to separate from kata
 
@@ -97,7 +101,7 @@ Within five minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/avatar-2.png")
+@(show-kata-code 'avatar-2)
 
 @italic{Review/Introduce}
 
@@ -123,7 +127,7 @@ Within ten minutes, the student can translate a sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/avatar-3.png")
+@(show-kata-code 'avatar-3)
 
 @italic{Review/Introduce}
 
@@ -149,7 +153,7 @@ Within five minutes, the student can translate an English sentence of this type:
 
 To code of this type:
 
-@(image "kata-definitions/img/enemy-1.png")
+@(show-kata-code 'enemy-1)
 
 @italic{Review/Introduce}
 @itemlist[
@@ -169,7 +173,7 @@ To code of this type:
 
 @margin-note*{Hint: AI levels are: 'easy, 'medium, 'hard}
 
-@(image "kata-definitions/img/enemy-2.png")
+@(show-kata-code 'enemy-2)
 
 @italic{Review/Introduce}
 @itemlist[
@@ -188,7 +192,7 @@ Within ten minutes, the student can translate an English sentence of this type:
 To code of this type:
 @margin-note*{Have students draw fast & simple! They won't keep it. Also, use the piskel cheat sheet.}
 
-@(image "kata-definitions/img/enemy-3.png")
+@(show-kata-code 'enemy-3)
 
 @italic{Review/Introduce}
 @itemlist[
@@ -210,7 +214,7 @@ Katas here
 
 @(image "doc/imgs/avatar-dance.gif")
 
-@(image "kata-definitions/img/enemy-npc.png")
+@(show-kata-code 'enemy-npc)
 
   
 
