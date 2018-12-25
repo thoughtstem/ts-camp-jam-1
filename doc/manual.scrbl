@@ -216,143 +216,137 @@ Fort building:
 @subsection{Spear Katas}
 
 @;----- BRONZE SPEAR ------
-@subsubsection{Bronze Spear Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list.}
-@margin-note*{@bold{Extra Dollars for:} helping teammates.}
-@margin-note*{"Spear" can be anything, like "Amaze-spear"}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'bronze
+               #:title "Spear"
+               #:time-limit 5
+               #:dollars 1
+               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
+               #:extra-dollars-for "helping teammates."]{
 
-@DOLLAR
-
-Within five minutes, the student can translate an English sentence of this type:
-
-"Make a game that has a spear."
-
-To code of this type:
-
-@(show-kata-code 'spear-1)
+ @side-note["Hint"]{"Spear" can be anything, like "Amaze-spear".}
+  
+ @(student-should-translate #:english "Make a game that has a spear."
+                            #:code 'spear-1)
+}
 
 @;----- SILVER SPEAR ------
-@subsubsection{Silver Spear Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} new keyword, customizable function names (my-weapon-1).}
-@margin-note*{@bold{Extra Dollars for:} helping teammates.}
-@margin-note*{Rarity indicates how many there will be in the world. All options are: 'common,
-              'uncommon, 'rare, 'epic, 'lengendary}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'silver
+               #:title "Spear"
+               #:time-limit 5
+               #:dollars 3
+               #:review/introduce "new keyword, customizable function names (my-weapon-1)."
+               #:extra-dollars-for "helping teammates."]{
+                                                         
+ @side-note["Tip"]{Rarity indicates how many there will be in the world. All options are: 'common,
+  'uncommon, 'rare, 'epic, 'lengendary}
+ 
+ @(student-should-translate #:english "Make a game with a customizable spear in it."
+                            #:code 'spear-2)
 
-@DOLLAR @DOLLAR @DOLLAR
+ @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
 
-Within five minutes, the student can translate an English sentence of this type:
+ @DOLLAR
 
-"Make a game with a ."
+ @(show-kata-code 'spear-2-bonus)
+}
 
-To code of this type:
-
-@(show-kata-code 'spear-2)
-
-@bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
-
-@DOLLAR
-
-@(show-kata-code 'spear-2-bonus)
 
 @;----- GOLD SPEAR ------
-@subsubsection{Gold Spear Kata (10 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} (my-weapon-1) and (my-spear) can be renamed to anything you'd like!}
-@margin-note*{@bold{Hint:} Use the piskel cheat sheet! Have them draw fast & simple - they're not going to keep it!}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'gold
+               #:title "Spear"
+               #:time-limit 10
+               #:dollars 5
+               #:review/introduce "(my-weapon-1) and (my-spear) can be renamed to anything you'd like!"
+               #:extra-dollars-for ""]{
+ @side-note["Tip"]{Use the piskel cheat sheet! Have them draw fast & simple - they’re not going to keep it!}
+  
+ @(student-should-translate #:english "Make a game that has a customizable spear in it where you can modify its damage and durability."
+                            #:code 'spear-3)
+  
+ @bold{Bonus Code:} Have them add additional keywords to (spear) to earn an extra dollar!
 
-@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+ @DOLLAR
 
-Within ten minutes, the student can translate an English sentence of this type:
+ @(show-kata-code 'spear-3-bonus)
+}
 
-"Make a game that has a customizable spear in it where you can modify its damage and durability."
-
-To code of this type:
-
-@(show-kata-code 'spear-3)
-
-@bold{Bonus Code:} Have them add additional keywords to (spear) to earn an extra dollar!
-
-@DOLLAR
-
-@(show-kata-code 'spear-3-bonus)
 
 @;====== SWORD KATAS ======
 @subsection{Sword Katas}
 
 @;----- BRONZE SWORD ------
-@subsubsection{Bronze Sword Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} meaning of #lang ts-camp-jam-1, battle-arena-game, list, keywords.}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'bronze
+               #:title "Sword"
+               #:time-limit 5
+               #:dollars 1
+               #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, list, keywords."
+               #:extra-dollars-for "helping teammates."]{
+ @side-note["Tip"]{"Sword" can be anything, like "Amazing Sword of Awesome"}
+  
+ @(student-should-translate #:english "Make a game that has a sword."
+                            #:code 'sword-1)
+}
 
-@margin-note*{@bold{Extra Dollars for:} helping teammates.}
-
-@margin-note*{"Sword" can be anything, like "Amazing Sword of Awesome"}
-
-@DOLLAR
-
-Within five minutes, the student can translate a sentence of this type:
-
-@italic{Make a game that has a sword.}
-
-To code of this type:
-
-@(show-kata-code 'sword-1)
 
 @;----- SILVER SWORD ------
-@subsubsection{Silver Sword Kata (5 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} new keyword, customizable function names (my-weapon-2).}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'silver
+               #:title "Sword"
+               #:time-limit 5
+               #:dollars 3
+               #:review/introduce "new keyword, customizable function names (my-weapon-2)."
+               #:extra-dollars-for "helping teammates."]{
+ @side-note["Tip"]{Rarity indicates how many there will be in the world. All options are: 'common,
+  'uncommon, 'rare, 'epic, 'lengendary.}
+ 
+ @(student-should-translate #:english "Make a game with your own defined sword."
+                            #:code 'sword-2)
+ @bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
 
-@margin-note*{@bold{Extra Dollars for:} helping teammates.}
+ @DOLLAR
 
-@margin-note*{Rarity indicates how many there will be in the world. All options are: 'common,
-              'uncommon, 'rare, 'epic, 'lengendary}
+ @(show-kata-code 'sword-2b)
+}
 
-@DOLLAR @DOLLAR @DOLLAR
-
-Within five minutes, the student can translate a sentence of this type:
-
-@italic{Make a game with your own defined sword.}
-
-To code of this type:
-
-@(show-kata-code 'sword-2)
-
-@bold{Bonus Code:} Have them add additional keywords to (custom-weapon) to earn an extra dollar!
-
-@DOLLAR
-
-@(show-kata-code 'sword-2b)
 
 @;----- GOLD SWORD ------
-@subsubsection{Gold Sword Kata (10 minutes)}
 
-@margin-note*{@bold{Review/Introduce:} function names can be anything, draw simple --
-                    nothing is saved for later.}
+@camp-jam-kata[#:document-level subsubsection
+               #:difficulty    'gold
+               #:title "Sword"
+               #:time-limit 10
+               #:dollars 5
+               #:review/introduce "function names can be anything, draw simple --
+                    nothing is saved for later."
+               #:extra-dollars-for "helping teammates, creativity."]{
+                                                                     
+ @side-note{Give students the piskel cheat sheet.}
 
-@margin-note*{@bold{Extra Dollars for:} helping teammates, creativity.}
+ @(student-should-translate #:english "Make a game with a fully customized sword."
+                            #:code 'sword-3)
 
-@margin-note*{Give students the piskel cheat sheet.}
+ @bold{Bonus Code:} Have them add additional keywords to (sword) to earn an extra dollar!
 
-@DOLLAR @DOLLAR @DOLLAR @DOLLAR @DOLLAR
+ @DOLLAR
 
-Within ten minutes, the student can translate a sentence of this type:
+ @(show-kata-code 'sword-3b)
+}
 
-@italic{Make a game with a fully customized sword.}
 
-To code of this type:
-
-@(show-kata-code 'sword-3)
-
-@bold{Bonus Code:} Have them add additional keywords to (sword) to earn an extra dollar!
-
-@DOLLAR
-
-@(show-kata-code 'sword-3b)
+@;====== PAINT THROWER KATAS ======
 
 @subsection{Paint Thrower Katas}
+
+@;----- BRONZE PAINT THROWER ------
 
 @subsubsection{Bronze Paint Thrower Kata (5 minutes)}
 
@@ -369,6 +363,8 @@ Within five minutes, the student can translate an English sentence of this type:
 To code of this type:
 
 @(show-kata-code 'paint-thrower-1)
+
+@;----- SILVER PAINT THROWER ------
 
 @subsubsection{Silver Paint Thrower Kata (5 minutes)}
 
@@ -390,6 +386,8 @@ To code of this type:
 @DOLLAR
 
 @(show-kata-code 'paint-thrower-2-bonus)
+
+@;----- GOLD PAINT THROWER ------
 
 @subsubsection{Gold Paint Thrower Kata (10 minutes)}
 
