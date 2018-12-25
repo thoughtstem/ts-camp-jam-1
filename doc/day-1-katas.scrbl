@@ -17,6 +17,7 @@
                #:title "Avatar"
                #:time-limit 5
                #:dollars 1
+               #:health-bar COLOR-BAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, avatar, keyword."
                #:extra-dollars-for "helping teammates."]{
  @(student-should-translate #:english "Make a game with an avatar."
@@ -30,6 +31,7 @@
                #:title "Avatar"
                #:time-limit 5
                #:dollars 3
+               #:health-bar ADD-STAR
                #:review/introduce "new keyword, the circle function & its parameters."
                #:extra-dollars-for "helping teammates, trying new colors or shapes."]{
 
@@ -48,6 +50,7 @@
                #:title "Avatar"
                #:time-limit 10
                #:dollars 5
+               #:health-bar ADD-HEART
                #:review/introduce "(my-avatar) can be renamed to anything, draw simple -- nothing is saved for later."
                #:extra-dollars-for "helping teammates, creativity."]{
                                                                                             
@@ -65,6 +68,7 @@
                #:title "Avatar"
                #:time-limit 10
                #:dollars 1
+               #:health-bar ADD-HEART
                #:review/introduce "what do new keywords mean? what does sheet->sprite mean?"
                #:extra-dollars-for "helping teammates, creativity."]{
  @(student-should-translate #:english "Make a game with a custom avatar that uses a sprite sheet created in Piskel and adds additional customizations to (custom-avatar) including key-mode and mouse-aim."
@@ -81,6 +85,7 @@
                #:title "Enemy"
                #:time-limit 5
                #:dollars 1
+               #:health-bar COLOR-BAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, enemy."
                #:extra-dollars-for "helping teammates."]{
  @(student-should-translate #:english "Make a game with an enemy."
@@ -95,6 +100,7 @@
                #:title "Enemy"
                #:time-limit 5
                #:dollars 3
+               #:health-bar ADD-STAR
                #:review/introduce "all the new keywords, keywords are always optional,
                     (my-enemy) can be anything."
                #:extra-dollars-for "helping teammates."]{
@@ -112,6 +118,7 @@
                #:title "Enemy"
                #:time-limit 10
                #:dollars 5
+               #:health-bar ADD-HEART
                #:review/introduce "draw simple -- nothing is saved for later."
                #:extra-dollars-for "helping teammates, creativity."]{
  @side-note["Hint"]{Use the piskel cheat sheet!}
@@ -128,6 +135,7 @@
                #:title "Enemy"
                #:time-limit 10
                #:dollars 1
+               #:health-bar ADD-HEART
                #:review/introduce "what does sheet->sprite mean?"
                #:extra-dollars-for "helping teammates, creativity."]{
  @(student-should-translate #:english "Make a game with a custom enemy that uses a sprite sheet created in Piskel."
@@ -145,6 +153,7 @@
                #:title "Spear"
                #:time-limit 5
                #:dollars 1
+               #:health-bar COLOR-BAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
 
@@ -161,6 +170,7 @@
                #:title "Spear"
                #:time-limit 5
                #:dollars 3
+               #:health-bar ADD-STAR
                #:review/introduce "new keyword, customizable function names (my-weapon-1)."
                #:extra-dollars-for "bonus code, helping teammates."]{
                                                          
@@ -185,6 +195,7 @@
                #:title "Spear"
                #:time-limit 10
                #:dollars 5
+               #:health-bar ADD-HEART
                #:review/introduce "(my-weapon-1) and (my-spear) can be renamed to anything you'd like!"
                #:extra-dollars-for "helping teammates, creativity."]{
  @side-note["Tip"]{Use the piskel cheat sheet! Have them draw fast & simple - they’re not going to keep it!}
@@ -200,6 +211,7 @@
                #:title "Spear"
                #:time-limit 10
                #:dollars 1
+               #:health-bar ADD-HEART
                #:review/introduce "what do the new keywords mean?"
                #:extra-dollars-for "helping teammates, creativity."]{  
  @(student-should-translate #:english "Make a game that has a fully customizable spear in it where you can modify its speed, range, and sprite."
@@ -216,6 +228,7 @@
                #:title "Sword"
                #:time-limit 5
                #:dollars 1
+               #:health-bar COLOR-BAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, list, keywords."
                #:extra-dollars-for "helping teammates."]{
  @side-note["Tip"]{"Sword" can be anything, like "Amazing Sword of Awesome"}
@@ -232,6 +245,7 @@
                #:title "Sword"
                #:time-limit 5
                #:dollars 3
+               #:health-bar ADD-STAR
                #:review/introduce "new keyword, customizable function names (my-weapon-2)."
                #:extra-dollars-for "helping teammates."]{
  @side-note["Tip"]{Rarity indicates how many there will be in the world. All options are: 'common,
@@ -254,6 +268,7 @@
                #:title "Sword"
                #:time-limit 10
                #:dollars 5
+               #:health-bar ADD-HEART
                #:review/introduce "function names can be anything, draw simple --
                     nothing is saved for later."
                #:extra-dollars-for "helping teammates, creativity."]{
@@ -271,6 +286,7 @@
                #:title "Sword"
                #:time-limit 10
                #:dollars 1
+               #:health-bar ADD-HEART
                #:review/introduce "what do the new keywords mean?"
                #:extra-dollars-for "helping teammates, creativity."]{
                                                    
@@ -289,6 +305,7 @@
                #:title "Paint Thrower"
                #:time-limit 5
                #:dollars 1
+               #:health-bar COLOR-BAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, list, keywords"
                #:extra-dollars-for "helping teammates."]{
  @side-note["Tip"]{Remember, keyword arguments (the parts of the code that start with "#:") are optional!)}
@@ -305,6 +322,7 @@
                #:title "Paint Thrower"
                #:time-limit 5
                #:dollars 3
+               #:health-bar ADD-STAR
                #:review/introduce "(my-weapon-3) could be anything; you could rename it to (paint-spitter)"
                #:extra-dollars-for "bonus code, helping teammates."]{
                                        
@@ -328,6 +346,7 @@
                #:title "Paint Thrower"
                #:time-limit 10
                #:dollars 5
+               #:health-bar ADD-HEART
                #:review/introduce "(my-paint) can be renamed to anything you'd like!"
                #:extra-dollars-for "helping teammates, creativity."]{
                                        
@@ -345,6 +364,7 @@
                #:title "Paint Thrower"
                #:time-limit 10
                #:dollars 1
+               #:health-bar ADD-HEART
                #:review/introduce "what do the new keywords mean?"
                #:extra-dollars-for "helping teammates, creativity."]{
  @(student-should-translate #:english  "Make a game that has a customizable paint thrower in it where you can modify the speed, range, and sprite of the paint."

@@ -3,10 +3,10 @@
 
 (define-kata-code ts-camp-jam-1 enemy-npc
   (define (enemy-npc level)
-    (custom-enemy #:amount-in-world 10
+    (custom-enemy #:amount-in-world 28
                   #:ai              level
-                  #:health          100
-                  #:shield          200
+                  #:health          1
+                  #:shield          1
                 
                   ;Change this to take an entity, not a system/component
                   #:weapon          (custom-weapon-system

@@ -1,10 +1,21 @@
 #lang scribble/manual
 
 @(require racket
-          ts-kata-util)
+          ts-kata-util
+          2htdp/image)
 
-@(provide DOLLAR
-          camp-jam-kata)
+@(provide camp-jam-kata
+          COLOR-BAR
+          ADD-STAR
+          ADD-HEART
+          DOLLAR)
+
+@(define COLOR-BAR (image "doc/imgs/color-bar.png"
+                          #:scale .5))
+@(define ADD-STAR (image "doc/imgs/star-sticker.png"
+                          #:scale .5))
+@(define ADD-HEART (image "doc/imgs/extra-life.png"
+                          #:scale .5))
 
 @(define DOLLAR (image "kata-definitions/img/ts-dollar.png"
                        #:scale .15))
@@ -17,6 +28,7 @@
                         #:title (title "Avatar")
                         #:time-limit (time-limit 10)
                         #:dollars    (num-dollars 1)
+                        #:health-bar (health-bar empty-image)
                         #:review/introduce (review-introduce "concepts to review...")
                         #:extra-dollars-for (extra-dollars-for "helping teammates...")
                         . body)
@@ -27,6 +39,8 @@
          #:time-limit time-limit]{
 
  @(dollars num-dollars)
+
+ @health-bar
   
  @side-note["Review/Introduce" review-introduce]
 
