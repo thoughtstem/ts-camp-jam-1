@@ -1,5 +1,7 @@
 #lang scribble/manual
 
+@(require 2htdp/image)
+
 @;============== CAMP MATERIALS ================
 @title{Camp Materials}
 
@@ -90,15 +92,33 @@ Highlight the core values cheat sheets below and print. Cut into strips and put 
 
 ---------------------------
 
+@bold{Core Values}
+
+@italic{Hand motions can make these easier to remember, repeat as needed:}
+
+@itemlist[
+ @item{It’s not about my CODE (point to computer).
+       
+  It’s about what I CAN code (point to brain).}
+ @item{It’s not about ME (point to self).
+       
+  It’s about my TEAM (air-draw a flat circle with finger pointing up).}]
+
 @subsection{Schedule}
 
 Print out a copy of this schedule for each instructor.
+
+---------------------------
 
 @(image "doc/imgs/2018-fleet-winter-schedule.png")
 
 @subsection{Schedule breakdown}
 
 Highlight the schedule breakdown below and print a copy for each instructor.
+
+----------------------------
+
+@larger{@bold{Camp Schedule Breakdown}}
 
 @bold{8:45 am - 9:15 am : Drop-off}
 
@@ -184,7 +204,95 @@ Students can assist each other once they completed that code (no touching any ot
 
 @subsection{Camp Jam Rules}
 
+Print out a copy of the Camp Jam Rules for each instructor.
+
+------------------------------
+
+@larger{@larger{@bold{CAMP JAM RULES}}}
+
+------------------------------
+
+@larger{@bold{At the Beginning:}}
+@itemlist[
+ @item{@bold{Be positive}; encourage all students to continue and help each other}
+ @item{@bold{High focused energy}; praise them once they get stuff finished/working}
+ @item{@bold{Promote focus}; make sure everyone is on task and moving along}]
+
+
+
+@larger{@bold{During:}}
+@itemlist[
+ @item["Encourage students to:"
+       @itemlist[@item{@bold{Start Small, Test Often}}
+                 @item{Start with the @bold{1st Kata Codes}}
+                 @item{After that, @bold{then customize}}]]
+ @item{Work towards @bold{all students success}}
+ @item{Find ways to @bold{praise all teams} throughout the jam}
+ @itemlist[
+ @item["Life Lines:"
+       @itemlist[@item{Life Line is asking a coach for help}
+                 @item{Each student gets @bold{1 free Life Line} -- once used, the coach initials the name tag}
+                 @item{Each additional Life Line is @bold{$1 TSD}}]]]]
+
+
+
+@larger{@bold{At the End:}}
+@itemlist[
+ @item{Each student gets @bold{$10 TSD} for participating!}
+ @item["Scoring:"
+       @itemlist[@item{1 point per filled Health Bar Square}
+                 @item{3 points per Star Sticker}
+                 @item{5 points per Extra Life (heart sticker)}]]
+ @item{Emphasize @bold{Camp Total Points} over team or individual scores}
+ @item{Add camp total score to @bold{Whole Camp Leader Board}}]
+
 @subsection{Example Camp Jam code}
+
+This is an example of how all the components come together during camp-jam into one piece of code:
+
+@(define (cool-guy) (bitmap "../fleet/cool-guy.png"))
+@(define (bad-guy) (bitmap "../fleet/bad-guy.png"))
+@(define (spear) (bitmap "../fleet/spear.png"))
+@(define (sword) (bitmap "../fleet/sword.png"))
+@(define (paint-thrower) (bitmap "../fleet/paint-thrower.png"))
+
+@codeblock{#lang ts-camp-jam-1}
+@racketblock[
+ (define (cool-guy)
+   (custom-avatar #:sprite #, (cool-guy)))
+
+ (define (bad-guy)
+   (custom-enemy #:sprite #,       (bad-guy)
+                 #:ai              'easy
+                 #:health          200
+                 #:shield          100
+                 #:amount-in-world 5))
+
+ (define (sharp-stick)
+   (custom-weapon #:name     "Spear"
+                  #:sprite #,(spear)
+                  #:dart     (spear)
+                  #:rarity   'common))
+
+ (define (metal-blade)
+   (custom-weapon #:name     "Sword"
+                  #:sprite #,(sword)
+                  #:dart     (sword)))
+
+ (define (paint-spitter)
+   (custom-weapon #:name     "Paint Thrower"
+                  #:sprite #,(paint-thrower)
+                  #:dart     (paint)
+                  #:rarity   'epic))
+
+ (battle-arena-game
+  #:avatar      (cool-guy)
+  #:enemy-list  (list (bad-guy))
+  #:weapon-list (list (sharp-stick)
+                      (metal-blade)
+                      (paint-spitter)))
+ ]
+
 
 @subsection{Dollars}
 
@@ -193,8 +301,8 @@ Students can assist each other once they completed that code (no touching any ot
 Attach a stopwatch to each clipboard.
 
 
-@;====== TABLE CHEST =======
-@section{Table Chest Materials}
+@;====== TABLE MATERIALS =======
+@section{Table Materials}
 
 @subsection{Markers and Stickers}
 
@@ -226,14 +334,27 @@ Clothes pin with crown?
 
 @section{Materials for Each Student}
 
+@subsection{Printing}
+
+Print one for each student:
+
+@bold{Kata Health Bar}
+
+@(image "doc/imgs/small-health-bars.png"
+               #:scale 0.5)
+
+@bold{Game Jam Health Bar}
+
+@(image "doc/imgs/large-health-bars.png"
+               #:scale 0.5)
+
+@subsection{Packing}
+
 Pack one of the following for each student:
 
-@subsection{1 lanyard}
-
-@subsection{1 clear plastic badge holder}
-
-@subsection{1 kata health bar}
-
-When they arrive for the day, you will write the student's name on the back of this.
-
-@subsection{1 game jam health bar}
+@itemlist[
+ @item{1 ThoughtSTEM lanyard}
+ @item{1 clear plastic badge holder, attached to lanyard}
+ @item{1 printed kata health bar (see above) - When they arrive for the day, you will write the student's name on the back of this:}
+ @item{1 printed game jam health bar (see above)}
+       ]
