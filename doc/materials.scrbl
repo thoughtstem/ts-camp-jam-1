@@ -196,16 +196,6 @@ Attach a stopwatch to each clipboard.
 @;====== TABLE CHEST =======
 @section{Table Chest Materials}
 
-@subsection{Student Kata Code}
-
-1st Katas - one per student (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-1.rkt)
-
-katas 2 and 3 (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-2-3.rkt)
-
-@subsection{Hint Sheets}
-
-2 per Kata (in ts-camp-jam-1/fleet/fleet-wed-12-26-students-hints-all.rkt)
-
 @subsection{Markers and Stickers}
 
 @subsection{Piskel Cheat Sheet}

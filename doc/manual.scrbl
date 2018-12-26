@@ -35,32 +35,6 @@ even better ones!
 
 @include-section["materials.scrbl"]
 
-@section{Meta Katas}
-clone-entity
-<Core values.>
-
-<Something about hard work.>
-
-<Anticipate student wories:
-  * Not playing fortnite today
-  * 2D vs 3D...>
-
-<Vocab?  Game moments?>
-
-
-Battle:
-  Mele
-  Ranged
-
-Battle Gear:
-  Potions/Powerups
-  Armor
-  Weapons?
-
-Fort building:
-  Offensive
-  Defensive
-
 @include-section["day-1-katas.scrbl"]
 
 

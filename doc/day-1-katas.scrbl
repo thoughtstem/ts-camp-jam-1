@@ -10,6 +10,61 @@
 @;====== AVATAR KATAS =======
 @section{Avatar Katas}
 
+@;----- Air AVATAR ------
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'air
+               #:title "Avatar"
+               #:time-limit 1
+               #:dollars 0
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+
+ Game design vocab!
+
+  @(student-should-know-difference-between
+    '("Player" "A human being playing a game")
+    '("Avatar" "A player's represetation in the game"))
+
+  The are NOT the same!  (Lots of people in the world don't know this)
+}
+
+
+@;====== Stone AVATAR ------
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'stone
+               #:title "Avatar"
+               #:time-limit 1
+               #:dollars 0
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+
+ @side-note["Format"]{It's probably not important to officially
+  time students on this kata.  It's also okay to encourage lively discussion.
+ Some of the pictures are funny, and that's okay.}
+
+ Students should be able to identify each of the following as either
+ avatars or players:
+
+ @image{doc/imgs/avatars/tomato-dance.gif}
+
+ @image{doc/imgs/players/players2.jpg} 
+
+ @image{doc/imgs/avatars/avatar-dance.gif}
+
+ @image{doc/imgs/players/players.jpg} 
+
+ @image{doc/imgs/avatars/bear-dance.gif} 
+ }
+
+
+
+
+
+
+
+
 @;----- BRONZE AVATAR ------
 
 @camp-jam-kata[#:document-level subsection
@@ -78,6 +133,28 @@
 @;====== ENEMY KATAS ======
 @section{Enemy Katas}
 
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'air
+               #:title "Enemy"
+               #:time-limit 1
+               #:dollars 0
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+
+ @side-note["Tip"]{Use discussion to help students learn these concepts.  They have all played a lot of video games.
+  Help them relate these concepts to games they've played -- both Fortnite and other games.}
+
+ Game design vocab!
+
+ @(student-should-know-difference-between
+   '("Enemy Bot" "An avatar controlled by artificial intelligence -- sometimes used by cheaters, but sometimes used by game designers to test a game.")
+   '("Artificial Intelligence" "A computer program that seems to be intelligent, and can sometimes fool human players into thinking it is."))
+
+  
+}
+
+
 @;----- BRONZE ENEMY ------
 
 @camp-jam-kata[#:document-level subsection
@@ -145,6 +222,28 @@
 
 @;====== SPEAR KATAS ======
 @section{Spear Katas}
+
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'air
+               #:title "Spear"
+               #:time-limit 1
+               #:dollars 0
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+
+ @side-note["Tip"]{Use discussion to help students learn these concepts.  They have all played a lot of video games.
+  Help them relate these concepts to games they've played -- both Fortnite and other games.}
+
+ Game design vocab!
+
+ @(student-should-know-difference-between
+   '("Asset" "The fundamental building material of a game.  Can be: art, music, sound effects, code, etc.  Game designers use programming to combine assets into a game.")
+   '("Funny Asset" "Any asset that is intended to make players laugh."))
+
+ One of the things that makes Fortnite famous are its funny assets.  What's your favorite!
+  
+}
 
 @;----- BRONZE SPEAR ------
 
@@ -224,6 +323,27 @@
 @;----- BRONZE SWORD ------
 
 @camp-jam-kata[#:document-level subsection
+               #:difficulty    'air
+               #:title "Sword"
+               #:time-limit 1
+               #:dollars 0
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+
+ @side-note["Tip"]{Use discussion to help students learn these concepts.  They have all played a lot of video games.
+  Help them relate these concepts to games they've played -- both Fortnite and other games.}
+
+ Game design vocab!
+
+ @(student-should-know-difference-between
+   '("Combat system" "A system in some (but not all) games.  It usually involves weapons, damage, healing, and death.")
+   '("Weapon" "An item that avatars can use to damage enemies")
+   '("Damage" "Reducing one or more of an avatar's stats (like health or shields).")
+   '("Death" "When an avatar is removed from a game or must respawn due to complete loss of health."))
+  
+}
+
+@camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
                #:title "Sword"
                #:time-limit 5
@@ -297,6 +417,52 @@
 @;====== PAINT THROWER KATAS ======
 
 @section{Paint Thrower Katas}
+
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'air
+               #:title "Paint Thrower"
+               #:time-limit 1
+               #:dollars 0
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+
+ @side-note["Tip"]{Use discussion to help students learn these concepts.  They have all played a lot of video games.
+  Help them relate these concepts to games they've played -- both Fortnite and other games.}
+
+ Game design vocab!
+
+ @(student-should-know-difference-between
+   '("Melee weapon" "A kind of weapon that is only effective at short range.")
+   '("Ranged weapon" "A kind of weapon that is effective at long range."))
+  
+}
+
+@camp-jam-kata[#:document-level subsection
+               #:difficulty    'stone
+               #:title "Paint Thrower"
+               #:time-limit 1
+               #:dollars 0
+               #:review/introduce "core values"
+               #:extra-dollars-for "lively discussion"]{
+
+ @side-note["Format"]{It's probably not important to officially
+  time students on this kata.  It's also okay to encourage lively discussion.
+ Some of the pictures are funny, and that's okay.}
+
+ Students should be able to identify each of the following as either
+ melee weapons or ranged weapons:
+
+ @image{doc/imgs/weapons/grenade.gif}
+
+ @image{doc/imgs/weapons/weird-pickaxe.gif}
+
+ @image{doc/imgs/weapons/long-range.gif}
+
+ @image{doc/imgs/weapons/pickaxe.gif}
+
+ @image{doc/imgs/weapons/rocket.gif}
+ }
 
 @;----- BRONZE PAINT THROWER ------
 
