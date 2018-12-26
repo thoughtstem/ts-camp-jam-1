@@ -30,7 +30,10 @@ A clipboard containing the following materials should be put together for each c
 
 @subsection{All Kata 1-pagers for the day}
 
-Print out each of the katas for the day. Katas are found in these docs. For example, see Section 3 ("Melee Battle Mode Katas") for Day 1 katas.
+@;Print out each of the katas for the day. Katas are found in these docs. For example, see Section 3 ("Melee Battle Mode Katas") for Day 1 katas.
+
+@;@(image "doc/imgs/printed-katas.jpeg"
+        @;#:scale .5)
 
 @subsection{Core Values Cheat Sheet}
 
@@ -218,8 +221,6 @@ Print out a copy of the Camp Jam Rules for each instructor.
  @item{@bold{High focused energy}; praise them once they get stuff finished/working}
  @item{@bold{Promote focus}; make sure everyone is on task and moving along}]
 
-
-
 @larger{@bold{During:}}
 @itemlist[
  @item["Encourage students to:"
@@ -233,8 +234,6 @@ Print out a copy of the Camp Jam Rules for each instructor.
        @itemlist[@item{Life Line is asking a coach for help}
                  @item{Each student gets @bold{1 free Life Line} -- once used, the coach initials the name tag}
                  @item{Each additional Life Line is @bold{$1 TSD}}]]]]
-
-
 
 @larger{@bold{At the End:}}
 @itemlist[
@@ -315,11 +314,19 @@ Attach a stopwatch to each clipboard.
 
 On butcher paper
 
-Include date, theme, 5 columns w/ space for team name and 5 game jam haleth bars each
+Include date, theme, 5 columns w/ space for team name and 5 game jam health bars each. Example:
+
+@;scale not working??
+@(image "doc/imgs/daily-team-page.jpeg"
+        #:scale .2)
 
 @subsection{Whole Camp Leaderboard}
 
-Include every date/theme, place for total score
+Include every date/theme, place for total score. Example:
+
+@;scale not working??
+@(image "doc/imgs/leaderboard.jpeg"
+        #:scale .2)
 
 @subsection{Leaderboard Winner Indicator}
 
