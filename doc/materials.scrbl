@@ -1,5 +1,7 @@
 #lang scribble/manual
 
+@(require 2htdp/image)
+
 @;============== CAMP MATERIALS ================
 @title{Camp Materials}
 
@@ -90,6 +92,18 @@ Highlight the core values cheat sheets below and print. Cut into strips and put 
 
 ---------------------------
 
+@bold{Core Values}
+
+@italic{Hand motions can make these easier to remember, repeat as needed:}
+
+@itemlist[
+ @item{It’s not about my CODE (point to computer).
+       
+  It’s about what I CAN code (point to brain).}
+ @item{It’s not about ME (point to self).
+       
+  It’s about my TEAM (air-draw a flat circle with finger pointing up).}]
+
 @subsection{Schedule}
 
 Print out a copy of this schedule for each instructor.
@@ -103,6 +117,8 @@ Print out a copy of this schedule for each instructor.
 Highlight the schedule breakdown below and print a copy for each instructor.
 
 ----------------------------
+
+@larger{@bold{Camp Schedule Breakdown}}
 
 @bold{8:45 am - 9:15 am : Drop-off}
 
@@ -232,6 +248,52 @@ Print out a copy of the Camp Jam Rules for each instructor.
 
 @subsection{Example Camp Jam code}
 
+This is an example of how all the components come together during camp-jam into one piece of code:
+
+@(define (cool-guy) (bitmap "../fleet/cool-guy.png"))
+@(define (bad-guy) (bitmap "../fleet/bad-guy.png"))
+@(define (spear) (bitmap "../fleet/spear.png"))
+@(define (sword) (bitmap "../fleet/sword.png"))
+@(define (paint-thrower) (bitmap "../fleet/paint-thrower.png"))
+
+@codeblock{#lang ts-camp-jam-1}
+@racketblock[
+ (define (cool-guy)
+   (custom-avatar #:sprite #, (cool-guy)))
+
+ (define (bad-guy)
+   (custom-enemy #:sprite #,       (bad-guy)
+                 #:ai              'easy
+                 #:health          200
+                 #:shield          100
+                 #:amount-in-world 5))
+
+ (define (sharp-stick)
+   (custom-weapon #:name     "Spear"
+                  #:sprite #,(spear)
+                  #:dart     (spear)
+                  #:rarity   'common))
+
+ (define (metal-blade)
+   (custom-weapon #:name     "Sword"
+                  #:sprite #,(sword)
+                  #:dart     (sword)))
+
+ (define (paint-spitter)
+   (custom-weapon #:name     "Paint Thrower"
+                  #:sprite #,(paint-thrower)
+                  #:dart     (paint)
+                  #:rarity   'epic))
+
+ (battle-arena-game
+  #:avatar      (cool-guy)
+  #:enemy-list  (list (bad-guy))
+  #:weapon-list (list (sharp-stick)
+                      (metal-blade)
+                      (paint-spitter)))
+ ]
+
+
 @subsection{Dollars}
 
 @subsection{Stopwatch}
@@ -288,12 +350,12 @@ Print one for each student:
 
 @bold{Kata Health Bar}
 
-@(image "doc/imgs/health-bar-name-badge.png"
+@(image "doc/imgs/small-health-bars.png"
                #:scale 0.5)
 
 @bold{Game Jam Health Bar}
 
-@(image "doc/imgs/large-health-bar.png"
+@(image "doc/imgs/large-health-bars.png"
                #:scale 0.5)
 
 @subsection{Packing}
