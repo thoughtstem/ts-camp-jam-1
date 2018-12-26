@@ -85,7 +85,7 @@
 
 
 
-(define/contract (custom-enemy #:amount-in-world (amount-in-world 10)
+(define/contract (custom-enemy #:amount-in-world (amount-in-world 1)
                                #:sprite (s (row->sprite (random-character-row) #:delay 4))
                                #:ai (ai-level 'easy)
                                #:health (health 100)
@@ -116,13 +116,20 @@
                   ))
  
     c)
-
+  
+  (define death-broadcast
+    (sprite->entity empty-image
+                    #:name "Enemy Death Broadcast"
+                    #:position (posn 0 0)
+                    #:components (on-start die)))
+  
   (define (die-if-health-is-0)
     (on-rule (λ(g e)
                (define h (get-storage-data "health-stat" e))
                (and h (<= h 0)))
              (do-many
               (spawn-on-current-tile particles)
+              (spawn death-broadcast)
               (λ(g e)
                 (add-component e (after-time 2 die)))
               )))
@@ -236,33 +243,38 @@
 (define (lost? g e)
   #f)
 
-(define (custom-weapon #:name        [n "Weapon"]
+(define (custom-weapon        #:name        [n "Weapon"]
                               #:sprite      [s chest-sprite]
                               #:dart      [b (custom-dart)]
                               #:fire-mode   [fm 'normal]
                               #:fire-rate   [fr 3]
                               #:fire-key    [key 'f]
-                              #:mouse-fire-button [button #f]
+                              #:mouse-fire-button [button 'left]
                               #:rapid-fire?       [rf? #t]
                               #:rarity      [rarity 'common])
+  (define updated-name (cond [(eq? rarity 'rare)      (~a "Rare " n)]
+                             [(eq? rarity 'epic)      (~a "Epic " n)]
+                             [(eq? rarity 'legendary) (~a "Legendary " n)]
+                             [else n]))
   (define weapon-component (custom-weapon-system #:dart b
                                                  #:fire-mode fm
                                                  #:fire-rate fr
                                                  #:fire-key  key
                                                  #:mouse-fire-button button
                                                  #:rapid-fire? rf?
-                                                 #:rule (and/r (weapon-is? n)
-                                                               (in-backpack? n))))
+                                                 #:rule (and/r (weapon-is? updated-name)
+                                                               (in-backpack? updated-name))))
   (sprite->entity s
-                  #:name n
+                  #:name updated-name
                   #:position    (posn 0 0)
                   #:components  (active-on-bg 0)
                                 (physical-collider)
                                 (storage "Weapon" weapon-component)
+                                (storage "Rarity" rarity)
                                 (static)
                                 (hidden)
                                 (on-start (do-many (respawn 'anywhere)
-                                                   (active-on-random)
+                                                   ;(active-on-random)
                                                    show))
                                 (storable)))
 
@@ -288,6 +300,39 @@
 
   (map f es))
 
+(define/contract (clone-by-rarity es)
+  (-> (listof entity?) (listof (listof entity?)))
+
+  (define (f e)
+    (define to-clone (if (procedure? e)
+                         (e)
+                         e) )
+    
+    (define rarity (if (get-storage "Rarity" to-clone)
+                       (get-storage-data "Rarity" to-clone)
+                       'common))
+    
+    (define n (cond [(eq? rarity 'common)    5]
+                    [(eq? rarity 'uncommon)  4]
+                    [(eq? rarity 'rare)      3]
+                    [(eq? rarity 'epic)      2]
+                    [(eq? rarity 'legendary) 1]))
+    (entity-cloner to-clone n))
+
+  (map f es))
+
+(define/contract (get-total-by-amount-in-world es)
+  (-> (listof entity?) number?)
+  (define (entity->amount e)
+    (define to-clone (if (procedure? e)
+                         (e)
+                         e))
+    (if (get-storage "amount-in-world" to-clone)
+        (get-storage-data "amount-in-world" to-clone)
+        1))
+  (apply + (map entity->amount es)))
+  
+
 (define (custom-background #:bg-img     [bg FOREST-BG]
                            #:rows       [rows 3]
                            #:columns    [cols 3]
@@ -304,8 +349,8 @@
 (define (custom-avatar #:sprite       [sprite (circle 10 'solid 'red)]
                        #:position     [p   (posn 100 100)]
                        #:speed        [spd 10]
-                       #:key-mode     [key-mode 'arrow-keys]
-                       #:mouse-aim?   [mouse-aim? #f]
+                       #:key-mode     [key-mode 'wasd]
+                       #:mouse-aim?   [mouse-aim? #t]
                        #:weapon-slots [w-slots 2]
                        #:components   [c #f]
                        . custom-components)
@@ -342,7 +387,7 @@
                                                           (add-component _
                                                                          (on-start
                                                                           (go-to-pos-inside 'top-left
-                                                                                            #:posn-offset (posn 0 10))))))))
+                                                                                            #:posn-offset (posn 10 20))))))))
 
   (define sheild-bar (stat-progress-bar 'blue
                                         #:width 100
@@ -353,7 +398,8 @@
                                                           (remove-component _ active-on-bg?)
                                                           (add-component _
                                                                          (on-start
-                                                                          (go-to-pos-inside 'top-left)))))))
+                                                                          (go-to-pos-inside 'top-left
+                                                                                            #:posn-offset (posn 10 10))))))))
 
   (combatant
    #:stats (list (make-stat-config 'health 100 health-bar)
@@ -365,8 +411,8 @@
 (define/contract (battle-arena-game
                   #:headless       [headless #f]
                   #:bg             [bg-ent (custom-background)]
-                  #:avatar         [p (custom-avatar)]
-                  #:enemy-list     [e-list (list (custom-enemy))]
+                  #:avatar         [p #f]
+                  #:enemy-list     [e-list '()]
                   #:weapon-list    [weapon-list '()]
                   #:other-entities [ent #f]
                   . custom-entities)
@@ -415,17 +461,26 @@
   (define (enemy-counter-entity)
     (define bg (~> (rectangle 1 1 'solid (make-color 0 0 0 100))
                    (new-sprite _ #:animate #f)
-                   (set-x-scale 100 _)
-                   (set-y-scale 14 _)
+                   (set-x-scale 140 _)
+                   (set-y-scale 20 _)
                    ))
+
+    (define (enemy-died? g e)
+      (get-entity "Enemy Death Broadcast" g))
+
+         
+    (define total-enemies (get-total-by-amount-in-world e-list))
     
     (sprite->entity bg
                     #:name       "score"
-                    #:position   (posn 380 20)
+                    #:position   (posn 340 20)
                     #:components (static)
-                                 (new-sprite "Enemies Left: 30" #:y-offset -7 #:scale 0.7 #:color 'yellow)
-                                 (counter 30)
-                                 (layer "ui")))
+                                 (new-sprite (~a "Enemies Left: " total-enemies) #:y-offset -7 #:scale 0.8 #:color 'yellow)
+                                 (counter total-enemies)
+                                 (layer "ui")
+                                 (on-rule enemy-died? (do-many (change-counter-by -0.5)
+                                                               (draw-counter-rpg #:prefix "Enemies Left: " #:exact-floor? #t)))
+                                 ))
 
    (define bg-with-instructions
     (add-components bg-ent (on-key "i" #:rule (λ (g e) (not (get-entity "instructions" g)))
@@ -446,7 +501,8 @@
                        (pine-tree (posn 93 136)  #:tile 4 (damager 5 (list 'passive)))
                        (round-tree (posn 322 59) #:tile 4 (damager 5 (list 'passive)))
 
-                       (map (λ (w) (entity-cloner w 3)) weapon-list)
+                       ;(map (λ (w) (entity-cloner w 3)) weapon-list)
+                       (clone-by-rarity (flatten weapon-list))
 
                        (clone-by-amount-in-world (flatten e-list))
 
@@ -462,7 +518,7 @@
       (initialize-game es) ;Just return initial game state for whatever processing or unit tests...
       (apply start-game es)))
 
-; ==== PREBUILT DARTSS ====
+; ==== PREBUILT DARTS ====
 (define (spear #:sprite     [s spear-sprite]
                #:damage     [dmg 50]
                #:durability [dur 20]
@@ -533,13 +589,23 @@
                             (every-tick (do-many (scale-sprite 1.05)
                                                  (change-direction-by 10)))))
 
-
 (module+ test
   (battle-arena-game
    #:bg              (custom-background)
    #:avatar          (custom-avatar #:sprite      (row->sprite (random-character-row))
                                     #:key-mode    'wasd
                                     #:mouse-aim?  #t)
-   #:weapon-list     (list (custom-weapon #:name "Light Repeater" #:mouse-fire-button 'left #:fire-mode 'random #:fire-rate 10)
-                           (custom-weapon #:name "Spread Shot"    #:mouse-fire-button 'left #:fire-mode 'spread #:rapid-fire? #f))))
+   #:enemy-list      (list (custom-enemy #:amount-in-world 10))
+   #:weapon-list     (list (custom-weapon #:name "Light Repeater"
+                                          #:sprite (make-icon "LR" "purple")
+                                          #:mouse-fire-button 'left
+                                          #:fire-mode 'random
+                                          #:fire-rate 10
+                                          #:rarity 'legendary)
+                           (custom-weapon #:name "Spread Shot"
+                                          #:sprite (make-icon "SS" "lightblue" "white")
+                                          #:mouse-fire-button 'left
+                                          #:fire-mode 'spread
+                                          #:rapid-fire? #f
+                                          #:rarity 'rare))))
 
