@@ -3,9 +3,9 @@
 @(require "ts-camp-jam-kata-util.scrbl")
 @(require ts-kata-util)
 
-@;====== ... KATAS ======
+@;====== DEFENSIVE BASE KATAS ======
 @;============== DAY 3 ================
-@title{... Katas}
+@title{Defensive Base Katas}
 
 
 
@@ -14,7 +14,7 @@
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'air
-               #:title "..."
+               #:title "Lava Pit"
                #:time-limit 1
                #:dollars 0
                #:review/introduce "core values"
