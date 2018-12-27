@@ -1,7 +1,6 @@
 #lang racket
 
 (require game-engine
-         game-engine-rpg ;;to get lava srite
          game-engine-demos-common)
 
 (provide battle-arena-game
@@ -612,15 +611,6 @@
                   (on-start (spawn-on-current-tile tower-top-entity))))
 
 
-(define (lava-builder #:damage (damage 10)
-                      #:size   (size 1)
-                      #:sprite (sprite LAVA-SPRITE)
-                      #:range (range 5))
-  (builder-dart #:entity (lava #:damage damage
-                               #:size size
-                               #:sprite sprite)
-                #:range range))
-
 
 (define (lava #:size size
               #:die-after (die-after 500)
@@ -651,7 +641,7 @@
                   (after-time die-after die)))
 
 (define (builder-dart #:entity   (to-build (wall))
-                      #:range (die-after 5))
+                      #:distance (die-after 5))
   (custom-dart #:components
                (every-tick (move))
                ;(after-time 6 die)
@@ -701,7 +691,7 @@
                #:speed      [spd 5]
                #:range      [rng 20])
   (custom-dart #:position (posn 20 0)
-                 #:sprite spear-sprite
+                 #:sprite s
                  #:damage dmg
                  #:durability dur
                  #:speed spd
@@ -777,3 +767,12 @@
                                                        #:durability dur
                                                        #:speed      spd
                                                        #:range      rng)))))
+
+(define (lava-builder #:damage (damage 10)
+                      #:size   (size 50)
+                      #:sprite (sprite (square 1 'solid 'red))
+                      #:distance (distance 5))
+  (builder-dart #:entity (lava #:damage damage
+                               #:size size
+                               #:sprite sprite)
+                #:distance distance))
