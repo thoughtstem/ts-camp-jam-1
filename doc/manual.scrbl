@@ -36,6 +36,7 @@ even better ones!
 @include-section["materials.scrbl"]
 
 @include-section["day-1-katas.scrbl"]
+@include-section["day-2-katas.scrbl"]
 
 
 @;@(image "doc/imgs/avatar-dance.gif")  

@@ -10,9 +10,8 @@
   ))
 
 (define compile-omit-paths '(
-  "test" "fleet" "kata-definitions/compiled-kata-data"))
+  "test" "kata-definitions/compiled-kata-data"))
 
-(define test-omit-paths '("doc" "jam" "scoring" "fleet" "kata-definitions/compiled-kata-data"))
+(define test-omit-paths '("doc" "jam" "scoring" "kata-definitions/compiled-kata-data"))
 
-(define test-include-paths '(
-  "kata-definitions/*.rkt"))
+(define test-include-paths '( "kata-definitions/*.rkt"))

@@ -16,6 +16,8 @@
          custom-enemy
          custom-avatar
 
+         move-in-ring
+
          STUDENT-IMAGE-HERE)
 
 (define STUDENT-IMAGE-HERE
@@ -237,14 +239,14 @@
   #f)
 
 (define (custom-weapon #:name        [n "Weapon"]
-                              #:sprite      [s chest-sprite]
-                              #:dart      [b (custom-dart)]
-                              #:fire-mode   [fm 'normal]
-                              #:fire-rate   [fr 3]
-                              #:fire-key    [key 'f]
-                              #:mouse-fire-button [button #f]
-                              #:rapid-fire?       [rf? #t]
-                              #:rarity      [rarity 'common])
+                       #:sprite      [s chest-sprite]
+                       #:dart      [b (custom-dart)]
+                       #:fire-mode   [fm 'normal]
+                       #:fire-rate   [fr 3]
+                       #:fire-key    [key 'f]
+                       #:mouse-fire-button [button 'left]
+                       #:rapid-fire?       [rf? #t]
+                       #:rarity      [rarity 'common])
   (define weapon-component (custom-weapon-system #:dart b
                                                  #:fire-mode fm
                                                  #:fire-rate fr
@@ -257,8 +259,8 @@
                   #:name n
                   #:position    (posn 0 0)
                   #:components  (active-on-bg 0)
-                                (physical-collider)
-                                (storage "Weapon" weapon-component)
+                  (physical-collider)
+                  (storage "Weapon" weapon-component)
                                 (static)
                                 (hidden)
                                 (on-start (do-many (respawn 'anywhere)
@@ -304,8 +306,8 @@
 (define (custom-avatar #:sprite       [sprite (circle 10 'solid 'red)]
                        #:position     [p   (posn 100 100)]
                        #:speed        [spd 10]
-                       #:key-mode     [key-mode 'arrow-keys]
-                       #:mouse-aim?   [mouse-aim? #f]
+                       #:key-mode     [key-mode 'wasd]
+                       #:mouse-aim?   [mouse-aim? #t]
                        #:weapon-slots [w-slots 2]
                        #:components   [c #f]
                        . custom-components)
@@ -532,6 +534,12 @@
                #:components (on-start (set-size 0.5))
                             (every-tick (do-many (scale-sprite 1.05)
                                                  (change-direction-by 10)))))
+
+(define (move-in-ring)
+  (list
+   (on-start (set-size 0.5))
+   (every-tick (do-many (scale-sprite 1.05)
+                        (change-direction-by 10)))))
 
 
 (module+ test
