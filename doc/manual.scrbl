@@ -1,5 +1,7 @@
 #lang scribble/manual
 
+@(require ts-kata-util racket)
+
 @title{Game Design through Fortnite}
 
 Game design is an art.  Two of the best ways
@@ -30,8 +32,11 @@ you're able to make.  One day, you'll be able to
 make games like Fortnite.  Or perhaps...
 even better ones!
 
-@section{Meta Katas}
 
+@include-section["materials.scrbl"]
+
+@section{Meta Katas}
+clone-entity
 <Core values.>
 
 <Something about hard work.>
@@ -56,16 +61,15 @@ Fort building:
   Offensive
   Defensive
 
-@section{???}
-
-@(image "doc/imgs/avatar-dance.gif")
+@include-section["day-1-katas.scrbl"]
 
 
-@(image "doc/imgs/bus-drop.gif")
+@;@(image "doc/imgs/avatar-dance.gif")  
 
-@(image "doc/imgs/jetpack-death.gif")
+@;@(image "doc/imgs/bus-drop.gif")
 
+@;@(image "doc/imgs/jetpack-death.gif")
 
-@(image "doc/imgs/building-while-running.gif")
+@;@(image "doc/imgs/building-while-running.gif")
 
-@(image "doc/imgs/wall-shoot.gif")
+@;@(image "doc/imgs/wall-shoot.gif")
