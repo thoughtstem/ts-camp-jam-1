@@ -49,7 +49,7 @@
                #:title "Magic Balance"
                #:time-limit 5
                #:dollars 3
-               #:health-bar COLOR-BAR
+               #:health-bar ADD-STAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
 
@@ -63,7 +63,7 @@
                #:title "Magic Balance"
                #:time-limit 5
                #:dollars 5
-               #:health-bar COLOR-BAR
+               #:health-bar ADD-HEART
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
 
@@ -115,7 +115,7 @@
                #:title "Melee Balance"
                #:time-limit 5
                #:dollars 3
-               #:health-bar COLOR-BAR
+               #:health-bar ADD-STAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
   
@@ -128,7 +128,7 @@
                #:title "Melee Balance"
                #:time-limit 5
                #:dollars 5
-               #:health-bar COLOR-BAR
+               #:health-bar ADD-HEART
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
  @side-note["Remember!" "This kata just combines the previous two.  Point this out!  It will help students see the pattern."]
@@ -185,7 +185,7 @@
                #:title "Repeater Balance"
                #:time-limit 5
                #:dollars 3
-               #:health-bar COLOR-BAR
+               #:health-bar ADD-STAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
   
@@ -198,7 +198,7 @@
                #:title "Repeater Balance"
                #:time-limit 5
                #:dollars 5
-               #:health-bar COLOR-BAR
+               #:health-bar ADD-HEART
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
 

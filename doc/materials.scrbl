@@ -30,7 +30,7 @@ Pack the following materials:
 
 A clipboard containing the following materials should be put together for each camp instructor.
 
-@subsection{All Kata 1-pagers for the day}
+@;@subsection{All Kata 1-pagers for the day}
 
 @;Print out each of the katas for the day. Katas are found in these docs. For example, see Section 3 ("Melee Battle Mode Katas") for Day 1 katas.
 
@@ -115,7 +115,7 @@ Print out a copy of this schedule for each instructor.
 
 ---------------------------
 
-@(image "imgs/2018-fleet-winter-schedule.png")
+@(image "doc/imgs/2018-fleet-winter-schedule.png")
 
 @subsection{Schedule breakdown}
 
@@ -251,11 +251,13 @@ Print out a copy of the Camp Jam Rules for each instructor.
 
 This is an example of how all the components come together during camp-jam into one piece of code:
 
-@(define (cool-guy) (bitmap "../fleet/cool-guy.png"))
-@(define (bad-guy) (bitmap "../fleet/bad-guy.png"))
-@(define (spear) (bitmap "../fleet/spear.png"))
-@(define (sword) (bitmap "../fleet/sword.png"))
-@(define (paint-thrower) (bitmap "../fleet/paint-thrower.png"))
+---------------------
+
+@(define (cool-guy) (image "doc/imgs/cool-guy.png"))
+@(define (bad-guy) (image "doc/imgs/bad-guy.png"))
+@(define (spear) (image "doc/imgs/spear.png"))
+@(define (sword) (image "doc/imgs/sword.png"))
+@(define (paint-thrower) (image "doc/imgs/paint-thrower.png"))
 
 @codeblock{#lang ts-camp-jam-1}
 @racketblock[
@@ -331,19 +333,21 @@ Attach a stopwatch to each clipboard.
 @;====== TABLE MATERIALS =======
 @section{Table Materials}
 
-@subsection{Student Kata Code}
+@;@subsection{Student Kata Code}
 
-1st Katas - one per student (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-1.rkt)
+@;1st Katas - one per student (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-1.rkt)
 
-katas 2 and 3 (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-2-3.rkt)
+@;katas 2 and 3 (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-2-3.rkt)
 
-@subsection{Hint Sheets}
+@;@subsection{Hint Sheets}
 
-2 per Kata (in ts-camp-jam-1/fleet/fleet-wed-12-26-students-hints-all.rkt)
+@;2 per Kata (in ts-camp-jam-1/fleet/fleet-wed-12-26-students-hints-all.rkt)
 
 @subsection{Markers and Stickers}
 
 @subsection{Piskel Cheat Sheet}
+
+@(image "doc/imgs/piskel-cheat-sheet.png")
 
 
 
@@ -357,7 +361,7 @@ On butcher paper
 Include date, theme, 5 columns w/ space for team name and 5 game jam health bars each. Example:
 
 @;scale not working??
-@(image "imgs/daily-team-page.jpeg"
+@(image "doc/imgs/daily-team-page.jpeg"
         #:scale .2)
 
 @subsection{Whole Camp Leaderboard}
@@ -365,7 +369,7 @@ Include date, theme, 5 columns w/ space for team name and 5 game jam health bars
 Include every date/theme, place for total score. Example:
 
 @;scale not working??
-@(image "imgs/leaderboard.jpeg"
+@(image "doc/imgs/leaderboard.jpeg"
         #:scale .2)
 
 @subsection{Leaderboard Winner Indicator}
@@ -387,14 +391,14 @@ Print one for each student:
 
 @bold{Kata Health Bar}
 
-@(image "imgs/small-health-bars.png"
+@(image "doc/imgs/small-health-bars.png"
                #:scale 0.5)
 
 @(image "doc/imgs/small-health-bar.svg") <-- svg file. Incorrect fonts.
 
 @bold{Game Jam Health Bar}
 
-@(image "imgs/large-health-bars.png"
+@(image "doc/imgs/large-health-bars.png"
                #:scale 0.5)
 
 @(image "doc/imgs/large-health-bar.svg") <-- svg file. Incorrect fonts.
