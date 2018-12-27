@@ -22,7 +22,8 @@
 
          builder-dart
          wall
-         lava)
+         lava
+         lava-builder)
 
 (define STUDENT-IMAGE-HERE
   (text "Student Image Here" 30 'blue))
@@ -624,7 +625,7 @@
 
 #;(define (tower #:weapon (custom-weapon)
                #:die-after (die-after 500))
-  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'red)))
+  (sprite->entity (set-scale-xy size (sprite (square 1 'solid 'red)))
                   #:name "wall"
                   #:position (posn 0 0)
                   #:components
@@ -637,10 +638,20 @@
                   (damager 10 '(lava))
                   (after-time die-after die)))
 
+(define (lava-builder #:damage (damage 10)
+                      #:size   (size 50)
+                      #:sprite (sprite (square 1 'solid 'red))
+                      #:distance (distance 5))
+  (builder-dart #:entity (lava #:damage damage
+                               #:size size
+                               #:sprite sprite)
+                #:distance distance))
 
-
-(define (lava #:size (size 50) #:die-after (die-after 500))
-  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'red)))
+(define (lava #:size size
+              #:die-after (die-after 500)
+              #:damage damage
+              #:sprite sprite)
+  (sprite->entity (set-scale-xy size (new-sprite sprite))
                   #:name "wall"
                   #:position (posn 0 0)
                   #:components
@@ -649,9 +660,8 @@
                   (lock-to-grid size)
                   (physical-collider)
                   (on-collide "wall" die)
-                  (damager 10 '(lava))
+                  (damager damage '(lava))
                   (after-time die-after die)))
-
 
 (define (wall #:size (size 50) #:die-after (die-after 500))
   (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'brown)))
@@ -665,11 +675,12 @@
                   (on-collide "wall" die)
                   (after-time die-after die)))
 
-(define (builder-dart #:entity (to-build (wall)))
+(define (builder-dart #:entity   (to-build (wall))
+                      #:distance (die-after 5))
   (custom-dart #:components
                (every-tick (move))
                ;(after-time 6 die)
-               (after-time 5
+               (after-time die-after
                            (spawn-on-current-tile to-build))))
 
 
