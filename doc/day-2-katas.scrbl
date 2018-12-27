@@ -209,6 +209,7 @@
 }
 
 
-@include-section["every-day-katas.scrbl"]
+@include-section["avatar-katas.scrbl"]
+@include-section["enemy-katas.scrbl"]
 
 
