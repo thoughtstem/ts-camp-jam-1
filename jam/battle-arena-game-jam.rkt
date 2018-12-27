@@ -18,7 +18,11 @@
 
          move-in-ring
 
-         STUDENT-IMAGE-HERE)
+         STUDENT-IMAGE-HERE
+
+         builder-dart
+         wall
+         lava)
 
 (define STUDENT-IMAGE-HERE
   (text "Student Image Here" 30 'blue))
@@ -602,6 +606,71 @@
    (every-tick (do-many (scale-sprite 1.05)
                         (change-direction-by 10)))))
 
+
+(define (round-nearest amount n)
+  (* amount (round (/ n amount))))
+
+(define (round-nearest-posn amount p)
+  (posn (round-nearest amount (posn-x p))
+        (round-nearest amount (posn-y p))))
+
+(define (lock-to-grid (amount 10))
+  (on-start
+   (λ(g e)
+     (update-entity e posn?
+                    (round-nearest-posn amount (get-component e posn?))))))
+
+
+
+#;(define (tower #:weapon (custom-weapon)
+               #:die-after (die-after 500))
+  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'red)))
+                  #:name "wall"
+                  #:position (posn 0 0)
+                  #:components
+                  (active-on-bg)
+                  (weapon->turret weapon)
+                  (static)
+                  (lock-to-grid size)
+                  (physical-collider)
+                  (on-collide "wall" die)
+                  (damager 10 '(lava))
+                  (after-time die-after die)))
+
+
+
+(define (lava #:size (size 50) #:die-after (die-after 500))
+  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'red)))
+                  #:name "wall"
+                  #:position (posn 0 0)
+                  #:components
+                  (active-on-bg)
+                  (static)
+                  (lock-to-grid size)
+                  (physical-collider)
+                  (on-collide "wall" die)
+                  (damager 10 '(lava))
+                  (after-time die-after die)))
+
+
+(define (wall #:size (size 50) #:die-after (die-after 500))
+  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'brown)))
+                  #:name "wall"
+                  #:position (posn 0 0)
+                  #:components
+                  (active-on-bg)
+                  (static)
+                  (lock-to-grid size)
+                  (physical-collider)
+                  (on-collide "wall" die)
+                  (after-time die-after die)))
+
+(define (builder-dart #:entity (to-build (wall)))
+  (custom-dart #:components
+               (every-tick (move))
+               ;(after-time 6 die)
+               (after-time 5
+                           (spawn-on-current-tile to-build))))
 
 
 (module+ test
