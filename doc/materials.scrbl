@@ -21,7 +21,9 @@ Pack the following materials:
  @item{8 extension cords}
  @item{5 clipboards - see below for what should be attached}
  @item{Projector - if location doesn't have one}
- @item{Extra tables - if location doesn't have enough for students + marketplace + game jam score}]
+ @item{Extra tables - if location doesn't have enough for students + marketplace + game jam score}
+ @item{Markers}
+ @item{Stickers -- stars and hearts that fit both the mini and game jam health bars}]
 
 @;====== TEACHER CLIPBOARD =======
 @section{Teacher Clipboard Materials}
@@ -313,9 +315,9 @@ katas 2 and 3 (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-2-3.rkt)
 
 2 per Kata (in ts-camp-jam-1/fleet/fleet-wed-12-26-students-hints-all.rkt)
 
-@subsection{Markers and Stickers}
-
 @subsection{Piskel Cheat Sheet}
+
+
 
 @;====== IN CLASSROOM =======
 @section{In Classroom Materials}
@@ -340,7 +342,7 @@ Include every date/theme, place for total score. Example:
 
 @subsection{Leaderboard Winner Indicator}
 
-Clothes pin with crown?
+A clothes pin with crown is a good marker.
 
 @subsection{Markers}
 
@@ -360,10 +362,14 @@ Print one for each student:
 @(image "doc/imgs/small-health-bars.png"
                #:scale 0.5)
 
+@(image "doc/imgs/small-health-bar.svg") <-- svg file. Incorrect fonts.
+
 @bold{Game Jam Health Bar}
 
 @(image "doc/imgs/large-health-bars.png"
                #:scale 0.5)
+
+@(image "doc/imgs/large-health-bar.svg") <-- svg file. Incorrect fonts.
 
 @subsection{Packing}
 
