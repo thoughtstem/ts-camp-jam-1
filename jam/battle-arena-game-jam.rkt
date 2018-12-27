@@ -22,7 +22,8 @@
 
          builder-dart
          wall
-         lava)
+         lava
+         tower)
 
 (define STUDENT-IMAGE-HERE
   (text "Student Image Here" 30 'blue))
@@ -39,7 +40,7 @@
                            #:ticks-between-shots (ticks-between-shots 50))
   
   (define wander (apply state 'wander (wander-mode-components wspeed)))
-  (define stand  (apply state 'stand (stand-and-shoot "follow" weapon
+  (define stand  (apply state 'stand (stand-and-shoot "player" weapon
                                                       #:ticks-between-shots ticks-between-shots)))
 
   (define wander->stand
@@ -70,7 +71,7 @@
 (define (stand-and-shoot target w #:ticks-between-shots (ticks-between-shots 50))
   (list (speed 0)
         (use-weapon-against-player w #:ticks-between-shots ticks-between-shots)
-        (every-tick (point-to "player"))))
+        (every-tick (point-to target))))
 
 
 (define (get-ai-from-level l weapon)
@@ -622,19 +623,26 @@
 
 
 
-#;(define (tower #:weapon (custom-weapon)
+
+
+(define (tower #:weapon (weapon (custom-weapon))
+               #:fire-rate (rate 50)
                #:die-after (die-after 500))
-  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'red)))
+
+  (define weapon-system (get-storage-data "Weapon" weapon))
+  
+  (sprite->entity (set-scale-xy 50 (new-sprite (square 1 'solid 'gray)))
                   #:name "wall"
                   #:position (posn 0 0)
                   #:components
+                  (direction 0)
+                  (speed 0)
                   (active-on-bg)
-                  (weapon->turret weapon)
+                  (use-weapon-against "Enemy" weapon-system #:ticks-between-shots rate)
                   (static)
-                  (lock-to-grid size)
+                  (lock-to-grid 50)
                   (physical-collider)
                   (on-collide "wall" die)
-                  (damager 10 '(lava))
                   (after-time die-after die)))
 
 
