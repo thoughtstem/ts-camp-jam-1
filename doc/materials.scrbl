@@ -34,7 +34,7 @@ A clipboard containing the following materials should be put together for each c
 
 @;Print out each of the katas for the day. Katas are found in these docs. For example, see Section 3 ("Melee Battle Mode Katas") for Day 1 katas.
 
-@;@(image "doc/imgs/printed-katas.jpeg"
+@;@(image "imgs/printed-katas.jpeg"
         @;#:scale .5)
 
 @subsection{Core Values Cheat Sheet}
@@ -115,7 +115,7 @@ Print out a copy of this schedule for each instructor.
 
 ---------------------------
 
-@(image "doc/imgs/2018-fleet-winter-schedule.png")
+@(image "imgs/2018-fleet-winter-schedule.png")
 
 @subsection{Schedule breakdown}
 
@@ -247,7 +247,7 @@ Print out a copy of the Camp Jam Rules for each instructor.
  @item{Emphasize @bold{Camp Total Points} over team or individual scores}
  @item{Add camp total score to @bold{Whole Camp Leader Board}}]
 
-@subsection{Example Camp Jam code}
+@subsection{Example Camp Jam code (w/definitions)}
 
 This is an example of how all the components come together during camp-jam into one piece of code:
 
@@ -294,6 +294,32 @@ This is an example of how all the components come together during camp-jam into 
                       (paint-spitter)))
  ]
 
+@subsection{Example Camp Jam code (w/in-line)}
+
+This is an example of how all the components come together during camp-jam into one piece of code:
+
+@codeblock{#lang ts-camp-jam-1}
+@racketblock[
+
+ (battle-arena-game
+  #:avatar      (custom-avatar #:sprite #, (cool-guy))
+  #:enemy-list  (list (custom-enemy #:sprite #,       (bad-guy)
+                                    #:ai              'easy
+                                    #:health          200
+                                    #:shield          100
+                                    #:amount-in-world 5))
+  #:weapon-list (list (custom-weapon #:name     "Spear"
+                                     #:sprite #,(spear)
+                                     #:dart     (spear)
+                                     #:rarity   'common)
+                      (custom-weapon #:name     "Sword"
+                                     #:sprite #,(sword)
+                                     #:dart     (sword))
+                      (custom-weapon #:name     "Paint Thrower"
+                                     #:sprite #,(paint-thrower)
+                                     #:dart     (paint)
+                                     #:rarity   'epic)))
+ ]
 
 @subsection{Dollars}
 
@@ -315,6 +341,8 @@ katas 2 and 3 (in ts-camp-jam-1/fleet/fleet-wed-12-26-student-kata-2-3.rkt)
 
 2 per Kata (in ts-camp-jam-1/fleet/fleet-wed-12-26-students-hints-all.rkt)
 
+@subsection{Markers and Stickers}
+
 @subsection{Piskel Cheat Sheet}
 
 
@@ -329,7 +357,7 @@ On butcher paper
 Include date, theme, 5 columns w/ space for team name and 5 game jam health bars each. Example:
 
 @;scale not working??
-@(image "doc/imgs/daily-team-page.jpeg"
+@(image "imgs/daily-team-page.jpeg"
         #:scale .2)
 
 @subsection{Whole Camp Leaderboard}
@@ -337,7 +365,7 @@ Include date, theme, 5 columns w/ space for team name and 5 game jam health bars
 Include every date/theme, place for total score. Example:
 
 @;scale not working??
-@(image "doc/imgs/leaderboard.jpeg"
+@(image "imgs/leaderboard.jpeg"
         #:scale .2)
 
 @subsection{Leaderboard Winner Indicator}
@@ -359,14 +387,14 @@ Print one for each student:
 
 @bold{Kata Health Bar}
 
-@(image "doc/imgs/small-health-bars.png"
+@(image "imgs/small-health-bars.png"
                #:scale 0.5)
 
 @(image "doc/imgs/small-health-bar.svg") <-- svg file. Incorrect fonts.
 
 @bold{Game Jam Health Bar}
 
-@(image "doc/imgs/large-health-bars.png"
+@(image "imgs/large-health-bars.png"
                #:scale 0.5)
 
 @(image "doc/imgs/large-health-bar.svg") <-- svg file. Incorrect fonts.
