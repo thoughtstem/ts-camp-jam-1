@@ -23,7 +23,9 @@
          builder-dart
          wall
          lava
-         tower)
+         tower
+
+         spear-tower-builder)
 
 (define STUDENT-IMAGE-HERE
   (text "Student Image Here" 30 'blue))
@@ -529,6 +531,153 @@
       (initialize-game es) ;Just return initial game state for whatever processing or unit tests...
       (apply start-game es)))
 
+
+
+(define (move-in-ring)
+  (list
+   (on-start (set-size 0.5))
+   (every-tick (do-many (scale-sprite 1.05)
+                        (change-direction-by 10)))))
+
+
+(define (round-nearest amount n)
+  (* amount (round (/ n amount))))
+
+(define (round-nearest-posn amount p)
+  (posn (round-nearest amount (posn-x p))
+        (round-nearest amount (posn-y p))))
+
+(define (lock-to-grid (amount 10))
+  (on-start
+   (λ(g e)
+     (update-entity e posn?
+                    (round-nearest-posn amount (get-component e posn?))))))
+
+
+
+
+
+
+
+
+
+
+
+
+(define (tower #:weapon (weapon (custom-weapon))
+               #:die-after (die-after 500))
+
+  (define tower-base (overlay/offset 
+                      (rectangle 32 24 "solid" "dimgray")
+                      0 8
+                      (ellipse 50 24 "solid" (make-color 0 0 0 120))))
+  
+  (define tower-top (above (beside (square 8 "solid" "darkslategray")
+                                   (square 8 "solid" "transparent")
+                                   (square 8 "solid" "darkslategray")
+                                   (square 8 "solid" "transparent")
+                                   (square 8 "solid" "darkslategray"))
+                           (rectangle 40 10 "solid" "darkslategray")
+                           (rectangle 32 32 "solid" "dimgray")))
+
+  (define tower-top-entity
+    (sprite->entity tower-top
+                    #:name "Tower Top"
+                    #:position (posn 0 -40)
+                    #:components
+                    (layer "tops")
+                    (after-time die-after die)
+                    (active-on-bg)))
+
+
+  (define weapon-system (get-storage-data "Weapon" weapon))
+  
+  (sprite->entity tower-base
+                  #:name "wall"
+                  #:position (posn 0 0)
+                  #:components
+                  (direction 0)
+                  (speed 0)
+                  (active-on-bg)
+                  (use-weapon-against "Enemy" weapon-system)
+                  (static)
+                  (lock-to-grid 50)
+                  (physical-collider)
+                  (on-collide "wall" die)
+                  (after-time die-after die)
+                  (on-start (spawn-on-current-tile tower-top-entity))))
+
+
+
+(define (lava #:size (size 50) #:die-after (die-after 500))
+  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'red)))
+                  #:name "wall"
+                  #:position (posn 0 0)
+                  #:components
+                  (active-on-bg)
+                  (static)
+                  (lock-to-grid size)
+                  (physical-collider)
+                  (on-collide "wall" die)
+                  (damager 10 '(lava))
+                  (after-time die-after die)))
+
+
+(define (wall #:size (size 50) #:die-after (die-after 500))
+  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'brown)))
+                  #:name "wall"
+                  #:position (posn 0 0)
+                  #:components
+                  (active-on-bg)
+                  (static)
+                  (lock-to-grid size)
+                  (physical-collider)
+                  (on-collide "wall" die)
+                  (after-time die-after die)))
+
+(define (builder-dart #:entity (to-build (wall)))
+  (custom-dart #:components
+               (every-tick (move))
+               ;(after-time 6 die)
+               (after-time 5
+                           (spawn-on-current-tile to-build))))
+
+       
+
+
+(module+ test
+  (battle-arena-game
+   #:bg              (custom-background)
+   #:avatar          (custom-avatar)
+   #:enemy-list      (list (custom-enemy #:amount-in-world 10))
+   #:weapon-list     (list (custom-weapon #:name "Light Repeater"
+                                          #:sprite (make-icon "LR" "purple")
+                                          #:mouse-fire-button 'left
+                                          #:fire-mode 'random
+                                          #:fire-rate 10
+                                          #:rarity 'legendary)
+                           (custom-weapon #:name "Spread Shot"
+                                          #:sprite (make-icon "SS" "lightblue" "white")
+                                          #:mouse-fire-button 'left
+                                          #:fire-mode 'spread
+                                          #:rapid-fire? #f
+                                          #:rarity 'rare))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ; ==== PREBUILT DARTS ====
 (define (spear #:sprite     [s spear-sprite]
                #:damage     [dmg 50]
@@ -600,102 +749,16 @@
                             (every-tick (do-many (scale-sprite 1.05)
                                                  (change-direction-by 10)))))
 
-
-(define (move-in-ring)
-  (list
-   (on-start (set-size 0.5))
-   (every-tick (do-many (scale-sprite 1.05)
-                        (change-direction-by 10)))))
-
-
-(define (round-nearest amount n)
-  (* amount (round (/ n amount))))
-
-(define (round-nearest-posn amount p)
-  (posn (round-nearest amount (posn-x p))
-        (round-nearest amount (posn-y p))))
-
-(define (lock-to-grid (amount 10))
-  (on-start
-   (λ(g e)
-     (update-entity e posn?
-                    (round-nearest-posn amount (get-component e posn?))))))
-
-
-
-
-
-(define (tower #:weapon (weapon (custom-weapon))
-               #:fire-rate (rate 50)
-               #:die-after (die-after 500))
-
-  (define weapon-system (get-storage-data "Weapon" weapon))
-  
-  (sprite->entity (set-scale-xy 50 (new-sprite (square 1 'solid 'gray)))
-                  #:name "wall"
-                  #:position (posn 0 0)
-                  #:components
-                  (direction 0)
-                  (speed 0)
-                  (active-on-bg)
-                  (use-weapon-against "Enemy" weapon-system #:ticks-between-shots rate)
-                  (static)
-                  (lock-to-grid 50)
-                  (physical-collider)
-                  (on-collide "wall" die)
-                  (after-time die-after die)))
-
-
-
-(define (lava #:size (size 50) #:die-after (die-after 500))
-  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'red)))
-                  #:name "wall"
-                  #:position (posn 0 0)
-                  #:components
-                  (active-on-bg)
-                  (static)
-                  (lock-to-grid size)
-                  (physical-collider)
-                  (on-collide "wall" die)
-                  (damager 10 '(lava))
-                  (after-time die-after die)))
-
-
-(define (wall #:size (size 50) #:die-after (die-after 500))
-  (sprite->entity (set-scale-xy size (new-sprite (square 1 'solid 'brown)))
-                  #:name "wall"
-                  #:position (posn 0 0)
-                  #:components
-                  (active-on-bg)
-                  (static)
-                  (lock-to-grid size)
-                  (physical-collider)
-                  (on-collide "wall" die)
-                  (after-time die-after die)))
-
-(define (builder-dart #:entity (to-build (wall)))
-  (custom-dart #:components
-               (every-tick (move))
-               ;(after-time 6 die)
-               (after-time 5
-                           (spawn-on-current-tile to-build))))
-
-
-(module+ test
-  (battle-arena-game
-   #:bg              (custom-background)
-   #:avatar          (custom-avatar)
-   #:enemy-list      (list (custom-enemy #:amount-in-world 10))
-   #:weapon-list     (list (custom-weapon #:name "Light Repeater"
-                                          #:sprite (make-icon "LR" "purple")
-                                          #:mouse-fire-button 'left
-                                          #:fire-mode 'random
-                                          #:fire-rate 10
-                                          #:rarity 'legendary)
-                           (custom-weapon #:name "Spread Shot"
-                                          #:sprite (make-icon "SS" "lightblue" "white")
-                                          #:mouse-fire-button 'left
-                                          #:fire-mode 'spread
-                                          #:rapid-fire? #f
-                                          #:rarity 'rare))))
+(define (spear-tower-builder #:sprite     [s spear-sprite]
+                             #:damage     [dmg 50]
+                             #:durability [dur 20]
+                             #:speed      [spd 0.5]
+                             #:range      [rng 20])
+  (builder-dart #:entity
+                (tower #:weapon (custom-weapon #:dart (spear
+                                                       #:sprite     s
+                                                       #:damage     dmg
+                                                       #:durability dur
+                                                       #:speed      spd
+                                                       #:range      rng)))))
 
