@@ -274,7 +274,7 @@
                                 (static)
                                 (hidden)
                                 (on-start (do-many (respawn 'anywhere)
-                                                   ;(active-on-random)
+                                                   (active-on-random)
                                                    show))
                                 (storable)))
 
