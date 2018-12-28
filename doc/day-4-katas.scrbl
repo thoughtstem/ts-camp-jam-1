@@ -7,6 +7,7 @@
 @;============== DAY 4 ================
 @title{Armor Katas}
 
+@include-section["enemy-katas.scrbl"]
 
 @section{Enemy Weapon Katas}
 
@@ -19,11 +20,10 @@
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list, dart."
                #:extra-dollars-for "helping teammates."]{
 
+ @side-note["Tip"]{In addition to @italic{sword} you can use any of these: paint, spear, lava-builer, spike-mine-builder, or spear-tower-builder.}
   
  @(student-should-translate #:english "Make a game that has a an enemy and give it a custom weapon."
                             #:code 'enemy-weapon-1)
-
- @side-note["Tip"]{In addition to @italic{sword} you can use any of these: paint, spear, lava-builer, spike-mine-builder, or spear-tower-builder.}
  }
 
 @camp-jam-kata[#:document-level subsection
@@ -35,6 +35,7 @@
                #:review/introduce "meaning of damage, size, multiple keywords."
                #:extra-dollars-for "helping teammates."]{
 
+ @side-note["Tip"]{Remember, all the keywords (denoted by @italic{#: }) are always optional.}
 
  @(student-should-translate #:english "Make a game that has an enemy, give it a custom weapon and customize it."
                             #:code 'enemy-weapon-2)
@@ -48,7 +49,9 @@
                #:health-bar ADD-HEART
                #:review/introduce "meaning of sprite, range."
                #:extra-dollars-for "helping teammates, creativity."]{
-  
+
+ @side-note["Tip"]{Remember, all the keywords (denoted by @italic{#: }) are always optional.}
+                                                                     
  @(student-should-translate #:english "Make a game that has am enemy, give it a custom weapon, and customize the dart."
                             #:code 'enemy-weapon-3)
 }
@@ -141,7 +144,6 @@
 
 
 @include-section["avatar-katas.scrbl"]
-@include-section["enemy-katas.scrbl"]
 
 @section{Example Camp Jam code (w/definitions)}
 

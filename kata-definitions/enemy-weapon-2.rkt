@@ -4,10 +4,9 @@
   
 (define (my-weapon)
   (custom-weapon
-   #:name        "Sword"
-   #:dart        (sword)
-   #:fire-rate   10
-   #:rapid-fire? #t))
+   #:name      "Sword"
+   #:dart      (sword)
+   #:fire-rate 10))
 
 (battle-arena-game
  #:enemy-list (list (custom-enemy
