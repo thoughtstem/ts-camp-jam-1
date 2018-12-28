@@ -38,7 +38,7 @@
                #:extra-dollars-for "helping teammates."]{
 
   
- @(student-should-translate #:english "Make a game that has a lava pit."
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a lava pit."
                             #:code 'lava-1)
 }
 
@@ -52,7 +52,7 @@
                #:extra-dollars-for "helping teammates."]{
 
 
- @(student-should-translate #:english "Make a game that has a lava pit with custom damage and size."
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a lava pit with custom damage and size."
                             #:code 'lava-2)
 }
 
@@ -65,7 +65,7 @@
                #:review/introduce "meaning of sprite, range."
                #:extra-dollars-for "helping teammates, creativity."]{
   
- @(student-should-translate #:english "Make a game that has a lava pit with custom damage, size, sprite, and range."
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a lava pit with custom damage, size, sprite, and range."
                             #:code 'lava-3)
 }
 
@@ -101,8 +101,8 @@
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that has a ..."
-                            #:code 'lava-1)
+ @(student-should-translate #:english "Make a game that has a weapon that deploys a default spike mine"
+                            #:code 'spike-mine-1)
 }
 
 @camp-jam-kata[#:document-level subsection
@@ -111,11 +111,11 @@
                #:time-limit 5
                #:dollars 3
                #:health-bar ADD-STAR
-               #:review/introduce "meaning of ..."
+               #:review/introduce "meaning of multiple keywords, range."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that has a ..."
-                            #:code 'lava-2)
+ @(student-should-translate #:english "Make a game that has a weapon that deploys a spike mine with a large range and speed"
+                            #:code 'spike-mine-2)
 }
 
 @camp-jam-kata[#:document-level subsection
@@ -124,11 +124,11 @@
                #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART
-               #:review/introduce "meaning of ..."
+               #:review/introduce "meaning of damage."
                #:extra-dollars-for "helping teammates, creativity"]{
 
- @(student-should-translate #:english "Make a game that has a ..."
-                            #:code 'lava-3)
+ @(student-should-translate #:english "Make a game that has a weapon that deploys a spike mine with a large range and speed, high damage, and non-default sprite"
+                            #:code 'spike-mine-3)
 }
 
 
@@ -164,7 +164,7 @@
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list, dart."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that includes a spear tower."
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a spear tower."
                             #:code 'spear-tower-1)
 }
 
@@ -177,7 +177,7 @@
                #:review/introduce "meaning of multiple keywords, range."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that has a spear tower with a speed of 10 and a range of 20."
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a spear tower with a speed of 10 and a range of 20."
                             #:code 'spear-tower-2)
 }
 
@@ -190,7 +190,7 @@
                #:review/introduce "meaning of damage."
                #:extra-dollars-for "helping teammates."]{
     
- @(student-should-translate #:english "Make a game that has a spear tower with a custom spear image, damage level, range and speed"
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a spear tower with a custom spear image, damage level, range and speed"
                             #:code 'spear-tower-3)
 }
 

@@ -1,5 +1,5 @@
 #lang ts-camp-jam-1
 (battle-arena-game
-#:enemy-list  (list (custom-enemy #:amount-in-world 10))
+#:enemy-list (list (custom-enemy #:amount-in-world 20))
 #:weapon-list (list (custom-weapon
-                     #:dart (spike-mine-builder))))
+                     #:dart (spear-tower-builder))))

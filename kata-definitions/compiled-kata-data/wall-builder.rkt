@@ -3,6 +3,4 @@
 #:enemy-list (list (custom-enemy #:amount-in-world 20))
 #:weapon-list (list (custom-weapon
                      #:dart (builder-dart #:entity
-                                          (tower #:fire-rate 50
-                                                 #:weapon (custom-weapon
-                                                           #:dart (spear)))))))
+                                          (wall)))))
