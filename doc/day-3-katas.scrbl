@@ -204,4 +204,78 @@
 @include-section["avatar-katas.scrbl"]
 @include-section["enemy-katas.scrbl"]
 
+@subsection{Example Camp Jam code (w/definitions)}
 
+This is an example of how all the components come together during camp-jam into one piece of code:
+
+---------------------
+
+@(define (cool-guy) (image "doc/imgs/cool-guy.png"))
+@(define (bad-guy) (image "doc/imgs/bad-guy.png"))
+@(define (spear) (image "doc/imgs/spear.png"))
+@(define (sword) (image "doc/imgs/sword.png"))
+@(define (paint-thrower) (image "doc/imgs/paint-thrower.png"))
+
+@codeblock{#lang ts-camp-jam-1}
+@racketblock[
+ (define (cool-guy)
+   (custom-avatar #:sprite #, (cool-guy)))
+
+ (define (bad-guy)
+   (custom-enemy #:sprite #,       (bad-guy)
+                 #:ai              'easy
+                 #:health          200
+                 #:shield          100
+                 #:amount-in-world 5))
+
+ (define (sharp-stick)
+   (custom-weapon #:name     "Spear"
+                  #:sprite #,(spear)
+                  #:dart     (spear)
+                  #:rarity   'common))
+
+ (define (metal-blade)
+   (custom-weapon #:name     "Sword"
+                  #:sprite #,(sword)
+                  #:dart     (sword)))
+
+ (define (paint-spitter)
+   (custom-weapon #:name     "Paint Thrower"
+                  #:sprite #,(paint-thrower)
+                  #:dart     (paint)
+                  #:rarity   'epic))
+
+ (battle-arena-game
+  #:avatar      (cool-guy)
+  #:enemy-list  (list (bad-guy))
+  #:weapon-list (list (sharp-stick)
+                      (metal-blade)
+                      (paint-spitter)))
+ ]
+
+@subsection{Example Camp Jam code (w/in-line)}
+
+This is an example of how all the components come together during camp-jam into one piece of code:
+
+@codeblock{#lang ts-camp-jam-1}
+@racketblock[
+
+ (battle-arena-game
+  #:avatar      (custom-avatar #:sprite #, (cool-guy))
+  #:enemy-list  (list (custom-enemy #:sprite #,       (bad-guy)
+                                    #:ai              'easy
+                                    #:health          200
+                                    #:shield          100
+                                    #:amount-in-world 5))
+  #:weapon-list (list (custom-weapon #:name     "Spear"
+                                     #:sprite #,(spear)
+                                     #:dart     (spear)
+                                     #:rarity   'common)
+                      (custom-weapon #:name     "Sword"
+                                     #:sprite #,(sword)
+                                     #:dart     (sword))
+                      (custom-weapon #:name     "Paint Thrower"
+                                     #:sprite #,(paint-thrower)
+                                     #:dart     (paint)
+                                     #:rarity   'epic)))
+ ]
