@@ -3,8 +3,8 @@
 @(require "ts-camp-jam-kata-util.scrbl")
 @(require ts-kata-util)
 
-@;====== MAGIC AND BALANCE KATAS ======
-@;============== DAY 2 ================
+@;====== MELEE BATTLE MODE KATAS ======
+@;============== DAY 1 ================
 @title{Weapons and Balance Katas}
 
 

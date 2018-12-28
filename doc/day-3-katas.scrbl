@@ -3,18 +3,18 @@
 @(require "ts-camp-jam-kata-util.scrbl")
 @(require ts-kata-util)
 
-@;====== MAGIC AND BALANCE KATAS ======
-@;============== DAY 2 ================
-@title{Weapons and Balance Katas}
+@;====== DEFENSIVE BASE KATAS ======
+@;============== DAY 3 ================
+@title{Defensive Base Katas}
 
 
 
-@section{Magic Balance Katas}
+@section{Lava Katas}
 
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'air
-               #:title "Magic Balance"
+               #:title "Lava Pit"
                #:time-limit 1
                #:dollars 0
                #:review/introduce "core values"
@@ -26,13 +26,13 @@
  Game design vocab!
 
  @(student-should-know-difference-between
-   '("Balance"     "One of the hardest aspects of game design -- making the game not too easy, and not too hard.")
-   '("Game Design" "Everything involved in making a game.  Coding.  Art.  Balance.  Etc."))}
+   '("..." "...")
+   '("..." "..."))}
 
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
-               #:title "Magic"
+               #:title "Lava Pit"
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
@@ -40,13 +40,13 @@
                #:extra-dollars-for "helping teammates."]{
 
   
- @(student-should-translate #:english "Make a game that has a light magic weapon."
-                            #:code 'magic-balance-1)
+ @(student-should-translate #:english "Make a game that has a lava pit."
+                            #:code 'lava-1)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
-               #:title "Magic Balance"
+               #:title "Lava Pit"
                #:time-limit 5
                #:dollars 3
                #:health-bar ADD-STAR
@@ -54,34 +54,32 @@
                #:extra-dollars-for "helping teammates."]{
 
 
- @(student-should-translate #:english "Make a game that has a heavy magic weapon."
-                            #:code 'magic-balance-2)
+ @(student-should-translate #:english "Make a game that has a lava pit with a custom damage and size."
+                            #:code 'lava-2)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
-               #:title "Magic Balance"
+               #:title "Lava Pit"
                #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
-
- @side-note["Remember!" "This kata just combines the previous two.  Point this out!  It will help students see the pattern."]
   
- @(student-should-translate #:english "Make a game that has a light repeater and a heavy magic weapon.  Balance them relative to each other."
-                            #:code 'magic-balance-3)
+ @(student-should-translate #:english "Make a game that has a lava pit with a custom damage, size, sprite, and range."
+                            #:code 'lava-3)
 }
 
 
 
 
-@section{Melee Balance Katas}
+@section{Spike Mine Katas}
 
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'air
-               #:title "Melee Balance"
+               #:title "Spike Mine"
                #:time-limit 1
                #:dollars 0
                #:review/introduce "core values"
@@ -93,60 +91,57 @@
  Game design vocab!
 
  @(student-should-know-difference-between
-   '("Game Design"      "Everything involved in making a game.  Coding.  Art.  Balance.  Etc.")
-   '("Game Development" "Usually, this refers to just the coding aspect of making a game.  Not the other parts."))}
-
+   '("..." "...")
+   '("..." "..."))}
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
-               #:title "Melee Balance"
+               #:title "Spike Mine"
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that has a light melee weapon."
-                            #:code 'melee-balance-1)
+ @(student-should-translate #:english "Make a game that has a ..."
+                            #:code 'lava-1)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
-               #:title "Melee Balance"
+               #:title "Spike Mine"
                #:time-limit 5
                #:dollars 3
                #:health-bar ADD-STAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that has a heavy melee weapon."
-                            #:code 'melee-balance-2)
+ @(student-should-translate #:english "Make a game that has a ..."
+                            #:code 'lava-2)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
-               #:title "Melee Balance"
+               #:title "Spike Mine"
                #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
- @side-note["Remember!" "This kata just combines the previous two.  Point this out!  It will help students see the pattern."]
-    
- @(student-should-translate #:english "Make a game that has a light repeater and a heavy melee weapon.  Balance them relative to each other."
-                            #:code 'melee-balance-3)
+
+ @(student-should-translate #:english "Make a game that has a ..."
+                            #:code 'lava-3)
 }
 
 
 
 
 
-@section{Repeater Balance Katas}
-
+@section{Spear Tower Katas}
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'air
-               #:title "Repeater Balance"
+               #:title "Spear Tower"
                #:time-limit 1
                #:dollars 0
                #:review/introduce "core values"
@@ -158,9 +153,8 @@
  Game design vocab!
 
  @(student-should-know-difference-between
-   '("Balanced Game"   "A game where every thing fits together just right -- not too easy, not too hard.")
-   '("Unbalanced Game" "A (usually less fun) game where something is \"off\"."))
-
+   '("..." "...")
+   '("..." "..."))
 
  Can students share examples of balanced or unbalanced games from their lives?  Is Fortnite perfectly balanced?
 }
@@ -169,43 +163,41 @@
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
-               #:title "Repeater Balance"
+               #:title "Spear Tower"
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that has a light repeater weapon."
-                            #:code 'repeater-balance-1)
+ @(student-should-translate #:english "Make a game that has a ..."
+                            #:code 'lava-1)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
-               #:title "Repeater Balance"
+               #:title "Spear Tower"
                #:time-limit 5
                #:dollars 3
                #:health-bar ADD-STAR
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that has a heavy repeater weapon."
-                            #:code 'repeater-balance-2)
+ @(student-should-translate #:english "Make a game that has a ..."
+                            #:code 'lava-2)
 }
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
-               #:title "Repeater Balance"
+               #:title "Spear Tower"
                #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART
                #:review/introduce "meaning of #lang ts-camp-jam-1, battle-arena-game, keyword, list."
                #:extra-dollars-for "helping teammates."]{
-
- @side-note["Remember!" "This kata just combines the previous two.  Point this out!  It will help students see the pattern."]
     
- @(student-should-translate #:english "Make a game that has a light repeater and a heavy repeater weapon.  Balance them relative to each other."
-                            #:code 'repeater-balance-3)
+ @(student-should-translate #:english "Make a game that has a ..."
+                            #:code 'lava-3)
 }
 
 
