@@ -771,8 +771,8 @@
 (define (lava-builder #:damage (damage 10)
                       #:size   (size 50)
                       #:sprite (sprite (square 1 'solid 'red))
-                      #:distance (distance 5))
+                      #:range (range 5))
   (builder-dart #:entity (lava #:damage damage
                                #:size size
                                #:sprite sprite)
-                #:distance distance))
+                #:distance range))
