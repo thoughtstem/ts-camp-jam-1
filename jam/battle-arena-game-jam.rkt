@@ -27,6 +27,7 @@
          tower
 
          spear-tower-builder
+         spike-mine-builder
          lava-builder)
 
 (define STUDENT-IMAGE-HERE
@@ -262,6 +263,7 @@
                               #:fire-rate   [fr 3]
                               #:fire-key    [key 'f]
                               #:mouse-fire-button [button 'left]
+                              #:point-to-mouse? [ptm? #t]
                               #:rapid-fire?       [rf? #t]
                               #:rarity      [rarity 'common])
   (define updated-name (cond [(eq? rarity 'rare)      (~a "Rare " n)]
@@ -274,6 +276,7 @@
                                                  #:fire-rate fr
                                                  #:fire-key  key
                                                  #:mouse-fire-button button
+                                                 #:point-to-mouse? ptm?
                                                  #:rapid-fire? rf?
                                                  #:rule (and/r (weapon-is? updated-name)
                                                                (in-backpack? updated-name))))
@@ -563,7 +566,45 @@
 
 
 
+(define (mine #:weapon (weapon (custom-weapon))
+              #:sprite (s spike-mine-sprite) ;(square 50 'solid 'green)
+              #:die-after (die-after 500))
 
+  (define weapon-system (get-storage-data "Weapon" weapon))
+
+  (define remove-point-to-hack
+    (lambda (e)
+      (~> e
+          (remove-component _ on-start?)
+          (add-component _ (on-start (random-direction 0 360))))
+      ))
+
+  (define explode
+    (do-many
+     (do-after-time 100 die)
+     (λ(g e)
+       (add-component e
+                      (use-weapon weapon-system)))))
+  
+  (sprite->entity s
+                  #:name "wall"
+                  #:position (posn 0 0)
+                  #:components
+                  (direction 0)
+                  (speed 0)
+                  (active-on-bg)
+            
+                  (static)
+                  (lock-to-grid 50)
+                  (physical-collider)
+                  (on-collide "wall" die)
+                  (after-time die-after die)
+                  (on-collide "Enemy"
+                              explode)
+                  (on-collide "player"
+                              explode))
+
+  )
 
 
 (define (tower #:weapon (weapon (custom-weapon))
@@ -591,6 +632,9 @@
                     (after-time die-after die)
                     (active-on-bg)))
 
+  (precompile! tower-top
+               tower-base)
+
 
   (define weapon-system (get-storage-data "Weapon" weapon))
   
@@ -609,7 +653,6 @@
                   (on-collide "wall" die)
                   (after-time die-after die)
                   (on-start (spawn-on-current-tile tower-top-entity))))
-
 
 
 (define (lava #:size size
@@ -758,21 +801,53 @@
 (define (spear-tower-builder #:sprite     [s spear-sprite]
                              #:damage     [dmg 50]
                              #:durability [dur 20]
-                             #:speed      [spd 0.5]
-                             #:range      [rng 20])
+                             #:speed      [spd 5]
+                             #:range      [rng 20]
+                             #:fire-rate  [fire-rate 0.5])
   (builder-dart #:entity
-                (tower #:weapon (custom-weapon #:dart (spear
+                (tower #:weapon (custom-weapon #:fire-rate fire-rate
+                                               #:dart (spear
                                                        #:sprite     s
                                                        #:damage     dmg
                                                        #:durability dur
                                                        #:speed      spd
                                                        #:range      rng)))))
 
+
+(define spike-mine-sprite
+  (overlay (ellipse 6 6 'solid 'red)
+           (ellipse 16 14 'solid 'gray)
+           (ellipse 18 16 'solid 'black)))
+
+(define spike-sprite
+  (rotate 30 (triangle 10 'solid 'gray)))
+
+(define (spike-mine-builder #:sprite     [s spike-mine-sprite]
+                            #:damage     [dmg 2]
+                            #:durability [dur 10]
+                            #:speed      [spd 5]
+                            #:range      [rng 20]
+                            #:fire-rate  [fire-rate 20])
+  (builder-dart #:entity
+                (mine #:sprite s
+                      #:weapon (custom-weapon ;#:fire-mode 'spread
+                                              #:fire-rate fire-rate
+                                              #:point-to-mouse? #f
+                                              #:dart (custom-dart #:sprite spike-sprite
+                                                                  #:damage dmg
+                                                                  #:durability dur
+                                                                  #:speed spd
+                                                                  #:range rng
+                                                                  #:components (on-start (random-direction 0 360)))
+                                              ))))
+
+
 (define (lava-builder #:damage (damage 10)
-                      #:size   (size 50)
-                      #:sprite (sprite (square 1 'solid 'red))
+                      #:size   (size 1)
+                      #:sprite (sprite LAVA-SPRITE)
                       #:range (range 5))
+  
   (builder-dart #:entity (lava #:damage damage
                                #:size size
                                #:sprite sprite)
-                #:distance range))
+                #:range range))
