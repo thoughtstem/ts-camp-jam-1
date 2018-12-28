@@ -23,7 +23,7 @@
  @(student-should-translate #:english "Make a game that has a an enemy and give it a custom weapon."
                             #:code 'enemy-weapon-1)
 
- @side-note["Tip"]{In addition to @italic[sword] you can use any of these: paint, spear, lava-builer, spike-mine-builder, or spear-tower-builder.}
+ @side-note["Tip"]{In addition to @italic{sword} you can use any of these: paint, spear, lava-builer, spike-mine-builder, or spear-tower-builder.}
  }
 
 @camp-jam-kata[#:document-level subsection
@@ -56,11 +56,11 @@
 
 
 
-@section{Sword Armor Katas}
+@section{??? Katas}
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
-               #:title "Sword Armor"
+               #:title "???"
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
@@ -73,7 +73,7 @@
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
-               #:title "Sword Armor"
+               #:title "???"
                #:time-limit 5
                #:dollars 3
                #:health-bar ADD-STAR
@@ -86,7 +86,7 @@
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
-               #:title "Sword Armor"
+               #:title "???"
                #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART
@@ -98,11 +98,11 @@
 }
 
 
-@section{Repeator Armor Katas}
+@section{??? Katas}
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'bronze
-               #:title "Repeator Armor"
+               #:title "??? Armor"
                #:time-limit 5
                #:dollars 1
                #:health-bar COLOR-BAR
@@ -115,7 +115,7 @@
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'silver
-               #:title "Repeator Armor"
+               #:title "??? Armor"
                #:time-limit 5
                #:dollars 3
                #:health-bar ADD-STAR
@@ -128,7 +128,7 @@
 
 @camp-jam-kata[#:document-level subsection
                #:difficulty    'gold
-               #:title "Repeator Armor"
+               #:title "???"
                #:time-limit 5
                #:dollars 5
                #:health-bar ADD-HEART
@@ -155,15 +155,20 @@ This is an example of how all the components come together during camp-jam into 
    (custom-avatar
     #:sprite (circle 30 'solid 'blue)))
 
-(define (lawsome)
+(define (my-weapon)
+  (custom-weapon
+   #:name        "Sword"
+   #:dart        (sword)
+   #:fire-rate   10
+   #:rapid-fire? #t))
   
- 
  (define (bad-guy)
    (custom-enemy
     #:ai              'easy
     #:health          200
     #:shield          100
-    #:amount-in-world 10))
+    #:amount-in-world 10
+    #:weapon          (my-weapon)))
 
  (battle-arena-game
   #:avatar (cool-guy)
@@ -185,6 +190,11 @@ This is an example of how all the components come together during camp-jam into 
                       #:ai              'easy
                       #:health          200
                       #:shield          100
-                      #:amount-in-world 10))
-                      )
+                      #:amount-in-world 10
+                      #:weapon   (custom-weapon
+                                  #:name        "Sword"
+                                  #:dart        (sword)
+                                  #:fire-rate   10
+                                  #:rapid-fire? #t))))
+
  ]

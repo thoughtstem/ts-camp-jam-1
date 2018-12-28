@@ -1,6 +1,6 @@
 #lang ts-camp-jam-1
 
-(define-kata-code ts-camp-jam-1 enemy-weapon-1
+(define-kata-code ts-camp-jam-1 enemy-weapon-2
   
 (define (my-weapon)
   (custom-weapon
