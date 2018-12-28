@@ -1,0 +1,18 @@
+#lang ts-camp-jam-1
+(define (my-dart)
+ (custom-dart
+  #:sprite     (star 5 'solid 'yellow)
+  #:damage     5
+  #:speed      1
+  #:range      200))
+
+(define (my-weapon)
+ (custom-weapon
+  #:name        "Repeator"
+  #:dart        (my-dart)
+  #:fire-rate   10
+  #:rapid-fire? #t))
+
+(battle-arena-game
+#:enemy-list (list (custom-enemy
+                    #:weapon (my-weapon))))

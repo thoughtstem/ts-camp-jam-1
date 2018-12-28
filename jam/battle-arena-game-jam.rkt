@@ -102,7 +102,7 @@
                                #:ai (ai-level 'easy)
                                #:health (health 100)
                                #:shield (shield 100)
-                               #:weapon (weapon (custom-weapon-system))
+                               #:weapon (weapon (custom-weapon))
                                #:death-particles (particles (custom-particles)))
 
   (->* () (#:amount-in-world positive?
@@ -110,7 +110,7 @@
            #:ai symbol?
            #:health positive?
            #:shield positive?
-           #:weapon component?
+           #:weapon entity?
            #:death-particles entity? ) entity?)
 
   
@@ -169,7 +169,8 @@
 
               (storage "amount-in-world" amount-in-world)
                          
-              (enemy-ai (get-ai-from-level ai-level weapon))
+              (enemy-ai (get-ai-from-level ai-level (get-storage-data "Weapon" weapon)))
+              ;(enemy-ai (get-ai-from-level ai-level (weapon)))
               ))
 
 
@@ -430,7 +431,7 @@
                   #:headless       [headless #f]
                   #:bg             [bg-ent (custom-background)]
                   #:avatar         [p (custom-avatar)]
-                  #:enemy-list     [e-list '()]
+                  #:enemy-list     [e-list (list (custom-enemy))]
                   #:weapon-list    [weapon-list '()]
                   #:other-entities [ent #f]
                   . custom-entities)

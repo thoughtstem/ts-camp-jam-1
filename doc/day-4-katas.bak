@@ -114,7 +114,7 @@
                #:review/introduce "meaning of multiple keywords, range."
                #:extra-dollars-for "helping teammates."]{
   
- @(student-should-translate #:english "Make a game that has a weapon that deploys a spike mine with a large range and speed."
+ @(student-should-translate #:english "Make a game that has a weapon that deploys a spike mine with a large range and speed"
                             #:code 'spike-mine-2)
 }
 
@@ -127,7 +127,7 @@
                #:review/introduce "meaning of damage."
                #:extra-dollars-for "helping teammates, creativity"]{
 
- @(student-should-translate #:english "Make a game that has a weapon that deploys a spike mine with a large range and speed, high damage, and non-default sprite."
+ @(student-should-translate #:english "Make a game that has a weapon that deploys a spike mine with a large range and speed, high damage, and non-default sprite"
                             #:code 'spike-mine-3)
 }
 
@@ -190,7 +190,7 @@
                #:review/introduce "meaning of damage."
                #:extra-dollars-for "helping teammates."]{
     
- @(student-should-translate #:english "Make a game that has a custom weapon that deploys a spear tower with a custom spear image, damage level, range and speed."
+ @(student-should-translate #:english "Make a game that has a custom weapon that deploys a spear tower with a custom spear image, damage level, range and speed"
                             #:code 'spear-tower-3)
 }
 
@@ -203,6 +203,12 @@
 This is an example of how all the components come together during camp-jam into one piece of code:
 
 ---------------------
+
+@(define (cool-guy) (image "doc/imgs/cool-guy.png"))
+@(define (bad-guy) (image "doc/imgs/bad-guy.png"))
+@(define (spear) (image "doc/imgs/spear.png"))
+@(define (sword) (image "doc/imgs/sword.png"))
+@(define (paint-thrower) (image "doc/imgs/paint-thrower.png"))
 
 @codeblock{#lang ts-camp-jam-1}
 @racketblock[
@@ -269,5 +275,6 @@ This is an example of how all the components come together during camp-jam into 
                       (custom-weapon
                        #:name "Spear Tower"
                        #:sprite (make-icon "ST")
-                       #:dart (spear-tower-builder))))
+                       #:dart (spear-tower-builder))
+                      ))
  ]
