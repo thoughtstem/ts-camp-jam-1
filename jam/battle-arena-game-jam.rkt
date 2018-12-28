@@ -850,4 +850,4 @@
   (builder-dart #:entity (lava #:damage damage
                                #:size size
                                #:sprite sprite)
-                #:range range))
+                #:distance range))
