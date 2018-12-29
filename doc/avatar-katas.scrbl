@@ -128,11 +128,11 @@ Depending on the day; Avatar Katas can be a great "starter" Kata set to run thro
                #:time-limit 10
                #:dollars 7
                #:health-bar ADD-HEART
-               #:review/introduce "sheet->sprite, columns (number of images in the row)"
+               #:review/introduce "interactions window, sheet->sprite, columns (number of images in the row)"
                #:extra-dollars-for "helping teammates."]{
 
-  @side-note["Coach Hint"]{The interactions window is the right side of DrRacket where all the code spits
-  out when you run a program.}
+ @side-note["Tip"]{The interactions window is the right side of DrRacket where all the code spits
+ out when you run a program.}
                                                                      
  Students should type the following code into the interactions window:
 

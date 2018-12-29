@@ -73,11 +73,13 @@ Depending on the day; Enemy Katas can be a great "starter" Kata set to run throu
                #:time-limit 10
                #:dollars 5
                #:health-bar ADD-HEART
-               #:review/introduce "draw simple -- nothing is saved for later."
-               #:extra-dollars-for "helping teammates, creativity."]{
- @side-note["Hint"]{Use the piskel cheat sheet!}
+               #:review/introduce "shapes, the requirements for building a shape."
+               #:extra-dollars-for "helping teammates."]{
+                                                         
+ @side-note["Additional shapes"]{triangle, square, star, rectangle (needs
+  2 numbers), ellipse (needs 2 numbers).}                                                        
                                                                                  
- @(student-should-translate #:english "Make a game with an enemy using a custom image."
+ @(student-should-translate #:english "Make a game with an enemy that is one of the basic shapes."
                             #:code 'enemy-3)
 }
 
@@ -90,8 +92,24 @@ Depending on the day; Enemy Katas can be a great "starter" Kata set to run throu
                #:time-limit 10
                #:dollars 1
                #:health-bar ADD-HEART
-               #:review/introduce "what does sheet->sprite mean?"
-               #:extra-dollars-for "helping teammates, creativity."]{
- @(student-should-translate #:english "Make a game with a custom enemy that uses a sprite sheet created in Piskel."
+               #:review/introduce "interactions window, sheet->sprite, columns (number of images in the row)"
+               #:extra-dollars-for "helping teammates."]{
+
+ @side-note["Tip"]{The interactions window is the right side of DrRacket where all the code spits
+ out when you run a program.}
+                                                                     
+ Students should type the following code into the interactions window:
+
+ @codeblock{(random-character-row)}
+
+ and hit enter to run. Students then can use @bold{ctrl + up arrow} and @bold{enter} to rerun this line
+ multiple times.
+
+ Once a student finds a sprite they want to use for their enemy, @bold{highlight the image} and @bold{copy}
+ using ctrl + c or right-click, copy. Paste the image (represented by STUDENT_IMAGE_HERE)
+ into the code as seen below.
+                                                                     
+ @(student-should-translate #:english "Make a game with a defined custom enemy that has a
+                                       sprite you chose from the random-character-row list."
                             #:code 'enemy-4)
 }
