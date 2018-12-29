@@ -7,6 +7,9 @@
 @;====== ENEMY KATAS ======
 @title{Enemy Katas}
 
+Depending on the day; Enemy Katas can be a great "starter" Kata set to run through with @bold{all teams}
+ before moving on to more challenging katas.
+
 
 @camp-jam-kata[#:document-level section
                #:difficulty    'air
