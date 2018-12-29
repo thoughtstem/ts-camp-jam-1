@@ -241,15 +241,20 @@
  Students should be able to identify each of the following as either
  melee weapons or ranged weapons:
 
- @image{doc/imgs/weapons/grenade.gif}
+ @(image "doc/imgs/weapons/grenade.gif"
+        #:scale .3) 
 
- @image{doc/imgs/weapons/weird-pickaxe.gif}
+ @(image "doc/imgs/weapons/weird-pickaxe.gif"
+        #:scale .2) 
 
- @image{doc/imgs/weapons/long-range.gif}
+ @(image "doc/imgs/weapons/long-range.gif"
+        #:scale .8) 
 
- @image{doc/imgs/weapons/pickaxe.gif}
+ @(image "doc/imgs/weapons/pickaxe.gif"
+         #:scale .5) 
 
- @image{doc/imgs/weapons/rocket.gif}
+ @(image "doc/imgs/weapons/rocket.gif"
+         #:scale .4) 
  }
 
 @;----- BRONZE PAINT THROWER ------

@@ -111,7 +111,7 @@
            #:ai symbol?
            #:health positive?
            #:shield positive?
-           #:weapon component?
+           #:weapon entity?
            #:death-particles entity? ) entity?)
 
   
